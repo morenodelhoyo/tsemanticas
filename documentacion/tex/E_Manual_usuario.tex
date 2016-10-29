@@ -5,7 +5,53 @@
 \section{Requisitos de usuarios}
 
 \section{Instalación}
+A continuación se mostrarán los pasos a dar para instalar el software necesario.
+
+\subsection{Osmosis}
+La instalación de la herramienta Osmosis es sencilla. Una vez descargada la última versión, se ha de descomprimir en una carpeta a la que se tenga acceso de forma sencilla (por ejemplo: C:\textbackslash{}osmosis.
+El aspecto del contenido de la carpeta será el reflejado en la Figura.
+
+Para comprobar que Osmosis funcione de forma correcta se ha de abrir la consola de comandos y ejecutar el fichero de extensión bat que se encuentra en el interior de la carpeta bin.
+
+Para abrir la consola de comandos de Windows desde la carpeta, simplemente se ha de pulsar la tecla shift y clicar el botón derecho del ratón en un espacio en blanco de la misma.
+
+En caso de obtener algún error, consulta la página de referencia de Osmosis.
+
+\subsection{PostgreSQL 9.6}
+
+\subsection{PostGIS 2.0}
+
+
 
 \section{Manual del usuario}
+
+\subsection{Osmosis}
+Osmosis permite extraer una ciudad concreta de un mapa con formato pbf. En el caso de este trabajo, se ha descargado el mapa de España y se ha extraído la ciudad de Burgos. A continuación, se muestran los pasos a dar para obtener un fichero osm.
+
+\subsubsection{Descarga del mapa de España}
+Accediendo a la web de descargas de Geofabrik será posible elegir el país cuyo mapa que se desea descargar. Clicando sobre el enlace mostrado en la Figura, se puede descargar el mapa de España en formato pbf.
+
+\subsubsection{Extracción de una ciudad}
+Para extraer una ciudad del plano que se acaba de descargar, se ha de abrir la consola del sistema y hacer uso del fichero "getMap.bat". Se necesitarán los siguientes argumentos (entre paréntesis las coordenadas que serán usadas en el caso de Burgos):
+\begin{itemize}
+	\item Nombre de la ciudad: con esta cadena nombraremos el fichero osm de salida.
+	\item Coordenada GPS que indique la parte superior del segmento de mapa que se va a recortar (42.658202).
+	\item Coordenada GPS que indique la parte derecha del segmento de mapa que se va a recortar (-3.12561).
+	\item Coordenada GPS que indique la parte inferior del segmento de mapa que se va a recortar (41.364442).
+	\item Coordenada GPS que indique la parte izquierda del segmento de mapa que se va a recortar (-4.3066641).
+\end{itemize}
+
+El comando a teclear constará de lo siguiente:
+\begin{itemize}
+	\item rb: permite leer el contenido del fichero pbf descargado.
+	\item bb: permite extraer los datos indicados en la caja definida por las coordenadas geográficas indicadas a continuación.
+	\item top: coordenada geográfica superior.
+	\item right: coordenada geográfica derecha.
+	\item bottom: coordenada geográfica inferior.
+	\item left: coordenada geográfica izquierda.
+	\item wx: permite escribir los datos en un fichero osm.
+\end{itemize}
+
+Para la ciudad de burgos, el comando será el mostrado en la Figura. Ejecutando el comando se obtendrá el fichero "Burgos.osm".
 
 

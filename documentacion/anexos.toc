@@ -28,4 +28,8 @@
 \contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{5}{section.Alph5.1}
 \contentsline {section}{\numberline {E.2}Requisitos de usuarios}{5}{section.Alph5.2}
 \contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{5}{section.Alph5.3}
-\contentsline {section}{\numberline {E.4}Manual del usuario}{5}{section.Alph5.4}
+\contentsline {subsection}{Osmosis}{5}{section*.5}
+\contentsline {section}{\numberline {E.4}Manual del usuario}{6}{section.Alph5.4}
+\contentsline {subsection}{Osmosis}{6}{section*.6}
+\contentsline {subsubsection}{Descarga del mapa de Espa\IeC {\~n}a}{6}{section*.7}
+\contentsline {subsubsection}{Extracci\IeC {\'o}n de una ciudad}{6}{section*.8}

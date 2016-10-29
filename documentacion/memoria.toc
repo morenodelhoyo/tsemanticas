@@ -13,7 +13,16 @@
 \contentsline {section}{\numberline {3.4}Listas de items}{4}{section.3.4}
 \contentsline {section}{\numberline {3.5}Tablas}{4}{section.3.5}
 \contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{6}{chapter*.8}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{7}{chapter*.9}
-\contentsline {chapter}{Trabajos relacionados}{8}{chapter*.10}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{9}{chapter*.11}
-\contentsline {chapter}{Bibliograf\'{\i }a}{10}{section*.13}
+\contentsline {subsection}{GPS y GLONASS}{6}{section*.9}
+\contentsline {subsection}{Open Street Maps}{7}{section*.10}
+\contentsline {subsection}{Android Studio}{7}{section*.11}
+\contentsline {subsection}{PostgreSQL 9.6}{7}{section*.12}
+\contentsline {subsection}{PostGIS}{8}{section*.13}
+\contentsline {subsection}{Git}{8}{section*.14}
+\contentsline {subsection}{GitHub (aplicaci\IeC {\'o}n de escritorio)}{8}{section*.15}
+\contentsline {subsection}{ZenHub}{8}{section*.16}
+\contentsline {subsection}{\LaTeX }{8}{section*.17}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{9}{chapter*.18}
+\contentsline {chapter}{Trabajos relacionados}{10}{chapter*.19}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{11}{chapter*.20}
+\contentsline {chapter}{Bibliograf\'{\i }a}{12}{section*.22}

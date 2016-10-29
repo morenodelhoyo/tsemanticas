@@ -1,6 +1,58 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
-No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
+Esta sección presenta un breve resumen de las técnicas y herramientas que han sido usadas para llevar a cabo este trabajo.
+
+\subsection{GPS y GLONASS}
+
+El Sistema de Posicionamiento Global (GPS) es un Sistema Global de Navegación por Satélite (GNSS) siendo conocido y usado ampliamente. Este sistema permite posicionar un dispositivo (terminal móvil, dispositivos GPS, etc) de una forma rápida y precisa (con un error no mayor a uno dos metros).
+
+El sistema GPS cuenta con 24 satélites orbitando la Tierra a 20.000 Km de altura. Aunque inicialmente fue desarrollado por el Departamento de Defensa de los Estados Unidos (únicamente disponible para operaciones militares), ahora es un sistema de uso libre.
+
+El sistema GlONASS (Global'naya Navigatsionnaya Sputnikovaya Sistema) es el sistema de posicionamiento desarrollado por la Unión Soviética para competir contra el GPS americano. Este sistema cuenta con 31 satélites (no todos en activo) orbitando a 19.100 Km de altura. En 2007 la Federación de Rusia elimina todas las restricciones para usos comerciales, siendo su precisión similar a la del sistema americano.
+
+Esta apertura ha posibilitado la inclusión de ambos sistemas en todo tipo de terminales móviles y "GPS" posibilitando crear dispositivos que puedan apoyarse en uno u otro sistema para lograr una precisión todavía mayor.
+
+En 2018 se espera que el Sistema Galileo (el sistema GNSS europeo) esté operativo contando con 27 satélites. Actualmente se cuenta con 3 satélites operativos y otros 6 en fase de pruebas.
 
 
+\subsection{Open Street Maps}
+Open Street Maps (OSM) es un proyecto colaborativo que permite crear y editar mapas. Estos mapas son de uso libre y gratuito para todos los usuarios, siendo solo los usuarios registrados los que pueden crear dichos mapas.
+
+La creación de los mapas se lleva a cabo mediante la recogida de coordenadas geográficas usando dispositivos móviles. Estos dispositivos móviles obtendrán su ubicación gracias a sistemas GPS o Glonass o al uso de wifi o a la ubicación proporcionada por el operador de telefonía en caso de que el dispositivo cuente con una tarjeta SIM.
+
+Los mapas son distribuidos bajo licencia ODbL (Licencia Abierta de Bases de Datos).
+
+Los datos se almacenan siguiendo el datum WGS84 (World Geodetic System 1984, constituido por parejas latitud-longitud) usando la proyección de Mercator (definida en 1569  por Gerardus Mercator). La información primitiva consta de:
+
+\begin{itemize}
+	\item Nodos: son posiciones geográficas concretas.
+	\item Vías: una lista ordenada de nodos constituye una vía. Esta puede ser una polilínea o un polígono.
+	\item Relaciones: son grupos de vías, nodos y relaciones que pueden ser agrupadas ya que contienen propiedades comunes (por ejemplo, .
+	\item Etiquetas: son usadas para almacenar metadatos sobre los objetos del mapa, constan de una pareja clave-valor. 
+\end{itemize}
+
+\subsection{Android Studio}
+Android Studio es el IDE (Entorno de Desarrollo Integrado) de referencia para la creación de aplicaciones Android. Este entorno ha sido diseñado y desarrollado por Google e IntelliJ difundido bajo Licencia Apache 2.0.
+La primera versión fue lanzada en diciembre de 2014 y actualmente se encuentra en su versión 2.2.1.
+
+\subsection{PostgreSQL 9.6}
+PostgreSQL es un Sistema Gestor de Bases de Datos (SGBD) relacional, orientado a objetos y libre, distribuído bajo licencia PostgreSQL License. Actualmente se encuentra en su versión 9.6 siendo la usada en este trabajo.
+
+\subsection{PostGIS}
+PostGIS es una Base de Datos espacial que expande las posibilidades de PostgreSQL añadiendo soporte a objetos geográficos permitiendo consultas de localización. PostGIS ha sido diseñado y desarrollado por la empresa Refraction Research siendo distribuido bajo licencia GNU (GPLv2).
+
+\subsection{Osmosis}
+
+
+\subsection{Git}
+Git ha sido el sistema de control de versiones elegido y como plataforma web se hará uso de GitHub.
+
+\subsection{GitHub (aplicación de escritorio)}
+La aplicación de escritorio de GitHub permite mantener sincronizado el proyecto con la nube. Permite añadir, crear o clonar un repositorio existente. También facilita una visión del proyecto en la ventana "History". Dentro de la ventana "Changes" se pueden ver los ficheros que han sido modificados y necesitan de un commit para ser sincronizados con el repositorio local. Posteriormente, se puede sincronizar el proyecto con la plataforma web clicando sobre el botón "Sync".
+
+\subsection{ZenHub}
+El proyecto se basará en Scrum (marco de desarrollo ágil) y para permitir la creación de sprints, tareas, etc, se hará uso de ZenHub.
+ZenHub es un plugin que añade funcionalidad extra a la plataforma de GitHub.
+
+\subsection{\LaTeX}
+Se ha usado \LaTeX  para la relaización de la documentación del presente Trabajo de Fin de Máster. El contenido ha sido editado con TexMaker en su versión 4.5.
