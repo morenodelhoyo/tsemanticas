@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.16)  16 OCT 2016 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.16)  29 OCT 2016 13:31
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1889,7 +1889,7 @@ eoricos.aux) (tex/4_Tecnicas_y_herramientas.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: F525B458D203C841F180D99B65995762;919.
+(rerunfilecheck)             Checksum: CA708B3B42D39EEE3602F6D695D6E31F;919.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1897,8 +1897,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
  ) 
 Here is how much of TeX's memory you used:
- 10992 strings out of 493334
- 153464 string characters out of 3136672
+ 10994 strings out of 493334
+ 153486 string characters out of 3136672
  302594 words of memory out of 3000000
  14293 multiletter control sequences out of 15000+200000
  14542 words of font info for 51 fonts, out of 3000000 for 9000
@@ -1916,9 +1916,9 @@ x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on memoria.pdf (20 pages, 569825 bytes).
+Output written on memoria.pdf (20 pages, 570742 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
