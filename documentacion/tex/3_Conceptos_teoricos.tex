@@ -1,83 +1,31 @@
 \capitulo{3}{Conceptos teóricos}
 
-En aquellos proyectos que necesiten para su comprensión y desarrollo de unos conceptos teóricos de una determinada materia o de un determinado dominio de conocimiento, debe existir un apartado que sintetice dichos conceptos.
+Para poder validar los datos de trayectorias en crudo obtenidos de distintos usuarios se han de seguir una serie de pasos que permitan limpiarlos y transformarlos en información útil para el sistema. Esta serie de pasos será descrita en esta sección de la memoria.
 
-Algunos conceptos teóricos de \LaTeX \footnote{Créditos a los proyectos de...}.
+\section{Limpieza de datos}
 
-\section{Secciones}
+Debido a fallos hardware o software, pueden capturarse rutas que no correspondan con la realidad. Por ejemplo, el receptor de GPS del dispositivo usado para la recolección de datos puede dejar de recibir señal durante unos minutos y provocar una unión entre un punto ``x'' y otro ``y'' habiendo perdido datos relevantes en dicho intervalo de tiempo. Esto provocará una posible línea recta entre coordenadas que no deberían estar relacionadas entre sí haciendo que la ruta pierda información sobre los puntos recorridos. Para solventar estos posibles fallos, se hará una limpieza de los datos recibidos  en el servidor y de los ya almacenados en el mismo.
 
-Las secciones se incluyen con el comando section.
+Para ello se calculará la mediana entre los puntos de una misma ruta y, aplicando, un porcentaje de margen de error, se validará que la distancia entre los puntos no varíe de forma significativa. En caso de detectarse algún posible problema se procederá a validar la ruta sin la coordenada tomada como errónea. En caso contrario, la ruta quedará invalidada por completo y no será usada por el sistema. 
 
-\subsection{Subsecciones}
+\section{Enriquecimiento semántico}
 
-Además de secciones tenemos subsecciones.
+Los datos obtenidos por el usuario solo incluyen posiciones geográficas tomadas en un instante determinado, es decir, solo se tienen datos como la latitud y longitud y el espacio temporal en el que han sido tomados. En esta etapa se incluye información adicional a estos datos.
 
-\subsubsection{Subsubsecciones}
+\subsection{Segmentación de la trayectoria}
 
-Y subsecciones. 
-
-
-\section{Referencias}
-
-Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
+Lo primero a hacer es dividir la trayectoria seguida en ``movimiento`` y ``paradas''. Un periodo de movimiento es el tiempo en el que la persona se encuentra moviéndose entre dos ubicaciones. Un periodo de parada es el tiempo en el que la persona se encuentra viendo un lugar de interés.
 
 
-\section{Imágenes}
+\section{Anotación de trayectorias}
 
-Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
+Una vez conocidas las paradas que ha realizado la persona, se pueden asociar los Puntos de Interés a cada parada y así conocer los lugares en los que el usuario ha dedicado su tiempo.
 
-\imagen{thompson-vacio}{Autómata para una expresión vacía}
+\section{Consultas por anotaciones}
+
+En este momento es posible realizar peticiones al sistema según lugares.
 
 
+\section{Descubrimiento de conocimiento}
 
-\section{Listas de items}
-
-Existen tres posibilidades:
-
-\begin{itemize}
-	\item primer item.
-	\item segundo item.
-\end{itemize}
-
-\begin{enumerate}
-	\item primer item.
-	\item segundo item.
-\end{enumerate}
-
-\begin{description}
-	\item[Primer item] más información sobre el primer item.
-	\item[Segundo item] más información sobre el segundo item.
-\end{description}
-	
-\begin{itemize}
-\item 
-\end{itemize}
-
-\section{Tablas}
-
-Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
-
-\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
-{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
-HTML5 & X & & &\\
-CSS3 & X & & &\\
-BOOTSTRAP & X & & &\\
-JavaScript & X & & &\\
-AngularJS & X & & &\\
-Bower & X & & &\\
-PHP & & X & &\\
-Karma + Jasmine & X & & &\\
-Slim framework & & X & &\\
-Idiorm & & X & &\\
-Composer & & X & &\\
-JSON & X & X & &\\
-PhpStorm & X & X & &\\
-MySQL & & & X &\\
-PhpMyAdmin & & & X &\\
-Git + BitBucket & X & X & X & X\\
-Mik\TeX{} & & & & X\\
-\TeX{}Maker & & & & X\\
-Astah & & & & X\\
-Balsamiq Mockups & X & & &\\
-VersionOne & X & X & X & X\\
-} 
+Extracción de patrones generalistas  a partir de las consultas realizadas.
