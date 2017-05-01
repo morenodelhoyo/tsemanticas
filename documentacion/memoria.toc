@@ -19,26 +19,25 @@
 \contentsline {section}{\numberline {2.3}Objetivos personales}{6}{section.2.3}
 \contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{7}{chapter*.14}
 \contentsline {section}{\numberline {3.1}Limpieza de datos}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Enriquecimiento sem\IeC {\'a}ntico}{7}{section.3.2}
-\contentsline {subsection}{Segmentaci\IeC {\'o}n de la trayectoria}{8}{section*.15}
+\contentsline {subsection}{Segmentaci\IeC {\'o}n de la trayectoria}{7}{section*.15}
+\contentsline {section}{\numberline {3.2}Enriquecimiento sem\IeC {\'a}ntico}{8}{section.3.2}
 \contentsline {section}{\numberline {3.3}Anotaci\IeC {\'o}n de trayectorias}{8}{section.3.3}
 \contentsline {section}{\numberline {3.4}Consultas por anotaciones}{8}{section.3.4}
 \contentsline {section}{\numberline {3.5}Descubrimiento de conocimiento}{8}{section.3.5}
 \contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{9}{chapter*.16}
 \contentsline {subsection}{GPS y GLONASS}{9}{section*.17}
 \contentsline {subsection}{Open Street Maps}{10}{section*.18}
-\contentsline {subsection}{Android Studio}{10}{section*.19}
-\contentsline {subsection}{PostgreSQL 9.6}{10}{section*.20}
-\contentsline {subsection}{PostGIS}{11}{section*.21}
-\contentsline {subsection}{Osmosis}{11}{section*.22}
-\contentsline {subsection}{Git}{11}{section*.23}
-\contentsline {subsection}{GitHub (aplicaci\IeC {\'o}n de escritorio)}{11}{section*.24}
-\contentsline {subsection}{ZenHub}{11}{section*.25}
-\contentsline {subsection}{\LaTeX }{11}{section*.26}
-\contentsline {subsection}{RouteConverter}{11}{section*.27}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{12}{chapter*.28}
-\contentsline {chapter}{Estado del arte}{13}{chapter*.29}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{14}{chapter*.30}
+\contentsline {subsection}{PostgreSQL 9.6}{10}{section*.19}
+\contentsline {subsection}{PostGIS}{10}{section*.20}
+\contentsline {subsection}{Osmosis}{11}{section*.21}
+\contentsline {subsection}{Git}{11}{section*.22}
+\contentsline {subsection}{GitHub (aplicaci\IeC {\'o}n de escritorio)}{11}{section*.23}
+\contentsline {subsection}{ZenHub}{11}{section*.24}
+\contentsline {subsection}{\LaTeX }{11}{section*.25}
+\contentsline {subsection}{RouteConverter}{11}{section*.26}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{12}{chapter*.27}
+\contentsline {chapter}{Estado del arte}{13}{chapter*.28}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{14}{chapter*.29}
 \contentsline {section}{\numberline {7.1}Conclusiones}{14}{section.7.1}
 \contentsline {section}{\numberline {7.2}Lineas de trabajo futuras}{14}{section.7.2}
-\contentsline {chapter}{Bibliograf\'{\i }a}{15}{section*.32}
+\contentsline {chapter}{Bibliograf\'{\i }a}{15}{section*.31}

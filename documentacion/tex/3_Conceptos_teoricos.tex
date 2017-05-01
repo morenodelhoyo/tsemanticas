@@ -8,18 +8,18 @@ Debido a fallos hardware o software, pueden capturarse rutas que no correspondan
 
 Para ello se calculará la mediana entre los puntos de una misma ruta y, aplicando, un porcentaje de margen de error, se validará que la distancia entre los puntos no varíe de forma significativa. En caso de detectarse algún posible problema se procederá a validar la ruta sin la coordenada tomada como errónea. En caso contrario, la ruta quedará invalidada por completo y no será usada por el sistema. 
 
-\section{Enriquecimiento semántico}
-
-Los datos obtenidos por el usuario solo incluyen posiciones geográficas tomadas en un instante determinado, es decir, solo se tienen datos como la latitud y longitud y el espacio temporal en el que han sido tomados. En esta etapa se incluye información adicional a estos datos.
-
 \subsection{Segmentación de la trayectoria}
 
 Lo primero a hacer es dividir la trayectoria seguida en ``movimiento`` y ``paradas''. Un periodo de movimiento es el tiempo en el que la persona se encuentra moviéndose entre dos ubicaciones. Un periodo de parada es el tiempo en el que la persona se encuentra viendo un lugar de interés.
 
+\section{Enriquecimiento semántico}
+
+Los datos obtenidos por el usuario solo incluyen posiciones geográficas tomadas en un instante determinado, es decir, solo se tienen datos como la latitud y longitud y el espacio temporal en el que han sido tomados. En esta etapa se incluye información adicional a estos datos.
 
 \section{Anotación de trayectorias}
 
 Una vez conocidas las paradas que ha realizado la persona, se pueden asociar los Puntos de Interés a cada parada y así conocer los lugares en los que el usuario ha dedicado su tiempo.
+
 
 \section{Consultas por anotaciones}
 
