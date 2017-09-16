@@ -1,9 +1,609 @@
 \apendice{Documentación de usuario}
 
 \section{Introducción}
+En los siguientes apartados de este anexo se mostrará cuáles son los requisitos  y conocimientos mínimos necesarios para poder hacer uso de la plataforma web.
 
 \section{Requisitos de usuarios}
+Los requisitos mínimos son los siguientes:
+
+\begin{itemize}
+	\item Hardware: el recurso que puede limitar la experiencia de usuario es la cantidad de memoria RAM disponible, por ello, se recomienda contar con, al menos, 3 GiB de memoria RAM.
+	\item Java: se ha de contar con el JRE de Java instalado y el servidor Glassfish para poder correr la plataforma de forma local.
+	\item Base de Datos: se ha de contar con PostgreSQL como SGBD y su extensión PostGIS.
+	\item Navegador: se ha de contar con un navegador web que soporte las últimas tecnologías, por ejemplo: Firefox o Chrome.
+\end{itemize}
+
+Cada sección de la plataforma web cuenta con una breve ayuda que permite al usuario desenvolverse con soltura desde el primer momento.
 
 \section{Instalación}
-A continuación se mostrarán los pasos a dar para instalar el software necesario.
+La plataforma web no ha de instalarse ni seguir ningún proceso adicional. Para acceder a la misma se ha abrir un navegador y acceder al host local. Generalmente será de la siguiente forma:
 
+\begin{lstlisting}[language=bash]
+  http://localhost:8080/aplicacion\_web/
+\end{lstlisting}
+
+\section{Manual de usuario}
+Esta sección describirá cómo es y cómo se usa la plataforma web. Se mostrarán las diferentes páginas que componen la plataforma web, las opciones de cada una de las mismas, etc.
+
+En todas las páginas se mostrará un pequeño aviso en la parte superior si una prueba o la carga de ficheros de Puntos De Interés se encuentran activas. También mostrarán un botón de ayuda que desplegará un modal en el que se podrán leer los aspectos relevantes de uso de la página en concreto. La Figura \ref{ejealgo} muestra el aviso y la Figura \ref{botones} permite ver ambos botones.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/ejealgo.jpg}
+  \caption{Ventana de aviso de un hilo en ejecución.}
+  \label{ejealgo}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/botones.jpg}
+  \caption{Botones de ayuda e hilo en ejecución.}
+  \label{botones}
+\end{figure}
+
+\subsection{Secciones de la plataforma web}
+
+En este apartado se detallan las secciones con las que cuenta la plataforma web y cuáles son sus funciones:
+
+\begin{itemize}
+	\item Portada: la portada de la plataforma web muestra algunas de las características de la misma.
+	\item Gestión de ficheros: la página de gestión de ficheros permite la subida, gestión y procesado de ficheros de rutas. Se permite la subida de ficheros de tipo csv. Estos ficheros serán mostrados en una tabla permitiendo su selección, procesado o eliminación de forma unitaria o conjunta.
+	\item Visualización de resultados: la ventana de resultados cuenta con dos partes diferenciadas. A la izquierda se muestran tres formas diferentes de seleccionar las áreas disponibles en la Base de Datos. La primera forma consiste en seleccionar las áreas existentes, la segunda permite seleccionar un área dentro de un mapa, y la tercera consiste en introducir los valores de latitud y longitud manualmente. Una vez seleccionada una o varias áreas de la forma deseada por el usuario, el listado de rutas mostrado a la izquierda (segunda de las partes mencionadas) será actualizado con las rutas pertenecientes al área o a las áreas seleccionadas.
+	\item Pruebas: esta página permite ver al usuario las pruebas que se han llevado a cabo del algoritmo de análisis de rutas. Se mostrará una tabla con los valores seleccionados en cada una de las ejecuciones del algoritmo y se permitirá su re ejecución, dejando al usuario la oportunidad de modificarlos o realizar la ejecución con los mismos valores.
+	\item Gestión: en esta sección se encuentran las páginas de gestión de la plataforma web. Un primer apartado permite mantener las áreas que se encuentran en la Base de Datos, además de crear nuevas áreas.
+\end{itemize}
+
+\subsubsection{Portada}
+La portada de esta plataforma muestra algunas imágenes y detalles de la misma que se consideran relevantes. Es, simplemente, un punto de entrada al sistema.
+
+\subsubsection{Gestión de ficheros}
+La página de gestión de ficheros se encuentra situada como segunda opción del menú principal de la plataforma web. Esta página permite al usuario una completa gestión de los ficheros subidos al servidor. Existe un formulario de subida que permite seleccionar ficheros únicos de tipo csv o ficheros comprimidos de tipo zip que, en su interior, contengan ficheros con extensión csv. La plataforma se encargará de la subida y eventual descompresión de los ficheros seleccionados por el usuario.
+
+Un aviso indicará al usuario de que la subida ha sido satisfactoria o mostrará un error en caso de existir algún problema. Si la subida ha sido correcta, los ficheros serán mostrados en la tabla inmediatamente inferior al formulario. La Figura \ref{nofiles} muestra la página completamente vacía y la \ref{files} muestra el resultado de una primera carga de ficheros.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/nofiles.jpg}
+  \caption{Sin ficheros.}
+  \label{nofiles}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/files.jpg}
+  \caption{Carga de ficheros realizada correctamente.}
+  \label{files}
+\end{figure}
+
+En caso de error, la Figura \ref{filerror} muestra el mensaje de error devuelto. El fichero no será subido.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/filerror.jpg}
+  \caption{Error en la carga de ficheros.}
+  \label{filerror}
+\end{figure}
+
+La tabla de ficheros muestra distinta información sobre los mismos. La siguiente lista muestra dicha información:
+
+\begin{itemize}
+	\item \textbf{Seleccionar:} cada fichero contará con un \textit{switch} que permitirá seleccionar el mismo para su procesado o borrado.
+	\item \textbf{Nombre:} es el nombre del fichero con el que se subió a la plataforma. 
+	\item \textbf{Tamaño:} es el tamaño en bytes que ocupa el fichero.
+	\item \textbf{Fecha de subida:} la fecha en la que el fichero fue subida a la plataforma web.
+	\item \textbf{Procesado:} indica al usuario si ya ha procesado ese fichero con anterioridad.
+	\item \textbf{Fecha de procesado:} si así ha sido, se mostrará la fecha de procesado.
+	\item \textbf{Eliminar:} botón que permite el borrado del fichero.
+\end{itemize}
+
+En la parte inferior de la tabla se encuentran tres botones adicionales:
+
+\begin{itemize}
+	\item \textbf{Seleccionar todos:} este botón permitirá seleccionar o liberar todos los ficheros de la tabla.
+	\item \textbf{Eliminar ficheros seleccionados:} si se ha seleccionado alguno de los ficheros de la tabla, este botón se activará y permitirá borrar dichos ficheros.
+	\item \textbf{Procesar los ficheros seleccionados:} una vez seleccionado alguno de los fichero y, clicando sobre este botón, se accederá a la página de opciones del algoritmo de análisis de rutas.
+\end{itemize}
+
+La Figura \ref{filetableend} muestra estos botones y su ubicación en la tabla.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/filetableend.jpg}
+  \caption{Botones de la tabla de ficheros.}
+  \label{filetableend}
+\end{figure}
+
+En caso de que una prueba se encuentre en ejecución, el botón de procesar ficheros quedará desactivado temporalmente hasta que la prueba termine, pudiéndose apreciar en la Figura \ref{pruebaeje}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/pruebaeje.jpg}
+  \caption{Botón desactivado al encontrarse una prueba en ejecución.}
+  \label{pruebaeje}
+\end{figure}
+
+\subsubsection{Opciones del algoritmo}
+Una vez que el usuario ha seleccionado los ficheros que desea analizar, puede clicar en el botón \quotes{Procesar los ficheros seleccionados} y acceder a esta página de opciones.
+
+En la parte izquierda de la ventana se podrán ver, en una tabla, los ficheros seleccionados. En la parte derecha se mostrarán las opciones disponibles antes de ejecutar el algoritmo. La Figura \ref{areaoption} permite ver, en la parte superior de los selectores, un pequeño indicador que señala la opción que actualmente aparece en pantalla. La Figura \ref{areaoption1} permite ver la segunda de las opciones, la selección de un área existente en la Base de Datos. Seleccionando esta última opción, se asignarán las rutas analizadas al área elegida.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/areaoption.jpg}
+  \caption{Opción de creación de nueva área. Se indica en el aviso que pueden no existir Puntos De Interés para la zona que delimite esta nueva área.}
+  \label{areaoption}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/areaoption1.jpg}
+  \caption{Opción de selección de un área existente.}
+  \label{areaoption1}
+\end{figure}
+
+Clicando en siguiente se muestran las opciones para el análisis de la ruta. Como muestra la Figura \ref{rutaoption}, se cuentan con dos opciones, la primera de ellas permite seleccionar el corte de la ruta si entre dos posiciones de la misma se supera la distancia marcada como opción. También permite variar la mediana obtenida durante el análisis mediante el segundo de los valores, siendo este dato multiplicado por la cifra introducida por el usuario.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/rutaoption.jpg}
+  \caption{Opciones relativas al análisis de la ruta.}
+  \label{rutaoption}
+\end{figure}
+
+La siguiente de las opciones permite al usuario decidir si quiere realizar una búsqueda de las paradas con las que puede contar la o las rutas de los ficheros seleccionados. Si desea realizar este análisis, la búsqueda de PDIs se activará. En caso contrario, la búsqueda de Puntos De Interés no estará disponible ya que los PDIs son asignados a las paradas encontradas en cada ruta.
+
+La Figura \href{paradasi} permite ver las variables disponibles si se activa la búsqueda de paradas. La Figura \href{poisi} muestra lo propio con las posibilidades de búsqueda de Puntos De Interés. En caso de que no se deseen buscar paradas, el aviso que se aprecia en la Figura \ref{poino} será mostrado en la sección de PDIs.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/paradasi.jpg}
+  \caption{Opciones de búsqueda de paradas.}
+  \label{paradasi}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/poisi.jpg}
+  \caption{Opciones análisis de Puntos De Interés activas.}
+  \label{poisi}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/poino.jpg}
+  \caption{Opciones análisis de Puntos De Interés desactivadas debido a que no se buscarán paradas.}
+  \label{poino}
+\end{figure}
+
+La última de las opciones (Figura \ref{guardar}) que permite el algoritmo es el guardado de todos los datos en la Base de Datos del sistema. Estas opción permitirá almacenar de forma permanente los resultados obtenidos durante el análisis de ficheros. En caso de no desear guardar los datos, estos serán perdidos al cerrar el navegador.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/guardar.jpg}
+  \caption{Opciones guardado, en la figura, la opción no está seleccionada.}
+  \label{guardar}
+\end{figure}
+
+Una vez que el usuario está conforme con los datos elegidos para realizar el análisis puede clicar en el botón \quotes{Ejecutar} y comenzará el procesado de los ficheros. En caso de no estar seguro de los datos elegidos siempre puede volver atrás mediante el botón correspondiente y que se aprecia en las figuras mostradas.
+
+La Figura \ref{enejecucion} muestra la página que se visualiza cuando una prueba se encuentra en ejecución. En esta página también se permite al usuario detener el proceso si estima que está siendo extremadamente largo y prefiere probar otros valores. En la parte inferior se puede ver un pequeño indicador del estado en el que se encuentra la ejecución del algoritmo de análisis.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/enejecucion.jpg}
+  \caption{Algoritmo de análisis en ejecución.}
+  \label{enejecucion}
+\end{figure}
+
+Una vez el proceso termina, se mostrará una nueva ventana indicando tal echo y se invitará al usuario a ver los resultados obtenidos.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/terminado.jpg}
+  \caption{El algoritmo ha finalizado.}
+  \label{terminado}
+\end{figure}
+
+\subsubsection{Visualización de resultados}
+La pagina de visualización de resultados permite al usuario ver todas las rutas analizadas siendo dichas rutas mostradas de acuerdo al área seleccionada previamente. En la parte izquierda de la ventana se encontrarán las opciones de selección de área mientras que en la derecha se verán las rutas encontradas en el sistema. La Figura \ref{resultados} muestra una captura de esta página.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/resultados.jpg}
+  \caption{Página de resultados.}
+  \label{resultados}
+\end{figure}
+
+Seleccionando una o varias áreas en la parte superior izquierda de la página habilitarán el botón inferior denominado \quotes{Obtener rutas de las áreas marcadas}. Una vez habilitado se podrá clicar y se buscarán las rutas pertenecientes a las áreas solicitadas. Si se prefiere, se puede hacer uso del mapa inferior o de las cajas de coordenadas de la parte final de la página. En la Figura \ref{mapacaja} se aprecia el mapa mencionado y las cajas de coordenadas.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/mapaycaja.jpg}
+  \caption{Sección sobre el mapa.}
+  \label{mapacaja}
+\end{figure}
+
+La selección sobre el mapa también mostrará las coordenadas elegidas sobre las cajas de coordenadas inferiores. El botón de búsqueda de rutas quedará activo y se podrá clicar para buscar las rutas en la Base de Datos.
+
+La parte derecha de la página muestra las rutas que han sido filtradas. La tabla que se puede apreciar en la Figura \ref{vermas} cuenta con distintas columnas, estas son:
+
+\begin{itemize}
+	\item \textbf{Seleccionar:} permite seleccionar la ruta.
+	\item \textbf{ID:} es el identificador de la ruta.
+	\item \textbf{Área:} es el área asignada a la ruta.
+	\item \textbf{Número de posiciones:} muestra el número de posiciones con las que cuenta la ruta.
+	\item \textbf{Fecha de inicio:} fecha de inicio de la ruta (tomada de la primera posición de la misma).
+	\item \textbf{Fecha de fin:} fecha de finalización de la ruta (tomada de la última posición de la ruta).
+	\item \textbf{Fecha de creación:} es la fecha en la que se ha ejecutado el análisis.
+\end{itemize}
+
+Al seleccionar alguna de las rutas, el botón \quotes{Ver más detalles} queda activo permitiendo al usuario acceder a una última página. Esta página.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/vermas.jpg}
+  \caption{Botón que permite ver más detalles.}
+  \label{vermas}
+\end{figure}
+
+Esta última página permitirá ver los detalles de las rutas seleccionadas y, además, se pintará sobre un mapa, dos marcadores mostrarán el inicio (verde) y fin (rojo) de cada ruta y una serie de marcadores adicionales mostrarán los PDIs cercanos, en caso de haber sido encontrados. El resultado podría ser similar al mostrado por la Figura \ref{rutaanalizada}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/rutaanalizada.jpg}
+  \caption{Una de las posibles rutas analizadas mostrada sobre un mapa.}
+  \label{rutaanalizada}
+\end{figure}
+
+
+\subsubsection{Pruebas}
+La página de pruebas permite visualizar todas las ejecuciones del algoritmo realizadas hasta el momento. Esta página (Figura \ref{ejecuciones}) permite ver en una tabla las opciones que han sido seleccionadas por cada ejecución. La siguiente lista detalla cada columna de esta tabla:
+
+\begin{itemize}
+	\item \textbf{Ficheros:} muestra el o los ficheros analizados. Para poder visualizar más de un fichero se ha de clicar sobre el botón \quotes{Ver todos}. Este botón indicará el número de ficheros analizados. Al clicar sobre el botón se lanzará un modal con el nombre de dichos ficheros.
+	\item \textbf{Área:} muestra el nombre del área asignada a las rutas.
+	\item \textbf{Distancia (rutas):} es la distancia máxima para dividir una ruta en dos partes.
+	\item \textbf{¿Búsqueda de paradas?:} indica si el usuario ha realizado la búsquda de paradas.
+	\item \textbf{Distancia:} es el valor que indica al algoritmo una distancia para considerar que dos puntos forman parte de una parada en ruta.
+	\item \textbf{Variación de mediana:} valor que multiplica la mediana calculada
+	\item \textbf{¿Búsqueda de POIs?:} indica si el usuario ha realizado la búsqueda de POIs.
+	\item \textbf{Radio máximo:} valor que limita la búsqueda de Puntos De Interés en una parada.
+	\item \textbf{Multiplicador de radio:} valor que multiplica al radio medido entre los puntos de una parada.
+	\item \textbf{Almacenado en BD:} indica si los resultados han sido almacenado en la Base de Datos.
+	\item \textbf{Fecha de la prueba:} fecha en la que se ha llevado a cabo la prueba.
+	\item \textbf{Repetir / Eliminar:} botones que permiten repetir o eliminar la prueba.
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/ejecuciones.jpg}
+  \caption{Tabla de pruebas ejecutadas.}
+  \label{ejecuciones}
+\end{figure}
+
+El botón inferior con texto \quotes{Eliminar todas las pruebas realizadas} permite eliminar todas las filas de la tabla de una sola vez. La Figura \ref{borratodaspruebas} muestra este botón. Se lanzará un modal como el apreciable en la Figura \ref{borradopruebasmodal} para asegurar el borrado de estas pruebas.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/borratodaspruebas.jpg}
+  \caption{Botón de borrado total de pruebas.}
+  \label{borratodaspruebas}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/borradopruebasmodal.jpg}
+  \caption{Modal de borrado de pruebas.}
+  \label{borradopruebasmodal}
+\end{figure}
+
+\subsubsection{Gestión}
+Como muestra la Figura \ref{manage}, la página de sección queda dividida en tres grandes grupos: Gestión de áreas, Gestión de Puntos de Interés y Borrado de datos
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/manage.jpg}
+  \caption{Gestión de la plataforma web.}
+  \label{manage}
+\end{figure}
+
+Accediendo a cada sección se podrá gestionar cada uno de los aspectos mencionados.
+
+\paragraph{Gestión de áreas:} la sección de gestión de áreas permite visualizar las áreas existentes, modificar cada una de las creadas con anterioridad, eliminar alguna de las áreas no deseadas o crear un nuevo área. En la Figura \ref{areamanage1} se puede ver esta página.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/areamanage1.jpg}
+  \caption{Gestión de áreas.}
+  \label{areamanage1}
+\end{figure}
+ 
+La tabla muestra el nombre del área, su descripción, la localización geográfica mediante los límites que muestran sus coordenadas geográficas, la fecha de creación del área y la fecha de modificación de la misma en caso de haber sufrido alguna modificación. También se observan dos botones: edición y borrado. Mediante el botón de edición se permite al usuario editar todos los valores relacionados con el área en cuestión. El botón de borrado permitirá eliminar el área seleccionada.
+
+Clicando sobre el botón de edición se mostrará la ventana emergente que referencia la Figura \ref{areaedit}. 
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/areaedit.jpg}
+  \caption{Edición de área existente.}
+  \label{areaedit}
+\end{figure}
+
+Si se desea crear una nueva área, simplemente se ha de clicar sobre el botón correspondiente (\quotes{Crear un nuevo área}) y se mostrará el mismo modal que para la edición salvo que sus entradas de texto y/o número estarán vacías. Al crear el área aparecerá de forma inmediata en el listado mostrado por la tabla de áreas.
+
+Para eliminar un área bastará con clicar sobre el botón de borrado correspondiente a cada área y aceptar la solicitud que indica el modal.
+
+\paragraph{Gestión de Puntos de Interés:} Un aspecto fundamental en este trabajo es el manejo de Puntos De Interés por parte del sistema. Para que el usuario pueda cargar nuevos PDIs en la Base de Datos se cuenta con el sencillo formulario ubicado en esta página. Como se puede apreciar en la Figura \ref{pdimanage}, simplemente se ha de seleccionar un fichero de tipo xml que cuente con los PDIs a subir e indicar un nombre de región en la que los distintos PDIs están englobados. Por ejemplo, si se desean cargar PDIs de España, se seleccionará el fichero xml y se indicará como región España. De esta forma, si el usuario desea eliminar alguna de las regiones, puede diferenciarla de forma sencilla y clara.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/pdimanage.jpg}
+  \caption{Gestión de PDIs.}
+  \label{pdimanage}
+\end{figure}
+
+Clicando sobre el botón \quotes{Enviar} se procederá a la carga de los datos del fichero seleccionado. Se puede ver cómo evoluciona el proceso en la ventana que muestra el navegador mientras el proceso se encuentra activo. Es apreciable en la Figura \ref{pdimanage2}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/pdimanage2.jpg}
+  \caption{Subida de PDIs.}
+  \label{pdimanage2}
+\end{figure}
+
+Una vez haya finalizado el proceso, la nueva región aparecerá en la tabla de regiones de esta página y se mostrarán el total de Puntos De Interés y caminos (Ways) con los que cuenta. Para eliminar una o varias regiones se debe clicar en el botón de borrado correspondiente a cada una o en el botón de borrado total situado en la parte inferior de la página.
+
+\paragraph{Borrado de datos:} se proporciona una página especialmente diseñada que permite eliminar completamente todos los datos del sistema. Cuenta con dos secciones, la primera permite eliminar únicamente los Puntos De Interés almacenados (obviamente, elimina todas las regiones creadas por el usuario). La segunda sección permite vaciar las tablas de rutas, pruebas, etc y, además, permite eliminar los ficheros que han sido subidos al servidor. La Figura \ref{deleteall} permite ver una captura de esta página de la plataforma web.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/deleteall.jpg}
+  \caption{Borrado de datos.}
+  \label{deleteall}
+\end{figure}
+
+Es importante tener en cuenta que si una prueba o una carga de Puntos De Interés está activa, los hilos de ejecución correspondientes serán parados y se procederá al borrado de los datos.
+
+Se mostrará un modal advirtiendo del borrado que se va a realizar evitando el borrado accidental de datos correctos.
+
+
+\section{Obtención y manipulación de datos}
+La plataforma web anteriormente descrita necesita diferentes datos para resultar útil. El primer conjunto de datos necesarios para poder llevar a cabo un análisis de rutas es el correspondiente a los Puntos De Interés que se deseen localizar en las paradas de las rutas. Este conjunto de datos puede obtenerse a partir de ficheros de tipo \textbf{osm}. En las siguientes secciones se explica cómo obtener estos datos.
+
+El segundo conjunto de datos necesario es el de las rutas propiamente dichas. Para realizar las pruebas se han buscado en distintos lugares de internet el mejor conjunto de datos posibles. En la parte final de este aenxo se mencionan los conjuntos de datos analizados y por qué se ha escogido uno en concreto.
+
+A continuación se muestra cómo obtener un mapa completo de China en formato comprimido (\textbf{pbf}), después se indicará cómo convertir este formato a osm y, por último, cómo obtener su conjunto de Puntos De Interés.
+
+\subsection{Descarga de mapas}
+Accediendo a la web de descargas de Geofabrik (enlace: \url{http://download.geofabrik.de/}) será posible elegir el país o continente cuyo mapa se desea descargar. La página principal de descargas permite obtener un continente completo (se aprecia en la Figura \ref{asaia1}). En esta ocasión se desea obtener solamente el mapa correspondiente a China. Por tanto, se clica sobre la fila correspondiente a Asia y en la segunda página se clica sobre China. El proceso es el descrito en las figuras \ref{asia2} y \ref{asia3}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/asia1.jpg}
+  \caption{Continente asiático.}
+  \label{asia1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/asia2.jpg}
+  \caption{Tabla mostrando todos los continentes.}
+  \label{asia2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/manualusuario/asia3.jpg}
+  \caption{Tabla con los países asiáticos.}
+  \label{asia3}
+\end{figure}
+
+
+Una vez descargado el mapa de China en formato pbf (ocupa unas 350 MiB), se puede subdividir mediante la herramienta Osmosis. De esta forma se podrán extraer ciudades del interior del país, regiones o provincias, etc.
+
+Antes de continuar y, como será necesario en los siguientes pasos, se usará la herramienta \textit{osmconvert} para convertir el mapa descargado a un fichero de tipo osm.
+
+\subsubsection{Osmconvert}
+El ejemplo de uso de la herramienta \textit{osmconvert} partirá de un fichero llamado \textbf{china-latest.osm.pbf} que será convertido a china-latest.osm. El comando a usar, si el usuario se encuentra situado en la carpeta donde se encuentra el fichero pbf es el siguiente:
+
+\begin{lstlisting}[language=bash]
+	osmconvert china-latest.osm.pbf --out-osm -o=china-latest.osm
+\end{lstlisting}
+
+Este comando necesita que se le indique el nombre del fichero de salida y su formato. Para convertir mapas de otros países o continentes es suficiente con cambiar los valores del mapa de entrada y el nombre del fichero de salida.
+
+El proceso puede tardar unos segundos debido a que es posible que se genere un fichero de dimensiones considerables. En este caso, se pasa de un archivo de unas 350 MiB a uno de más de 8 GiB de extensión.
+
+En este momento se está en disposición de hacer uso de dos herramientas, la primera, que es \quotes{Osmosis}, permitirá extraer una zona del mapa de China. La segunda, \quotes{Osmfilter}, permite obtener los Puntos De Interés a partir del mapa en formato osm. Como ejemplo, se extraerá la ciudad de Pekín a partir del fichero osm obtenido en este paso.
+
+\subsection{Osmosis}
+Osmosis permite extraer una zona concreta de un mapa con extensión osm o pbf. A continuación y, a como ejemplo, se muestran los pasos necesarios para obtener la zona correspondiente a una  ciudad concreta, en este caso Pekín, partiendo de un mapa completo de China.
+
+\subsubsection{Extracción de una ciudad}
+Para extraer una ciudad del plano que se acaba de descargar se ha de abrir la consola del sistema y hacer uso de la herramienta Osmosis. Se necesitarán los siguientes argumentos (entre paréntesis las coordenadas que serán usadas en el caso de Pekín):
+\begin{itemize}
+	\item Nombre del fichero de entrada: se seleccionará el fichero de extensión osm sobre el que se obtendrá el recorte del mapa.
+	\item Coordenada GPS que indique la parte \textbf{superior} del segmento de mapa que se va a recortar (41.3).
+	\item Coordenada GPS que indique la parte \textbf{izquierda} del segmento de mapa que se va a recortar (115.0).
+	\item Coordenada GPS que indique la parte \textbf{inferior} del segmento de mapa que se va a recortar (39.4).
+	\item Coordenada GPS que indique la parte \textbf{derecha} del segmento de mapa que se va a recortar (117.35).
+	\item Nombre del fichero de salida: se dará nombre al fichero de salida con extensión osm.
+\end{itemize}
+
+El comando a teclear incluirá los siguientes parámetros:
+\begin{itemize}
+	\item rb: permite leer el contenido del fichero pbf descargado.
+	\item bb: permite extraer los datos indicados en la caja definida por las coordenadas geográficas indicadas a continuación.
+	\item top: coordenada geográfica superior.
+	\item right: coordenada geográfica derecha.
+	\item bottom: coordenada geográfica inferior.
+	\item left: coordenada geográfica izquierda.
+	\item wx: permite escribir los datos en un fichero osm.
+\end{itemize}
+
+Una vez descritos los parámetros y valores necesarios, se ejecuta el comando de la siguiente forma:
+
+\begin{lstlisting}[language=bash]
+	osmosis --read-xml china-latest.osm --bb top=41.3 left=115.0 bottom=39.4 right=117.35 --wx pekin.osm
+\end{lstlisting}
+
+El proceso puede tardar unos instantes debido a que el tamaño del fichero inicial es grande. Una vez lanzado el comando, se verá la siguiente salida por consola:
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/osmextract/osmosis.jpg}
+  \caption{Impresión en consola del resultado del comando.}
+  \label{puntosGeograficos}
+\end{figure}
+
+\subsection{Osmconvert}
+Es el momento de obtener los datos correspondientes a los Puntos De Interés de la ciudad de Pekín. El comando para esta herramienta es sencillo, en la siguiente lista se muestran los parámetros necesarios:
+
+\begin{itemize}
+	\item \textbf{Fichero de entrada osm:} es el fichero de entrada que se proporcionará a la herramienta, en este ejemplo, Pekin.osm.
+	\item \textbf{Opciones \quotes{keep}:} \textit{keep} indica los nodos a mantener. En este caso se seleccionan los nodos, caminos y relaciones que incluyen una etiqueta de tipo amenity. Esta etiqueta es una descripción general del nodo (Catedral, Universidad, etc).
+	\item \textbf{Fichero de salida (xml):} se ha de indicar como salida un nombre de fichero en formato xml.
+\end{itemize}
+
+El comando quedaría de la siguiente forma:
+
+\begin{lstlisting}[language=bash]
+	osmfilter pekin.osm --keep="amenity=" --keep-ways="amenity=" --keep-relations="amenity=" > pekin-pois.xml
+\end{lstlisting}
+
+Siendo l resultado por consola es el mostrado en la Figura \ref{filter}.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/osmextract/filter.jpg}
+  \caption{Impresión en consola del resultado del comando osmfilter.}
+  \label{filter}
+\end{figure}
+
+Si se desea subir este fichero de Puntos De Interés a la plataforma web, simplemente se ha de abrir la página de Gestión de Puntos De Interés y proceder a su subida, las figuras \ref{subida1}, \ref{subida2}, \ref{subida3} muestran el proceso que puede extenderse en el tiempo dependiendo del tamaño del fichero xml procesado.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/osmextract/subida1.jpg}
+  \caption{Selección del fichero.}
+  \label{subida1}
+\end{figure}
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/osmextract/subida2.jpg}
+  \caption{Región a la que pertenece.}
+  \label{subida2}
+\end{figure}
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/osmextract/subida3.jpg}
+  \caption{Ejecución del procesado.}
+  \label{subida3}
+\end{figure}
+Una vez finalice el proceso, la nueva región quedará visible en la tabla de regiones. Para que no existan PDIs duplicados se omitirá el guardado de nodos existentes.
+
+
+
+\section{QGIS}
+Como se ha comentado a lo largo de esta documentación, QGIS es un excelente programa en el que visualizar mapas, rutas, etc. Por tanto, se hará un breve resumen de las opciones principales con las que el usuario cuenta al hacer uso de dicho programa.
+
+\subsection{QGIS}
+QGIS es una herramienta de información geográfica libre y de código abierto que permite conexiones con PostgreSQL y visualización de los datos obtenidos sobre un mapa físico. 
+
+También permite la obtención de información geográfica desde Open Street Maps. De esta forma se pueden superponer rutas/trazas obtenidas desde las tablas de la Base de Datos con los mapas de Open Street Maps.
+
+Para configurar una conexión contra la Base de Datos instalada y configurada anteriormente se ha de clicar en el icono de PostgreSQL ubicado en la columna central izquierda. Pedirá al usuario una serie de valores como:
+
+\begin{itemize}
+\item \textbf{nombre:} valor que se dará al nombre de la conexión (localhost).
+\item \textbf{servidor:} servidor contra el que se realizará la conexión. En este caso será el servidor local (localhost).
+\item \textbf{Base de datos:} la Base de Datos de la que serán obtenidos los datos (rutassemanticas).
+\item \textbf{Autenticación:} nombre de usuario y contraseña  del usuario de PostgresQL usado para obtener la información (rs, rs).
+\end{itemize}
+
+La Figura \ref{conexionqgis} muestra la ventana emergente que permite realizar la conexión con los valores ya introducidos.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/qgis/conexionqgis.jpg}
+  \caption{Conexión contra PostgreSQL en QGIS.}
+  \label{conexionqgis}
+\end{figure}
+
+Una vez se consigue una conexión, aparecerán las tablas que en la Base de Datos cuentan con columnas representables por QGIS, esto es, la tabla que se desee usar ha de contar con una columna de tipo \quotes{the\_geom}. Este tipo de dato es propio de PostGIS y permite situar coordenadas geográficas de una forma sencilla y rápida para el sistema.
+
+Otro de los aspectos importantes a tener en cuenta es la facilidad que brinda al usuario para descargar contenido en formato osm indicando una zona determinada mediante coordenadas geográficas. Esta característica ofrece el mismo resultado que el recorte del mapa de China realizado con Osmosis. A continuación, se muestra un ejemplo con los mismos datos.
+
+\subsubsection{Descarga de contenido OSM con QGIS}
+Para comenzar, se ha de acceder a la sección ``Vectorial'', después, situar el cursor sobre ``OpenStreetMaps'' y clicar sobre ``Descargar datos'' (Figura \ref{vectorial}).
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.8\textwidth]{../img/qgis/descarga.jpg}
+  \caption{Descarga de datos desde QGIS}
+  \label{vectorial}
+\end{figure}
+
+A continuación se indicarán las coordenadas sobre las que se desea obtener los datos. En la Figura \ref{datos} se indican sus valores, son los mismos que los usados en Osmosis. Además, se ha de seleccionar un fichero destino. En este caso, se aprecia que es el mismo que el descargado mediante Osmosis.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.8\textwidth]{../img/qgis/pekin-qgis.jpg}
+  \caption{Valores introducidos para la búsqueda de datos en QGIS}
+  \label{datos}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.8\textwidth]{../img/qgis/exito.jpg}
+  \caption{Éxito en la descarga de los datos.}
+  \label{exito}
+\end{figure}
+Por último, se mostrará un mensaje de éxito si todo ha salido correctamente (Figura \ref{exito}).
+
+Ahora se cuenta con el mismo fichero de extensión OSM y será posible extraer los datos referentes a Puntos De Interés de la forma ya mencionada.
+
+Para obtener más información sobre QGIS se puede acceder al siguiente enlace: \url{http://www.qgis.org/es/docs/index.html}.
+
+
+
+\section{Datos de prueba}
+Esta sección pretende ilustrar cómo se han obtenido los datos con los que se han realizado las pruebas. De esta forma un futuro usuario podrá navegar por las páginas aquí mencionadas y tener una base para obtener nuevos datos de prueba para esta plataforma o para cualquier otra.
+
+
+\subsection{Origen de datos}
+El problema inicial al que hacer frente ha sido la falta de datos propios como punto de partida, por tanto, se ha tenido que realizar una búsqueda en distintos sitios de Internet para conseguir un conjunto de datos lo más fiables posible y con la estructura adecuada. Se han establecido una serie de condiciones indispensables que el \textit{dataset} ha de cumplir:
+\begin{itemize}
+\item \textbf{Coordenadas geográficas:} cada coordenada ha de contar con una latitud y longitud separadas en dos campos.
+\item \textbf{Marca de tiempo:} cada una de las coordenadas geográficas incluidas ha de contar con una marca de tiempo que permita localizar la coordenada en un espacio temporal concreto (un día, una semana, etc.).
+\item \textbf{Altitud:} para que la coordenada geográfica sea más precisa, debe contar con su altitud.
+\item \textbf{Diferenciación de rutas:} de igual manera que una coordenada geográfica se ha de poder diferencia de la siguiente, cada ruta incluida en el \textit{dataset} ha de poder ser diferenciada del resto. Es importante que cada una de las rutas se diferencien mediante un identificador único o se encuentren en ficheros separados.
+\end{itemize}
+
+Algunos de los sitios donde se pueden buscar este tipo de \textit{dataset} incluyen páginas como el repositorio de Machine Learning de la Universidad Irvine de California (\url{http://archive.ics.uci.edu/ml/}). Donde se pueden encontrar los últimos \textit{dataset} subidos o un buscador para poder encontrar el \textit{dataset} buscado. En esta página se han encontrado y valorado dos conjuntos de datos.
+
+\subsubsection{Taxi Service Trajectory}
+El primer \textit{dataset} encontrado ha sido el correspondiente a distintos trayectos en taxi sobre la ciudad de Oporto (Portugal). Este conjunto de datos se compone de un amplio fichero csv con información como el tipo de llamada realizada a la compañía de taxis, el taxi que ha respondido a la misma, la fecha y hora a la que se produjo la llamada y el conjunto de coordenadas geográficas tomadas durante el trayecto.
+
+Aunque el conjunto de los datos parece interesante en un primer momento, no se cuenta con un indicador temporal por cada coordenada y los hace inviables para su posterior uso, siendo este el motivo por el que se ha descartado el uso de este conjunto de datos.
+
+Este dataset puede ser descargado desde el siguiente enlace: \url{https://archive.ics.uci.edu/ml/datasets/Taxi+Service+Trajectory+-+Prediction+Challenge,+ECML+PKDD+2015}.
+
+\subsubsection{GPS Trajectories Data Set}
+El segundo de los conjuntos de datos analizados ha sido el correspondiente a las rutas realizadas por un conjunto de usuarios en la ciudad de Aracaju (Brasil) en taxi o autobús. Estos datos se encuentran divididos en dos ficheros csv. El primero de los ficheros cuenta con un identificador único de usuario, de esta forma se puede conocer qué usuario ha tomado cada ruta, un indicador de velocidad de la ruta (inicialmente no necesario), un campo de tiempo, uno de distancia recorrida, algunos de calificación de la ruta (rating) y por último, uno indicando la línea de autobús en la que se ha realizado el trayecto.
+
+El segundo de los ficheros incluye cada una de las coordenadas geográficas correspondientes a cada ruta y su asociación al usuario que la ha tomado.
+
+Aunque inicialmente fue uno de los \textbf{dataset} tenidos en cuenta, se ha desechado por no contener un número elevado de rutas que permitiese una mayor aleatoriedad en los datos.
+
+Este conjunto de datos puede ser descargado desde el siguiente enlace: \url{https://archive.ics.uci.edu/ml/datasets/GPS+Trajectories}.
+
+\subsubsection{Geolife}
+El \textit{dataset} seleccionado ha sido el denominado Geolife GPS Trajectories. Este dataset pertenece al repositorio que mantiene Microsoft. Este conjunto de datos viene acompañado por un documento en el que se indica cómo se han obtenido los datos, cuál es su estructura, etc. Se menciona que los datos han sido recolectados por unos 180 usuarios, en su mayoría en la ciudad de Pekín (China) pero también existen datos de viajes a otras ciudades o, incluso, a otros países.
+
+En el \textit{dataset} se incluye una carpeta por cada usuario y en cada carpeta se puede encontrar un fichero que toma su nombre de la marca de tiempo de la primera coordenada de cada ruta. Por tanto, puede que un usuario cuente con un único fichero, indicando así que solo ha realizado una ruta, o que cuente con múltiples ficheros en los que se almacenan distintas rutas.
+
+Cada fichero contiene una línea por cada coordenada geográfica obtenida. Esta línea contiene distinta información: un par latitud longitud, que permite situar la coordenada geográfica sobre un plano, su altitud y su marca temporal (entre otras). Esta estructura hace que la diferenciación de las rutas sea sencilla ya que se encuentran separadas por usuarios y marca temporal en la que ha sido tomada. Debido a esto, este conjunto de datos es el que ha sido finalmente elegido y volcado a la Base de Datos.
+
+Finalmente, comentar que otras universidades como la de St Andrews (\url{https://uk.crawdad.org/}) también prestan sus \textit{dataset} aunque, en esta ocasión, no se ha revisado su repositorio en profundidad.

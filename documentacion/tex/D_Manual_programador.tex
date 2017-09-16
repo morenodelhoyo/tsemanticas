@@ -5,267 +5,505 @@
 Esta sección pretende aclarar todos los conceptos relativos a las cuestiones técnicas y de programación llevadas a cabo en el presente Trabajo de Fin de Máster.
 
 \section{Estructura de directorios}
+Este apartado presenta la estructura de los directorios y carpetas usados en el proyeto. Esta estructura es la siguiente:
+
+\begin{itemize}
+	\item \textbf{web:} esta carpeta almacena todos los recursos web, desde las páginas jsp hasta los ficheros css pasando por los ficheros javascript o las imágenes usadas.
+	\begin{itemize}
+		\item \textbf{css:} carpeta con los ficheros css que dan estilo a la plataforma web.
+		\item \textbf{jquery\textbackslash bootstrap:} ficheros pertenecientes al framework Bootstrap.
+		\item \textbf{jquery\textbackslash fileupload:} ficheros que permiten la subida de ficheros al servidor.
+		\item \textbf{jquery\textbackslash rutassemanticas:} ficheros javascript para el manejo de las páginas que componen la plataforma web de Rutas Semánticas.
+		\item \textbf{jquery\textbackslash rutassemanticas\textbackslash threads:} estos ficheros permiten consultar los estados de los hilos que pueden ser ejecutados.
+		\item \textbf{jquery\textbackslash steps:} los ficheros ubicados bajo la carpeta \textit{steps} permiten el manejo de los sistemas de información del estado de ejecución de los procesos.
+		\item \textbf{images:} carpeta con imágenes y/o logos.
+		\item \textbf{pages:} páginas JSP del sistema web.
+	\end{itemize}
+	\item \textbf{src:} la carpeta con todas las clases Java queda dividida en:
+	\begin{itemize}
+		\item \textbf{controller\textbackslash algorithm:} ficheros pertenecientes a la ejecución del algoritmo.
+		\item \textbf{controller\textbackslash connection:} estas clases permiten establecer la conexión contra la Base de Datos.
+		\item \textbf{controller\textbackslash servlet:} clases de servidor.
+		\item \textbf{model\textbackslash dao:} estas clases pertenecen al DAO (Data Access Object) y permiten realizar operaciones CRUD sobre el sistema.
+		\item \textbf{model\textbackslash data:} estas clases forman el modelo de la plataforma web.
+	\end{itemize}
+\end{itemize}
 
 \section{Manual del programador}
 
-\section{Compilación, instalación y ejecución del proyecto}
+La presente sección indica cómo instalar las herramientas necesarias para el correcto desempeño de todo el sistema.
 
-\section{Pruebas del sistema}
-
-\section{Instalación de herramientas}
+Si se opta por una máquina virutal, primero se deberá contar con el software Virtual Box instalado en el ssitema anfitrión.
 
 \subsection{Virtual Box}
 El software de virtualización seleccionado ha sido Oracle VM Virtual Box en su versión 5.1. Este programa ha sido instalado sobre Windows 10, sistema que actúa como anfitrión.
 
-La descarga de este software se puede realizar desde la siguiente dirección web: \url{https://www.virtualbox.org/wiki/Downloads}
+La descarga de este software se puede realizar desde la siguiente dirección web: \url{https://www.virtualbox.org/wiki/Downloads}. En el caso de que el sistema anfitrión sea diferente, se deberá optar por la descarga correspondiente.
 
-\subsection{Ubuntu 16.04}
+\subsection{Ubuntu 16.04 LTS}
 Como servidor se ha optado por la versión 16.04 de Ubuntu en su versión de escritorio. El sistema ha sido instalado sobre una máquina virtual haciendo uso del software mencionado en la sección anterior.
 
 Para descargar una imagen de este Sistema Operativo se ha de acceder al siguiente enlace: \url{https://www.ubuntu.com/download/desktop}
 
+El nombre de usuario y contraseña son los siguientes:
 
-\subsection{PostgreSQL 9.6 y PgAdmin 3}
+\begin{itemize}
+	\item Usuario: \textbf{rs}.
+	\item Contraseña: \textbf{rs}.
+\end{itemize}
+
+A partir de este momento se indican los pasos necesarios para una instalación de todo el software restante sobre la distribución 16.04 LTS.
+
+\subsubsection{Recursos del sistema}
+
+El sistema ha contado con los siguientes recursos hardware durante la fase de desarrollo y pruebas:
+
+\begin{itemize}
+	\item Espacio en disco: 80 GiB en disco de estado sólido.
+	\item CPU: 4 cores con disposición del 100\% de su capacidad.
+	\item Memoria RAM: 8 GiB de RAM.
+	\item Memoria de Vídeo dedicada: 128 MiB.
+	\item Red: conectividad de red por NAT.
+\end{itemize}
+
+
+\subsection{PostgreSQL 9.6, PgAdmin 3 y PostGIS}
 PostgreSQL puede ser instalado en Ubuntu desde la consola de comandos. Para ello se han de seguir unos sencillos pasos.
-El primer paso es actualizar el repositorio de Ubuntu mediante el siguiente comando sobre la consola:
-\begin{lstlisting}
-apt-get update
+
+\subsubsection{PostgreSQL}
+
+El primer paso es añadir el repositorio al fichero sources.list:
+
+\begin{lstlisting}[language=bash]
+  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt xenial-pgdg main" >> /etc/apt/sources.list'
 \end{lstlisting}
+
+El siguiente paso consiste en añadir las claves y actualizar los repositorios de Ubuntu:
+
+\begin{lstlisting}[language=bash]
+	wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+	sudo apt-get update
+\end{lstlisting}
+
 Ahora se puede comenzar la instalación de Postgres mediante la siguiente línea en la consola de comandos:
-\begin{lstlisting}
-apt-get install postgresql postgresql-contrib
+\begin{lstlisting}[language=bash]
+	sudo apt-get install postgresql-9.6 postgresql-server-dev-9.6
 \end{lstlisting}
 
-Por último, si se desea hacer uso de PgAdmin 3, se podrá instalar mediante el siguiente comando:
-\begin{lstlisting}
-apt-get install pgadmin3
+Si se desea hacer uso de PgAdmin 3, se podrá instalar mediante el siguiente comando:
+\begin{lstlisting}[language=bash]
+	apt-get install pgadmin3
 \end{lstlisting}
 
-Una vez que Postgres ha sido instalado, se ha procedido a la configuración del usuario por defecto (``postgres'') y de la creación de un nuevo usuario ``rs'') para la adición de extensiones y creación de tablas necesarias.
+\subsubsection{PostGIS}
 
-\subsection{PostGIS}
-PostGIS es una extensión espacial para las Bases de Datos PostgreSQL. Esta extensión añade soporte para objetos geográficos permitiendo consultas geográficas sobre la Base de Datos.
-PostGIS se encuentra distribuido bajo licencia GNU General Public License.
+Una vez que Postgres ha sido instalado, se ha de instalar la extensión PostGIS mediante los siguientes comandos de consola:
 
-Para instalar PostGIS sobre Ubuntu 16.04 se ha de teclear el siguiente comando:
-\begin{lstlisting}
-apt-get install postgis
+\begin{lstlisting}[language=bash]
+	sudo apt-get install postgresql-9.6-postgis-2.3 postgresql-contrib-9.6
+\end{lstlisting}
+Una vez termina, se ha de continuar con este comando:
+
+\begin{lstlisting}[language=bash]
+	sudo apt-get install postgis
 \end{lstlisting}
 
 Se puede obtener más información en la página web oficial de PostGIS: \url{http://www.postgis.net/}.
 
-\section{Manual del usuario}
+\subsubsection{pg\_cron}
+
+\quotes{pg\_cron} es un programador de tareas para PostgreSQL basado en cron. Este programador permitirá realizar tareas de mantenimiento sobre la Base de Datos en los tiempos marcados al programar las tareas.
+
+Para usar este complemento de chrome primero se ha de instalar y configurar, a continuación, se mencionan los pasos necesarios.
 
 
-\subsection{Osmosis}
-Osmosis permite extraer una zona concreta de un mapa con extensión osm o pbf. Para instalar esta herramienta sobre el Sistema Operativo Ubuntu se han de seguir los pasos indicados en su documentación oficial. El enlace a la misma es el siguiente: \url{http://wiki.openstreetmap.org/wiki/Osmosis}. En el caso de este trabajo, se ha descargado el mapa de la ciudad de Aracaju, capital del estado de Sergipe en Brasil. A continuación, se muestran los pasos necesarios para obtener la zona correspondiente a la ciudad mencionada partiendo de un mapa completo de Brasil.
+El primer paso consistirá clonar el repositorio mediante el siguiente comando:
 
-\subsubsection{Descarga del mapa de Brasil}
-Accediendo a la web de descargas de Geofabrik (enlace: \url{http://download.geofabrik.de/}) será posible elegir el país cuyo mapa que se desea descargar. Primero se seleccionará el continente sobre el que se encuentra el país a descargar (Figura \ref{continente}) y, después, se seleccionará el país propiamente dicho (Figura \ref{pais}).
+\begin{lstlisting}[language=bash]
+	git clone https://github.com/citusdata/pg_cron.git
+\end{lstlisting}
+
+Después se debe acceder a la carpeta y exportar la ruta de la siguiente forma:
+
+\begin{lstlisting}[language=bash]
+	cd pg_cron
+	export PATH=/usr/pgsql-9.6/bin:$PATH
+\end{lstlisting}
+
+El último comando a ejecutar es el siguiente:
+
+\begin{lstlisting}[language=bash]
+	make && sudo PATH=$PATH make install
+\end{lstlisting}
+
+Ahora se debe abrir el fichero \textit{postgresql.conf} situado en \textit{/etc/postgresql/9.6/main}. En este fichero se ha de indicar la Base de Datos sobre la que actuará pg\_cron. Las dos últimas líneas del fichero han de lucir de la siguiente forma:
+\begin{lstlisting}[language=bash]
+	shared_preload_libraries = 'pg_cron'
+	cron.database_name = 'rutassemanticas'
+\end{lstlisting}
+
+Par que los cambios funcionen se ha de reiniciar el servicio:
+\begin{lstlisting}[language=bash]
+	sudo service postgresql restart
+\end{lstlisting}
+
+\subsubsection{Configuración básica de PostgreSQL}
+
+Una vez instalados esta serie de paquetes, se puede continuar con la configuración de PostgreSQL antes de cerrar la consola de comandos. El siguiente paso consistirá en asignar una contraseña al usuario  \quotes{postgres} como se detalla a continuación.
+
+El primer paso es acceder a PostgreSQL mediante:
+\begin{lstlisting}[language=bash]
+	sudo -u postgres psql postgres
+\end{lstlisting}
+Este comando nos introducirá en la consola del SGBD, para asignar una nueva contraseña se ha de indicar el siguiente comando:
+
+\begin{lstlisting}[language=bash]
+	\password postgres
+\end{lstlisting}
+
+En este caso, se ha decidido asignar la clave \quotes{postgres} para recordarla de forma sencilla.
+
+Como recomendación no se debe instalar PostGIS sobre la Base de Datos por defecto (postgres), para seguir esta recomendación, se creará una nueva Base de Datos a la que se asignarán el resto de extensiones y tablas:
+
+\begin{lstlisting}[language=bash]
+	CREATE DATABASE rutassemanticas;
+	\connect rutassemanticas;
+\end{lstlisting}
+
+Es el momento de añadir alguna extensión adicional a esta Base de Datos:
+
+\begin{lstlisting}[language=bash]
+	CREATE EXTENSION adminpack;
+	CREATE EXTENSION postgis;
+	CREATE EXTENSION fuzzystrmatch;
+	CREATE EXTENSION postgis_sfcgal;
+	CREATE EXTENSION pg_cron;
+\end{lstlisting}
+
+Estas extensiones permitirán manejar las consultas lanzadas sobre PostGIS y habilitar cron.
+
+Ahora se debe salir del gestor mediante el comando:
+\begin{lstlisting}[language=bash]
+	\q
+\end{lstlisting}
+
+A partir de este momento se puede conectar contra el host local desde PgAdmin 3. Para ello se ha de indicar los siguientes parámetros:
+
+\begin{itemize}
+	\item Nombre: se debe teclear \textbf{localhost}.
+	\item Host: como en el caso anterior, será \textbf{localhost}.
+	\item Username: usaremos el nombre de usuario \textbf{postgres}.
+	\item Password: y su contraseña asignada hace unos instantes \textbf{postgres}.
+\end{itemize}
+
+En la Figura \ref{conexion} se pueden visualizar estos valores.
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.6\textwidth]{../img/osmosis_descarga_mapa/continente.jpg}
-  \caption{Sección de continentes}
-  \label{continente}
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/conexion.jpg}
+  \caption{Conexión contra el host local.}
+  \label{conexion}
+\end{figure}
+
+Una vez conseguida la conexión contra el sistema, se procederá a crear un nuevo usuario y se añadirán nuevas extensiones. De esta forma se comprueba que tanto PostgreSQL, como PostGIS funcionan de forma correcta para su futuro uso.
+
+Para crear un nuevo usuario se ha de clicar sobre la sección \quotes{Login Roles} del host local. El asistente solicita distintos parámetros como se observa en las Figuras \ref{nr1}, \ref{nr2} y \ref{nr3}:
+
+\begin{itemize}
+	\item Nombre de usuario: \textbf{rs}.
+	\item Password: \textbf{rs}.
+	\item Privilegios: super usuario, creación de bases de datos y creación de roles.
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/nr1.jpg}
+  \caption{Nombre de usuario.}
+  \label{nr1}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.6\textwidth]{../img/osmosis_descarga_mapa/mapa.jpg}
-  \caption{Países mapeados de Sudamérica}
-  \label{pais}
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/nr2.jpg}
+  \caption{Contraseña.}
+  \label{nr2}
 \end{figure}
-
-\subsubsection{Extracción de una ciudad}
-Para extraer una ciudad del plano que se acaba de descargar, se ha de abrir la consola del sistema y hacer uso del fichero de la aplicación Osmosis. Se necesitarán los siguientes argumentos (entre paréntesis las coordenadas que serán usadas en el caso de Aracaju):
-\begin{itemize}
-	\item Nombre del fichero de entrada: se seleccionará el fichero de extensión osm sobre el que se obtendrá el recorte del mapa.
-	\item Coordenada GPS que indique la parte \textbf{superior} del segmento de mapa que se va a recortar (-36.441).
-	\item Coordenada GPS que indique la parte \textbf{izquierda} del segmento de mapa que se va a recortar (-11.0367).
-	\item Coordenada GPS que indique la parte \textbf{inferior} del segmento de mapa que se va a recortar (-37.6971).
-	\item Coordenada GPS que indique la parte \textbf{derecha} del segmento de mapa que se va a recortar (-10.537).
-	\item Nombre del fichero de salida: se dará nombre al fichero de salida con extensión osm.
-\end{itemize}
-
-El comando a teclear incluirá los siguientes parámetros:
-\begin{itemize}
-	\item rb: permite leer el contenido del fichero pbf descargado.
-	\item bb: permite extraer los datos indicados en la caja definida por las coordenadas geográficas indicadas a continuación.
-	\item top: coordenada geográfica superior.
-	\item right: coordenada geográfica derecha.
-	\item bottom: coordenada geográfica inferior.
-	\item left: coordenada geográfica izquierda.
-	\item wx: permite escribir los datos en un fichero osm.
-\end{itemize}
-
-Una vez descritos los parámetros y valores necesarios, se ejecuta el comando de la siguiente forma:
-
-osmosis --rb /home/rs/osmdata/brazil-latest.osm.pbf --bb top=-36.441 left=-11.0367 bottom=-37.6971 right=-10.537 --wx /home/rs/osmdata/aracaju.osm
-
-Una vez lanzado el comando, se verá la siguiente salida por consola:
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.6\textwidth]{../img/osmextract/resultado.jpg}
-  \caption{Impresión en consola del resultado del comando.}
-  \label{puntosGeograficos}
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/nr3.jpg}
+  \caption{Privilegios.}
+  \label{nr3}
 \end{figure}
 
-\subsection{Carga de mapas OSM en PostGIS}
-Una vez extraída la sección de mapa correspondiente a Aracaju se ha de cargar en PostGIS para poder hacer uso de toda su información posteriormente.
+Una vez se cuenta con un nuevo usuario, se podrá asignar la Base de Datos creada por consola al usuario creado. Para ello se clica con botón derecho sobre la Base de Datos y se modifica el valor de propietario como se aprecia en la Figura \ref{asignacion}.
 
-\subsection{osm2pgsql}
-``osm2pgsql'' es una herramienta que permitirá la carga de los datos obtenidos mediante Osmosis en PostGIS. Antes de comenzar, se ha de instalar siguiendo los pasos indicados en su página de referencia (enlace: \url{http://wiki.openstreetmap.org/wiki/Osm2pgsql}). Los parámetros que la herramienta necesita para su correcto funcionamiento son:
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/asignacion.jpg}
+  \caption{Asignacion de usuario rs a rutassemanticas.}
+  \label{asignacion}
+\end{figure}
 
-\begin{itemize}
-	\item s: habilita el modo ``slim'', recomendado en la guía de referencia.
-	\item U: indica el usuario de la Base de Datos. En este caso: ``rs''.
-	\item -d: indica la Base de Datos sobre la que se cargará el mapa. El valor debe ser ``rutassemanticas''.
-	\item nombre del fichero: inmediatamente después del nombre de la Base de Datos, se indica la ruta al fichero que contiene el mapa. Se seleccionará el fichero de extensión OSM obtenido en el paso previo: ``aracaju.osm''.
-\end{itemize}
+\subsubsection{Tareas programadas con pg\_cron}
+Para crear tareas programadas con pg\_cron se han de ejecutar sentencias select contra cron.schedule.
 
-El comando queda así:
+Estas son las tres tareas que se han programado en el SGBD:
 
-osm2pgsql -s -U rs -d rutassemanticas /home/rs/osmdata/aracaju.osm
+\begin{lstlisting}[language=bash]
+	SELECT cron.schedule('55 23 * * *', 'VACUUM');
+	SELECT cron.schedule('59 23 * * *', $$DELETE FROM tfm_ruta WHERE es_temporal = true$$);
+		SELECT cron.schedule('59 23 * * *', $$DELETE FROM tfm_experimento WHERE es_temporal = true$$);
+\end{lstlisting}
 
-Una vez finalice, se crearán algunas tablas como ``planet\_osm\_nodes'', ``planet\_osm\_rels'' o ``planet\_osm\_ways''. Si ya existían, se añadirá el nuevo contenido.
+Estas tareas permiten realizar operaciones de mantenimiento (como VACCUM) y borrado de rutas y pruebas temporales.
 
+En este punto se cuenta con un SGBD instalado en el sistema, un usuario con una Base de Datos asignada y las extensiones necesarias. En los siguientes apartados se muestra cómo instalar el resto de componentes.
+
+\subsection{Java y Glassfish 4}
+A continuación, se mostrará cómo instalar Java y el servidor Glassfish sobre Ubuntu. Para ello, se han de seguir los siguientes pasos:
+
+La lista de comandos es la siguiente:
+\begin{lstlisting}[language=bash]
+	sudo apt-get install python-software-properties
+	sudo add-apt-repository ppa:webupd8team/java
+	sudo apt-get update
+	sudo apt-get install oracle-java8-installer
+\end{lstlisting}
+
+Si ahora se teclea en la consola:
+\begin{lstlisting}[language=bash]
+	java -version
+\end{lstlisting}
+
+Se observará que Java ya se encuentra instalado en el sistema en su versión más reciente.  Es recomendable asignar la variable JAVA\_HOME de la siguiente forma:
+
+\begin{lstlisting}[language=bash]
+	export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+\end{lstlisting}
+
+
+A continuación se mostrará cómo instalar Glassfish en su versión 4.1.1, para ello, es necesario descargar todos sus ficheros mediante el siguiente comando:
+
+
+\begin{lstlisting}[language=bash]
+	wget http://download.java.net/glassfish/4.1.1/release/glassfish-4.1.1.zip
+\end{lstlisting}
+
+Una vez finalizada la descarga, es posible desempaquetar Glassfish sobre la carpeta /opt del sistema y se cambiará su pertenencia al usuario rs:
+
+\begin{lstlisting}[language=bash]
+	sudo mv glassfish-4.1.1.zip /opt
+	unzip glassfish-4.1.1.zip
+	sudo rm glassfish-4.1.1.zip
+	sudo chown -R rs:rs /opt 
+\end{lstlisting}
+
+Para comprobar que Glassfish funciona, se levantará el servidor situándose en la carpeta /opt y tecleando el siguiente comando:
+\begin{lstlisting}[language=bash]
+	glassfish4/bin/asadmin start-domain
+\end{lstlisting}
+
+Si todo sucede de forma correcta, el \quotes{domain1} quedará levantado y corriendo. Antes de finalizar se ha de configurar la memoria asignada a la JVM en la consola de adminsitración del servidor.
+
+\subsubsection{Configuración de Glassfish}
+Para acceder a la consola mencionada anteriormente, se ha de abrir un navegador y teclear \quotes{localhost:4848} que es el puerto de escucha de configuración de Glassfish. En unos segundos, la consola quedará a disposición del usuario.
+
+Se ha de acceder a la sección \quotes{Configurations} -> \quotes{Server config} -> \quotes{JVM} y asignar el valor 2048m a la variable Xmx del listado. Esta configuración se puede apreciar en la Figura \ref{glassconfig}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/glassconfig.jpg}
+  \caption{Configuración de memoria de Glassfish.}
+  \label{glassconfig}
+\end{figure}
+
+
+
+\subsection{NetBeans}
+Como IDE se ha usado NetBeans, para instalar este entorno se ha de acceder al sección de descargas de su desarrollador y elegir la versión que cuente con Java EE por defecto (Figura \ref{descnet}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/descnet.jpg}
+  \caption{Descarga de NetBeans.}
+  \label{descnet}
+\end{figure}
+
+El IDE cuenta con un sencillo instalador que guía al usuario en todos los pasos necesarios. Como ya se cuenta con Glassfish en el sistema, se desmarcará la opción que permite una nueva instalación de este servidor. Al finalizar, el IDE se lanzará y se podrá comenzar a trabajar. Si por alguna razón no encuentra la ruta adecuada al JDK instalado, en el apartado siguiente se comenta cómo solucionar este pequeño inconveniente. Además, se muestra cómo ligar a NetBeans con Glasssfish.
+
+\subsubsection{Configuración}
+En el caso de que NetBeans no localice el JDK, se ha de abrir el fichero \quotes{netbeans.conf} de la carpeta \textbackslash etc situada dentro de la carpeta del IDE. La línea que ha de modificarse es la siguiente:
+
+\begin{lstlisting}[language=bash]
+	netbeans_jdkhome="/usr/lib/jvm/java-8-oracle"
+\end{lstlisting}
+
+Para indicar el servidor a NetBeans se ha de acceder a la ventana de configuración de servidores del IDE, localizada en: \quotes{Tools} -> \quotes{Servers}. En este momento se mostrará una ventana que permitirá seleccionar el servidor que se desea instalar además de otros parámetros. Todo el proceso de configuración queda descrito en las siguientes Figuras:  \ref{sv1}, \ref{sv2} y \ref{sv3}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/sv1.jpg}
+  \caption{Selección de servidor.}
+  \label{sv1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/sv2.jpg}
+  \caption{Localización del servidor en el sistema.}
+  \label{sv2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/instalacion/sv3.jpg}
+  \caption{Indicación del dominio.}
+  \label{sv3}
+\end{figure}
 
 \subsection{QGIS}
-QGIS es una herramienta de información geográfica libre y de código abierto que permite conexiones con PostgreSQL y visualización de los datos obtenidos sobre un mapa físico. También permite la obtención de información geográfica desde Open Street Maps. De esta forma se pueden superponer rutas/trazas obtenidas desde las tablas de la Base de Datos con los mapas de Open Street Maps.
 
-Para instalar QGIS desde ubuntu se han de seguir los pasos mostrados a continuación:
+Durante el desarrollo de este trabajo se ha hecho uso de las capacidades de QGIS para visualizar resultados y rutas sobre mapas Open Street Maps. QGIS se encuentra incluido en el repositorio de Ubuntu y solo es necesario teclear el siguiente comando en la consola:
 
-El primer paso es añadir la ruta a los ficheros fuente de QGIS en el fichero ``sources.list'', para ello se puede abrir dicho fichero con el editor nano. Se encuentra en la siguiente ruta: ``etc/apt/''.
-Las líneas a añadir son las siguientes y pueden ser incluidas en la parte final del fichero:
-\begin{lstlisting}
-deb http://qgis.org/debian xenial main
-deb-src http://qgis.org/debian xenial main
+\begin{lstlisting}[language=bash]
+	sudo apt-get install qgis
 \end{lstlisting}
 
-Ahora se puede proceder a la instalación de QGIS sobre el Sistema Operativo:
+\subsection{Herramientas de OpenStreetMap}
+Para instalar las herramientas pertenecientes a OpenStreetMap que permiten procesar ficheros de tipo osm se han de seguir los pasos mostrados a continuación.
 
-\begin{lstlisting}
-apt install qgis python-qgis qgis-plugin-grass
+\subsubsection{Osmosis}
+La instalación de Osmosis se realiza de la siguiente forma:
+\begin{lstlisting}[language=bash]
+	sudo apt-get install osmosis
 \end{lstlisting}
 
-Una vez instalado, se puede configurar una conexión contra la Base de Datos instalada y configurada anteriormente. Para ello se ha de clicar en el icono de PostgreSQL ubicado en la columna central izquierda. Para ello se han de indicar valores como:
+\subsubsection{Osmfilter y Osmconvert}
+Estas dos herramientas se encuentran dentro de las utilidades del siguiente paquete:
+\begin{lstlisting}[language=bash]
+	sudo apt-get install osmctools
+\end{lstlisting}
 
-\begin{itemize}
-\item \textbf{nombre:} valor que se dará al nombre de la conexión.
-\item \textbf{servidor:} servidor contra el que se realizará la conexión. En este caso será el servidor local.
-\item \textbf{ de datos:} la Base de Datos de la que serán obtenidos los datos.
-\item \textbf{Autenticación:} nombre de usuario y contraseña  del usuario de PostgresQL usado para obtener la información.
-\end{itemize}
+\section{Compilación, instalación y ejecución del proyecto}
 
-Otro de los aspectos importantes a tener en cuenta es la facilidad que brinda al usuario para descargar contenido en formato indicando una zona determinada mediante coordenadas geográficas. Esta característica ofrece el mismo resultado que el recorte del mapa de Brasil realizado con Osmosis. A continuación, se muestra un ejemplo con los mismos datos.
+El proyecto ha sido creado y desarrollado bajo el IDE NetBeans, por tanto, se mostrará cómo ejecutar el mismo desde este IDE. Además, se mostrará cómo desplegar la plataforma web sobre el propio servidor Glassfish.
 
-\subsubsection{Descarga de contenido OSM con QGIS}
-Para comenzar, se ha de acceder a la sección ``Vectorial'', después, situar el cursor sobre ``OpenStreetMaps'' y clicar sobre ``Descargar datos'' (Figura \ref{vectorial}).
-
+\section{Recuperación de la Base de Datos}
+Para recuperar la Base de Datos sobre PostgreSQL se usará la interfaz ofrecida por PgAdmin3. Los pasos son sencillos y mostrados en las figuras \ref{uno}, \ref{dos}, \ref{tres}, \ref{cuatro}, \ref{cinco} y \ref{seis}.
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.8\textwidth]{../img/qgis/descarga.jpg}
-  \caption{Descarga de datos desde QGIS}
-  \label{vectorial}
-\end{figure}
-
-A continuación se indicarán las coordenadas sobre las que se desea obtener los datos. En la Figura \ref{datos} se indican sus valores, son los mismos que los usados en Osmosis. Además, se ha de seleccionar un fichero destino. En este caso, se aprecia que es el mismo que el descargado mediante Osmosis.
-
-\begin{figure}[h]
-  \centering
-    \includegraphics[width=0.8\textwidth]{../img/qgis/datos_3.jpg}
-  \caption{Valores introducidos para la búsqueda de datos en QGIS}
-  \label{datos}
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/uno.jpg}
+  \caption{Click sobre \quotes{Restore}.}
+  \label{uno}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.8\textwidth]{../img/qgis/exito_2.jpg}
-  \caption{Éxito en la descarga de los datos.}
-  \label{exito}
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/dos.jpg}
+  \caption{Selección del fichero de backup.}
+  \label{dos}
 \end{figure}
-Por último, se mostrará un mensaje de éxito si todo ha salido correctamente (Figura \ref{exito}).
 
-Ahora se cuenta con el mismo fichero de extensión OSM y será posible su carga en PostGIS de la misma forma que se ha mostrado anteriormente.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/tres.jpg}
+  \caption{Selección de opciones.}
+  \label{tres}
+\end{figure}
 
-Para obtener más información sobre QGIS se puede acceder al siguiente enlace: \url{http://www.qgis.org/es/docs/index.html}.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/cuatro.jpg}
+  \caption{Opciones adicionales.}
+  \label{cuatro}
+\end{figure}
 
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/cinco.jpg}
+  \caption{Tablas a restaurar.}
+  \label{cinco}
+\end{figure}
 
-
-\section{\textit{Data cleaning}}
-En esta sección se describe el proceso de \textit{data cleaning} o limpieza de datos aplicado a todas las rutas que se encuentran alojados en la Base de Datos.
-
-\subsection{Origen de datos}
-Antes de comenzar a describir el proceso de limpieza aplicado, se ha de tener en cuenta la procedencia de los datos usados para el presente Trabajo de Fin de Máster. El problema inicial al que hacer frente ha sido la falta de datos propios como punto de partida, por tanto, se ha tenido que realizar una búsqueda en distintos sitios de Internet para conseguir un conjunto de datos lo más fiables posible y con la estructura adecuada. Se han establecido una serie de condiciones indispensables que el dataset ha de cumplir:
-\begin{itemize}
-\item \textbf{Coordenadas geográficas:} cada coordenada ha de contar con una latitud y longitud separadas en dos campos.
-\item \textbf{Marca de tiempo:} cada una de las coordenadas geográficas incluidas ha de contar con una marca de tiempo que permita localizar la coordenada en un espacio temporal concreto (un día, una semana, etc.).
-\item \textbf{Altitud:} para que la coordenada geográfica sea más precisa, debe contar con su altitud.
-\item \textbf{Diferenciación de rutas:} de igual manera que una coordenada geográfica se ha de poder diferencia de la siguiente, cada ruta incluida en el dataset ha de poder ser diferenciada del resto. Es importante que cada una de las rutas se diferencien mediante un identificador único o se encuentren en ficheros separados.
-\end{itemize}
-
-Algunos de los sitios donde se pueden buscar este tipo de dataset incluyen páginas como el repositorio de Machine Learning de la Universidad Irvine de California (\url{http://archive.ics.uci.edu/ml/}). Donde se pueden encontrar los últimos dataset subidos o un buscador para poder encontrar el dataset buscado. En esta página se han encontrado y valorado dos conjuntos de datos.
-
-\subsubsection{Taxi Service Trajectory}
-El primer dataset encontrado ha sido el correspondiente a distintos trayectos en taxi sobre la ciudad de Oporto (Portugal). Este dataset se compone de un amplio fichero csv con información como el tipo de llamada realizada a la compañía de taxis, el taxi que ha respondido a la misma, la fecha y hora a la que se produjo la llamada y el conjunto de coordenadas geográficas tomadas durante el trayecto.
-
-Aunque el conjunto de los datos parece interesante en un primer momento, no se cuenta con un indicador temporal por cada coordenada y los hace inviables para su posterior uso, siendo este el motivo por el que se ha descartado el uso de este conjunto de datos.
-
-Este dataset puede ser descargado desde el siguiente enlace: \url{https://archive.ics.uci.edu/ml/datasets/Taxi+Service+Trajectory+-+Prediction+Challenge,+ECML+PKDD+2015}.
-
-\subsubsection{GPS Trajectories Data Set}
-El segundo de los conjuntos de datos analizados ha sido el correspondiente a las rutas realizadas por un conjunto de usuarios en la ciudad de Aracaju (Brasil) en taxi o autobús. Estos datos se encuentran divididos en dos ficheros csv. El primero de los ficheros cuenta con un identificador único de usuario, de esta forma se puede conocer qué usuario ha tomado cada ruta, un indicador de velocidad de la ruta (inicialmente no necesario), un campo de tiempo, uno de distancia recorrida, algunos de calificación de la ruta (rating) y por último, uno indicando la línea de autobús en la que se ha realizado el trayecto.
-
-El segundo de los ficheros incluye cada una de las coordenadas geográficas correspondientes a cada ruta y su asociación al usuario que la ha tomado.
-
-Aunque inicialmente fue uno de los dataset tenidos en cuenta, se ha desechado por no contener un número elevado de rutas que permitiese una mayor aleatoriedad en los datos.
-
-Este dataset puede ser descargado desde el siguiente enlace: \url{https://archive.ics.uci.edu/ml/datasets/GPS+Trajectories}.
-
-\subsubsection{Geolife}
-El dataset seleccionado ha sido el denominado Geolife GPS Trajectories. Este dataset pertenece al repositorio que mantiene Microsoft. Este conjunto de datos viene acompañado por un documento en el que se indica cómo se han obtenido los datos, cuál es su estructura, etc. Se menciona que los datos han sido recolectados por unos 180 usuarios, en su mayoría en la ciudad de Pekín (China) pero también existen datos de viajes a otras ciudades o, incluso, a otros países.
-
-En el dataset se incluye una carpeta por cada usuario y en cada carpeta se puede encontrar un fichero que toma su nombre de la marca de tiempo de la primera coordenada de cada ruta. Por tanto, puede que un usuario cuente con un único fichero, indicando así que solo ha realizado una ruta, o que cuente con múltiples ficheros en los que se almacenan distintas rutas.
-
-Cada fichero contiene una línea por cada coordenada geográfica obtenida. Esta línea contiene distinta información: un par latitud longitud, que permite situar la coordenada geográfica sobre un plano, su altitud y su marca temporal (entre otras). Esta estructura hace que la diferenciación de las rutas sea sencilla ya que se encuentran separadas por usuarios y marca temporal en la que ha sido tomada. Debido a esto, este conjunto de datos es el que ha sido finalmente elegido y volcado a la Base de Datos.
-
-Finalmente, comentar que otras universidades como la de St Andrews (\url{https://uk.crawdad.org/}) también prestan sus dataset aunque, en esta ocasión, no se ha revisado su repositorio en profundidad.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/restoredb/seis.jpg}
+  \caption{Resultado obtenido.}
+  \label{seis}
+\end{figure}
 
 
-\subsection{Proceso de limpieza}
-Aunque los datos provistos por el dataset de Microsoft son fiables, se ha implementado un proceso de limpieza de los mismos para poder afinar todavía más los resultados.
+Una vez restaurada, es posible lanzar la plataforma web mediante alguna de las opciones mostradas a continuación.
 
-Se ha comentado en la sección anterior que este dataset cuenta con diferentes carpetas en las que se incluyen los ficheros correspondientes a las rutas efectuadas por cada usuario. Uno de los problemas encontrados ha sido la continuidad de una ruta dentro de un mismo fichero. Para explicar esto, primero hay que saber, que cada coordenada tomada dentro de una misma ruta suele diferenciarse por una cantidad de tiempo (ya sean segundos o minutos) o espacial (metros) constante.
+\subsection{Área por defecto}
+Si se desea contar con un área por defecto, se puede crear con la siguiente sentencia SQL. A esta área pertenecerán las rutas a las que no se pueda o quiera asignar una área concreta.
+\textbf{
+	insert into tfm\_area (nombre, descripcion, min\_lat, min\_long, max\_lat, max\_long, activa, fecha\_creacion) values('Desconocida', 'Área con rutas desconocidas', -90, -180, 90, 180, true, now());
+}
 
-Poniendo un ejemplo, teniendo las siguientes coordenadas geográficas extraídas de un mismo fichero:
+\subsection{NetBeans}
 
-\begin{lstlisting}
-40.004273,116.322334,87,2009-05-17,22:22:16
-40.004285,116.322334,87,2009-05-17,22:22:21
-40.004323,116.32235,8.,2009-05-17,22:22:26
-40.004387,116.322366,91,2009-05-17,22:22:31
-40.004371,116.322317,91,2009-05-17,22:22:36
-40.00441,116.322294,92,2009-05-17,22:22:41
-40.004435,116.322279,102,2009-05-17,22:22:46
-40.004451,116.322241,120,2009-05-17,22:22:51
-40.004214,116.322215,110,2009-05-17,22:35:46
-40.004171,116.322241,108,2009-05-17,22:35:51
-40.004125,116.322269,108,2009-05-17,22:35:56
-40.004107,116.322301,105,2009-05-17,22:36:01
-40.004132,116.32232,103,2009-05-17,22:36:06
-40.004154,116.32232,103,2009-05-17,22:36:11
-40.004192,116.322331,105,2009-05-17,22:36:16
-40.004248,116.32235,109,2009-05-17,22:36:21
+La ejecución o despliegue desde NetBeans es tan simple como clicar con el botón derecho sobre el proyecto y elegir la opción \quotes{run}. La Figura \ref{netbeansrun} muestra esta opción.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/glass/netbeansrun.jpg}
+  \caption{Despliegue desde NetBeans.}
+  \label{netbeansrun}
+\end{figure}
+
+El servidor será lanzado por NetBeans así que no se han de seguir pasos adicionales.
+
+\subsection{Despliegue de la plataforma web}
+Para poder acceder a la plataforma web, primero se ha de obtener un fichero de extensión \textbf{war} desde el IDE y después desplegarlo mediante los comandos de Glassfish.
+
+Para obtener este fichero simplemente se ha de construir el proyecto y acceder a la carpeta \quotes{dist} del mismo. En esta carpeta se encontrará el fichero war que se ha de desplegar en el servidor.
+
+Para no perder este fichero en una posible desinstalación de NetNBeans se creará una carpeta llamada \textit{Proyectos} en la que se copiará este fichero.
+
+Una vez copiado se han de seguir estos pasos:
+
+\begin{enumerate}
+	\item Acceder a la carpeta \textit{glassfish4} dentro de /opt.
+	\item Lanzar el dominio mediante estos comandos:
+	\begin{lstlisting}[language=bash]
+		bin/asadmin
+		start-domain domain1		
+	\end{lstlisting}
+	\item Lanzar el comando de ejecución de despliegue:
+	\begin{lstlisting}[language=bash]
+		bin/asadmin deploy /home/rs/Proyectos/RutasSemanticas.war
+	\end{lstlisting}
+\end{enumerate}
+
+La Figura \ref{deploy} muestra el resultado de la ejecución.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/glass/despliegue.jpg}
+  \caption{Despliegue en Glassfish.}
+  \label{deploy}
+\end{figure}
+
+Si se desea cancelar el despliegue simplemente se deberá ejecutar el siguiente comando:
+
+\begin{lstlisting}[language=bash]
+	bin/asadmin undeploy /home/rs/Proyectos/RutasSemanticas
 \end{lstlisting}
 
-Se puede observar que cada punto geográfico es recolectado cada cinco segundos, aproximadamente. Teniendo esto en cuenta, se aprecia un salto importante entre la octava y la novena coordenada. En concreto, hay un salto de 12 minutos y 55 segundos. Esta diferencia contrasta con los cinco segundos transcurridos entre cada toma de tiempo. Por tanto, se puede pensar que ha ocurrido algún problema en la toma de datos o que se tratan de rutas diferentes aunque se encuentren en el mismo fichero. En este caso, como se trata de un salto importante sobre las mediciones tomadas, se realiza un corte en la ruta y se tratará como dos rutas diferentes.
+El resultado es mostrado en la Figura \ref{undeploy}.
 
-Este pequeño ejemplo muestra el problema que puede ocurrir con el resto de las rutas disponibles en los ficheros del dataset. Se ha implementado un algoritmo para poder separar las rutas que, por tiempo o diferencia geográfica, parezcan pertenecer a dos o más rutas diferentes. Este algoritmo tiene en cuenta la mediana, tanto de la diferencia en términos de tiempo como de espacio.
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.6\textwidth]{../img/glass/undeploy.jpg}
+  \caption{Cancelación del despliegue.}
+  \label{undeploy}
+\end{figure}
 
+Si se desea detener el dominio se deberán seguir los mismos pasos que para inciarlo. El comando ha de ser el siguiente:
 
-El algoritmo comienza obteniendo todas las rutas de la Base de Datos y generando un mapa cuya clave es el identificador del usuario y valores las rutas del mismo. Después se recorre cada una de las rutas y se calcula una primera mediana (el usuario puede indicar si quiere la mediana sobre las marcas temporales o sobre las coordenadas geográficas). En base a esta primera mediana se empieza a analizar la ruta, siendo el siguiente paso, el cálculo de la diferencia temporal o geográfica entre cada dos de las coordenadas. Una vez obtenida esta lista de diferencias se comparará con la mediana obtenida anteriormente. En el caso de que no existan diferencias significativas, la ruta se mantendrá tal cual en la Base de Datos. Si, por el contrario, una posición de la lista contiene una diferencia apreciable, la ruta quedará separada, inicialmente, en dos tramos. El primer tramo se mantendrá en la Base de Datos pero el segundo tramo será re analizado calculando una nueva mediana y repitiendo el proceso descrito. Al final se podrán obtener varias rutas a partir de la inicial actualizando la Base de Datos con las nuevas rutas obtenidas.
-
-Este algoritmo también es aplicable a ficheros de texto, que una vez procesados, generarán nuevas rutas en las tablas de la Base de Datos.
+\begin{lstlisting}[language=bash]
+	bin/asadmin
+	stop-domain domain1		
+\end{lstlisting}

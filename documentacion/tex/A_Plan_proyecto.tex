@@ -1,13 +1,191 @@
-\apendice{Manuales}
+\apendice{Plan de Proyecto Software}
 
 \section{Introducción}
 
+La planificación de un proyecto software debe incluir los siguientes apartados:
+
+\begin{itemize}
+	\item Planificación temporal: tratará de determinar los marcos temporales durante los que el desarrollo tendrá lugar. Es decir, se acordará una fecha de comienzo, y dependiendo de las características a implementar, se propondrá una fecha de finalización. 
+	\item Estudio de viabilidad: este estudio trata de calcular los costes que supondrá el desarrollo de la aplicación así como de los inconvenientes legales que puedan plantearse para su posterior puesta en venta.
+\end{itemize}
+
+De esta forma se contará con la información que permita controlar los costes y riesgos tomados al comenzar el desarrollo de una aplicación determinada.
+
 \section{Planificación temporal}
 
+
+
 \section{Estudio de viabilidad}
+El estudio de viabilidad de un proyecto debe estimar la posibilidad de obtener una rentabilidad a partir de los costes y beneficios que produzca el desarrollo de la aplicación.
+
+No obstante, si se desea realizar una aplicación privativa se deben estudiar los términos de las licencias del software de terceros usado en el proyecto.
+
+En los siguientes apartados se realiza tanto un estudio económico como uno legal.
 
 \subsection{Viabilidad económica}
+El apartado correspondiente a la viabilidad económica tratará de calcular la rentabilidad económica del proyecto, detallando los costes y estimando la posibilidad de obtención de ingresos. Se estima que la duración del proyecto será de cinco meses.
+
+Dentro del ámbito de los costes incluimos los siguientes apartados:
+\begin{itemize}
+	\item \textbf{Coste laboral.}
+	\item \textbf{Coste de capital:}
+	\begin{itemize}
+		\item \textbf{Coste de hardware.}
+		\item \textbf{Coste de software.}
+		\item \textbf{Suministros.}
+		\item \textbf{Alquileres.}
+		\item \textbf{Material de oficina.}
+	\end{itemize}
+\end{itemize}		
+		
+\subsubsection{Coste laboral}
+
+Para el desarrollo del proyecto se contratará a un único programador por un tiempo de cinco meses a jornada completa.
+
+El salario bruto prorrateando las pagas extra será de 1.400 euros mensuales. La empresa deberá de tener en cuenta el pago que le corresponde realizar a la Seguridad Social y será el 32,1\% que se aplica sobre la base de cotización, que en este caso será de 1.400 euros. Se desglosa de la siguiente manera:
+
+\begin{itemize}
+	\item \textbf{Contingencias comunes:} 23,6%.
+	\item \textbf{Desempleo:} 6,7\%. (Contrato de duración determinada.)
+	\item \textbf{FOGASA:} 0,2%.
+	\item \textbf{Formación Profesional}: 0,6\%.
+	\item \textbf{Cotización de AT (Accidentes de Trabajo) y EP (Enfermedad Profesional):} se utiliza la tarifa “a” (personal de trabajos de oficina) corresponde un 0,65\% para IT (Incapacidad Temporal) y un 0,35\% para IMS (Invalidez, Muerte y Supervivencia).
+
+\end{itemize}
+
+El coste laboral por persona y mes será el siguiente:
+
+\begin{itemize}
+	\item 1.400 + (1.400*32,1\%)= \textbf{1.849 euros.}
+\end{itemize}
+
+Siendo el coste total el calculado a continuación:
+
+\begin{itemize}
+	\item 1.849,4*5=\textbf{9.247 euros.}
+\end{itemize}
+
+En el momento de la contratación se verá si el programador elegido se puede acoger a algún tipo de bonificación en las cuotas que paga la empresa a la Seguridad Social, para ello nos informaremos en la siguiente página.
+
+
+\subsubsection{Coste de capital}
+Se adquirirá un equipo a un coste unitario de 1.500 euros siendo la adquisición del equipo una inversión. Este ordenador se podrá utilizar a lo largo de su vida útil para otros proyectos. Las características principales de este ordenador son las siguientes:
+
+\begin{itemize}
+	\item \textbf{CPU:} Core i7 de séptima generación.
+	\item \textbf{RAM:} 16 GiB de memoria RAM de tipo DDR4.
+	\item \textbf{SSD:} 250 GiB de disco en estado sólido.
+	\item \textbf{PSU:} Fuente de alimentación de 500W.
+	\item \textbf{Monitor:} pantalla plana de 24".
+\end{itemize}
+
+Se considera una vida útil de 5 años, siguiendo un método de amortización lineal y un valor residual nulo se podrán contabilizar unos gastos anuales de amortización de 300 euros, que prorrateando por meses corresponderán a 25 euros/mes.
+
+Respecto al coste del \textbf{software}, durante todo el desarrollo de la aplicación, se hará uso de herramientas de software libre que permitan prescindir del pago de licencias privativas. Algunas de las aplicaciones que serán usadas son:
+
+\begin{itemize}
+	\item \textbf{Ubuntu 16.04 LTS} como Sistema Operativo.
+	\item \textbf{Glassfish} como servidor web.
+	\item \textbf{OpenStreetMaps} como fuente de datos y mapas.
+	\item \textbf{NetBeans} como IDE de desarrollo.
+	\item \textbf{TexMaker} como editor de texto para la documentación.
+\end{itemize}
+
+El coste de los \textbf{suministros}, una vez calculados los costes de agua, luz, fibra, etc, ascienden a 125 euros mensuales.
+
+Respecto al coste del \textbf{alquiler}, se estima un coste mensual de 100 euros por el arriendo de una oficina.
+
+Por último, el coste total del \textbf{material de oficina} se calcula en 50 euros.
+
+La suma de todos los costes relacionados con el capital asciende a:
+
+\begin{itemize}
+	\item (125 + 100 + 25)*5 + 50 = \textbf{1.300 euros}.
+\end{itemize}
+
+El coste total del proyecto ascenderá a la siguiente cantidad:
+
+\begin{itemize}
+	\item 9.247 + 1.300 = \textbf{10.547 euros}.
+\end{itemize}
+
+La tabla \ref{table:costes} presenta esta información de manera ordenada y clara.
+
+\begin{table}
+	\centering
+		\begin{tabular}{l*{6}{c}r}
+		\hline
+			Costes                & Mes & Nº de meses & total \\
+		\hline
+			Coste laboral 	  	  &		  &  &   \\
+			Salario bruto         & 1.400 & 5  & 7.000  \\
+			Seguridad Social      & 449.4 & 5 & 2.247\\
+		\hline
+			Total (coste laboral)	& 1.849,4 & 5 & 9.247   \\
+		\hline
+			Amortización de Hardware	& 25 & 5 & 125  \\
+			Software     & 0 & 0 & 0  \\
+			Suministros     & 125 & 5 & 625  \\
+			Alquileres     & 100 & 5 & 500  \\
+			Material de oficina   & 50  &  & 50 \\
+		\hline
+			Total (coste de capital)     &  &  &  1.300 \\
+		\hline
+			Total     &  &  &  10.547  \\
+		\hline
+	\end{tabular}
+	\caption{Costes de desarrollo.}
+	\label{table:costes}
+\end{table}
+
+\subsubsection{Ingresos estimados}
+Para que los costes de desarrollo (contratación de un programador, costes relacionados con las instalaciones y equipos informáticos, etc) sean viables se propone la venta del software desarrollado mediante un sistema de licencias.
+
+Cada licencia podrá ser vendida a un usuario individual o a una empresa. Los costes de licencias serán diferentes puesto que la empresa dispondrá de rappels por volumen de compra.
+
+Se estima que una licencia única podrá tener un coste estimado para un usuario final de 59 euros por licencia anual. Una empresa podrá disponer de un descuento máximo de un 25\%, rebajando el coste de la licencia a 44.25 euros.
+
+Utilizando la fórmula del punto muerto (que nos indica las licencias a vender para que el beneficio sea cero, es decir, a partir de ahí se comienzan a obtener beneficios) y considerando como costes fijos los 10.547 euros y atribuyendo un coste variable por licencia de 3 euros y utilizando el precio menos favorable para la empresa se necesitarán vender 250 licencias para comenzar a obtener beneficio.
+
+La fórmula de PM es la siguiente:
+
+\begin{equation*}
+ 	PM = \frac{CF}{P - CVu}
+\end{equation*}
+
+Siendo los elementos de la fórmula los siguientes:
+
+\begin{itemize}
+	\item PM: Punto Muerto.
+	\item CF: Coste Fijo.
+	\item P: Precio de venta.
+	\item CVu: Coste Variable unitario.
+\end{itemize}
+
+Según los datos mostrados anteriormente, el número mínimo de licencias a vender para llegar al Punto Muerto será el siguiente:
+
+\begin{equation*}
+ 	PM = \frac{10.547}{44.25 - 2} = 249.63
+\end{equation*}
 
 \subsection{Viabilidad legal}
 
+En el desarrollo de un producto software es bastante común el uso de librerías y software desarrollado por terceros. De esta forma se obtienen características adicionales sin necesidad de implementar de nuevo lo que ya está hecho. De esta forma se gana en velocidad y agilidad pero para poder usar estas librerías adicionales en el proyecto en desarrollo se ha de comprobar que su uso está permitido y que no perjudicarán la futura puesta en producción de la aplicación desarrollada.
 
+\subsubsection{Librerías de terceros}
+En este apartado se mencionan las librerías y software de terceros de las que se hace uso en el proyecto así como su licencia.
+
+\begin{itemize}
+	\item \textbf{PostgreSQL y PostgreSQL SQL JDB Driver:} cuentan con licencia de tipo \textbf{PostgreSQL License} basada en BSD y MIT.
+	\item \textbf{json:} su desarrollador indica que este software puede ser usado y distribuido de forma libre.
+	\item \textbf{gson, commons-exec y commons-io:} estos tres paquetes cuentan con licencia \textbf{Apache 2.0}.
+	\item \textbf{Open Layers 3:} la licencia de Open Layers es \textbf{FreeBSD}.
+\end{itemize}
+
+\subsubsection{Características de las licencias}
+
+\begin{itemize}
+	\item \textbf{PostgreSQL:} licencia simple, libre, abierta y con clausula de advertencia.
+	\item \textbf{Apache 2.0:} es una licencia libre, abierta y con patentes. Permite al usuario usar el software, modificarlo, y distribuirlo, incluso una vez modificado. Se ha de mencionar el uso de esta licencia.
+	\item \textbf{FreeBSD:} licencia otorgada a los sistemas BDS (\quotes{Berkeley Software Distribution}) siendo una licencia de software libre permisiva. Es una licencia cercana al dominio público.
+\end{itemize}

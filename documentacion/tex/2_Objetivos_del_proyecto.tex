@@ -1,78 +1,85 @@
 \capitulo{2}{Objetivos del proyecto}
 
-A continuación se detallan los objetivos que se han llevado a cabo en este proyecto. Se han dividido
-en tres secciones, la primera trata de los objetivos generales (qué se ha querido implementar), en
-la segunda se tratan los objetivos técnicos (qué herramientas se han usado) y por último se abordan
-los objetivos personales (por qué se escogió este proyecto).
+A continuación se detallan los objetivos que se han llevado a cabo en este proyecto. Se han dividido en tres secciones, la primera trata de los objetivos generales (qué se ha querido implementar), en la segunda se tratan los objetivos técnicos (qué herramientas se han usado) y por último se abordan los objetivos personales (por qué se escogió este proyecto).
 
 \section{Objetivos generales}
 
-En este Trabajo de Fin de Máster se persigue dotar a las rutas que una persona puede seguir en sus días de vacaciones de un significado semántico. Es decir, se pretende asignar una palabra clave a posiciones significativas dentro de la ruta que dicha persona ha seguido o está siguiendo en un momento determinado. Enfocándose en una visita turística, estas palabras clave estarán relacionadas con lugares turísticos de la localidad visitada, por ejemplo, su plaza mayor, su catedral o sus iglesias, sus museos o edificios de interés, etc. No obstante, se tienen en cuenta otros lugares como pueden ser centros comerciales, bancos, o restaurantes. Estos puntos o zonas reciben el nombre de Puntos de de Interés (PDI o POI, por sus siglas en inglés).
+Los objetivos fundamentales planteados a la hora de realizar este trabajo son los siguientes:
 
-\subsection{PDI (Point de Interest}
-Como se ha descrito anteriormente, un Punto de Interés (PDI) es un lugar especificado mediante coordenadas geográficas que es interesante o útil para un gran número de personas. Este término es usado de forma general en aplicaciones software de cartografía o navegadores GPS.
-
-Un PDI constará, como mínimo, de latitud y longitud pero también se suele incluir cierta información como un nombre, su descripción, la altitud o un número de teléfono. Cada PDI puede llevar asociado un cierto icono representativo usado por las aplicaciones para dotar de una mayor facilidad de uso al usuario. La Figura \ref{puntosdeinteres} muestra un ejemplo de estos PDI sobre un mapa de Open Street Maps. En este caso, estos puntos marcan un hospital, un parking, un taller de automóviles, diversas paradas de autobús, bancos e, incluso, semáforos.
-
-\begin{figure}[h]
-  \centering
-    \includegraphics[width=0.6\textwidth]{../img/poi/poi.png}
-  \caption{Puntos de Interés señalados en el mapa}
-  \label{puntosdeinteres}
-\end{figure}
-
-
-Una vez se conocen los PDI por los que una persona ha pasado, se pueden reconocer los más significativos y asignar a su ruta. En este momento se puede decir que la trayectoria seguida es una trayectoria semántica. De esta forma se pasará de una serie de coordenadas (latitud, longitud) a un recorrido cíclico como el de la Figura \ref{rutasemantica}. En este recorrido se observa la salida desde el Hotel Zola, pasando por lugares de interés como la Torre Eiffel, el Palacio Borbón o el Museo del Louvre, terminando en el Restaurante \textit{Babylone} antes de regresar al punto de origen.
-
-\begin{figure}[h]
-  \centering
-    \includegraphics[width=0.6\textwidth]{../img/poi/ruta.png}
-  \caption{Ruta semántica sobre París}
-  \label{rutasemantica}
-\end{figure}
-
-
-Siguiendo la filosofía de Open Street Maps, se pueden distinguir los PDI situados sobre una zona concreta dependiendo del tipo o del lugar al que hacen referencia. Dentro de estos mapas, estas categorías son denominadas ``Amenities''.
-
-\subsection{Trayectoria semántica}
-
-La consecución de distintos PDI sobre una misma ruta, define una trayectoria semántica. Esta trayectoria semántica puede estar formada por los puntos mencionados anteriormente, sobre el mapa del centro de París.
-
-\subsection{Análisis de trayectorias semánticas}
-
-El interés de una trayectoria semántica radica en los tipos de Puntos de Interés visitados por una persona que puede ser considerada turista en una localidad. De esta forma se puede categorizar cada ruta por los sitios de interés visitados. A continuación se muestra un ejemplo sencillo.
-
-Una persona que realiza una visita turística en una ciudad puede estar interesada en visitar su catedral, sus iglesias o monasterios más importantes, etc. Englobando todo tipo de edificios destinados al culto religioso. Sin embargo, otra persona puede realizar una visita a los museos o monumentos de arte moderno combinándola con restaurantes de ``autor''. Cada persona puede que tenga un ritmo diferente y sus visitas se duren un periodo de tiempo diferente.
-
-En estos dos casos, es evidente, que ambas personas buscan lugares de interés turístico completamente diferentes. Seguramente estos patrones se repitan en las distintas visitas turísticas que realicen a otras localidades del país o, incluso, de otros países.
-
-Habiendo realizado un análisis de las rutas o trayectorias que cada persona sigue, es posible recomendar a dicha persona una ruta adecuada en una ciudad que no haya visitado. De esta forma se ahorrará un tiempo valioso durante la preparación del viaje, que podrá ser aprovechado en la visita de los lugares seleccionados.
-
+\begin{itemize}
+	\item Implementación de una plataforma web que permita la gestión de todas las tareas relacionadas con la gestión de rutas compuestas por coordenadas GPS.
+	\item La plataforma permitirá el manejo de ficheros de extensión csv (subida, procesado y borrado) con el fin de procesar las rutas de los usuarios.
+	\item Proveerá de un proceso guiado (paso a paso) que permita elegir al usuario los valores que usará el algoritmo implementado a la hora de buscar paradas y PDIs en las rutas. Además, permitirá indicar si se desean almacenar en el sistema los resultados obtenidos.
+	\item Para lograr el objetivo anterior se usará un diseño web adaptable (Responsive Web Design), con lo que cualquier dispositivo será válido para visualizar el portal web.
+\end{itemize}
 
 \section{Objetivos técnicos}
+En esta sección se van a tratar los objetivos de carácter técnico que se han pretendido alcanzar al desarrollar este trabajo.
 
-A la hora de implementar los objetivos marcados en este Trabajo de Fin de Máster, se han debido resolver distintas cuestiones técnicas. En esta sección se tratarán estos objetivos.
+\begin{itemize}
+	\item Implementación de un algoritmo que permita el análisis de datos y convertirlos en información útil para el usuario.
+	\item Desarrollo de la plataforma web de la manera más compatible con todos los navegadores.
+	\item Uso del patrón MVC para la separación de datos, interfaz y lógica de negocio.
+	\item Uso de ProstgreSQL como SGBD, accediendo al mismo mediante librerías JDBC.
+\end{itemize}
 
-\subsection{PostGIS}
+Para llevar a cabo estos objetivos se han analizado ciertos parámetros como el mejor Sistema Operativo disponible, el SGBD que más se adapta a los requerimientos técnicos o las librerías de datos. En los siguientes apartados se aporta este análisis.
 
-PostGIS es una extensión espacial para las bases de datos relacionales PostgreSQL. Añade soporte  para objetos geográficos permitiendo realizar consultas espaciales en SQL.
+\subsubsection{Sistema Operativo}
+Ubuntu es un sistema operativo basado en GNU/Linux y distribuido como software libre y de código abierto. Aunque la última versión estable es la 17.04, el sistema está basado en la 16.04 LTS que cuenta con un soporte extendido. Podría haberse usado una distribución de servidor pero para facilitar el desarrollo de la plataforma web se optó por una de escritorio que contase con interfaz gráfica.
 
-Este soporte se encuentra respaldado mediante tres características únicas de esta extensión: tipos de datos espaciales, índices espaciales y funciones que actúan sobre ellos. Esta información espacial será almacenada en una columna de tipo ``GEOMETRY''.
+Al ser una distribución de soporte extendido suele recibir mayor soporte y perduran un mayor tiempo. Por tanto, los administradores de sistemas suelen ser reticentes a sustituir un sistema que funciona y sobre el que han invertido muchas horas de trabajo, además de que los cambios requieren una inversión elevada de tiempo y recursos y eso, en una empresa, se traduce en dejar de ganar dinero.
 
-Cabe destacar que PostGIS ha sido certificado por el Open Geospatial Consortium (OGC) garantizando la interoperabilidad con otros sistemas.
+Este soporte extendido implica actualizaciones del sistema por un mínimo de 5 años.
 
+\subsubsection{Ubuntu frente a otros Sistemas Operativos}
+Aunque Ubuntu fue el sistema elegido, no fue el único analizado para dar soporte a esta plataforma web. Otro de los sistemas analizados fue CentOS, usado de forma amplia en muchos entornos de servidor.
 
-\subsection{PostgreSQL}
-Viendo la dependencia que PostGIS tiene sobre PostgreSQL, ha sido necesario el uso de este Sistema Gestor de Base de Datos para dar soporte a la extensión comentada. El uso de este SGBD no entraña una complicación superior o diferente a la del uso de cualquier otro sistema.
+CentOS (Community ENTerprise Operating System) es una distribución que trata de ofrecer una plataforma gestionada por la comunidad, de tipo empresarial y de código abierto. Es compatible con Red Hat Enterprise Linux, distribución en la que se basó su desarrollo. Es una versión orientada a servidores y cuenta con un amplio soporte. Las versiones que se lanzan tienen un tiempo de vida de diez años, significativamente mayor que el habitual para la distribución de escritorio, que suele variar entre los 6 meses (muchas versiones beta para realizar correcciones de la comunidad de cara a Release Candidates) y los 60 (como se ha especificado sobre las versiones Long Time Support de Ubuntu). Desde enero de 2014, CentOS pasó a ser adoptado por Red Hat, por lo que el equipo principal de desarrollo tiene mayor interacción con los equipos de Fedora y RHEL.
 
+Actualmente, CentOS, ocupa el tercer lugar en porcentaje de uso en servidores en producción.
 
-\subsection{QGIS}
-QGIS es un Sistema de Información Geográfica de código libre. Permite manejar distintos tipos de objetos mediante las bibliotecas GDAL y OGR además de comunicarse con Bases de Datos. La interfaz de QGIS permite visualizar mapas de Open Street Maps, situar rutas sobre dichos mapas, consultar rutas a PostGIS, descargar ficheros de  extensión OSM. Estos ficheros contienen todo tipo de información sobre una sección determinada de un mapa. Por ejemplo, se puede extraer todo tipo de información de las calles de una ciudad concreta, sobre sus POI, etc. 
+Aunque en principio es un sistema igualmente válido que Ubuntu, se optó por la versión 16.04 LTS debido a que otros desarrollos previos en el que se basa este TFM contaban con versiones previas de este Sistema Operativo como base.
 
-\subsection{Biblioteca ``tSemanticas''}
-La biblioteca que acompaña a este trabajo ha sido desarrollada en Java.
+\subsubsection{Sistema Gestor de Bases de Datos (SGBD)}
+
+Como Sistema Gestor de Base de Datos para el sistema, se ha optado por PostgreSQL (completamente compatible con MySql). La instalación es sencilla en este sistema operativo y se obtienen resultados óptimos con cargas de datos de hasta 1TB.
+
+Además se necesitaba hacer uso de una extensión llamada PostGIS que añade soporte para objetos geográficos, por tanto, la elección del SGBD queda limitada por esta extensión que permite la realización de análisis espaciales mediante sencillas consultas SQL.
+
+\subsubsection{Mapas basados en OpenLayers}
+
+Para mostrar las rutas se deseaba hacer uso de un mapas, inicialmente se trató con la API de OpenStreetMaps y, posteriormente, se ha terminado usando OpenLayers.
+
+OpenLayers  es una biblioteca de JavaScript de código abierto con la que el usuario puede disfrutar de sencilla interacción con el usuario permitiendo señalar zonas en un mapa determinado mediante una figura como puede ser un cuadrado, un triángulo, etc. También permite dibujar rutas mediante coordenadas geográficas (latitud, longitud) y añadir marcadores en lugares determinados.
+
+Cabe destacar que OpenLayers aporta un gran juego a los mapas ya que permite añadir una infinidad de capas con mayor funcionalidad que la usada en esta plataforma web permitiendo alcanzar los objetivos planteados con un gran margen.
+
+\subsubsection{Librerías necesarias}
+Para poder implementar un mapa basado en OpenLayers ha de descargarse la librería correspondiente a la versión de la que se quiere hacer uso.
+
+Estas librerías se pueden obtener desde Internet (mediante un enlace a las mismas) o pueden ser descargadas y guardadas
+para ser usadas de forma local. También son necesarias nociones en JavaScript/jQuery puesto que se hace uso de este lenguaje para pintar los gráficos.
+
+\subsubsection{Datos}
+Los datos necesarios para pintar una ruta sobre el mapa son obtenidos mediante llamadas Ajax a la Base de Datos. Una vez obtenidos se han de formatear de forma específica en coordenadas y transformar las coordenadas al sistema soportado por OpenLayers. En este caso, se transforman las coordenadas desde el sistema EPSG:4326 a EPSG:3857.
+
+Nota: el \textit{European Petroleum Survey Group} o EPSG fue una organización científica asociada a la industria petrolera en Europa. Formada por especialistas topólogos cartógrafos, entre otros, compiló y difundió el conjunto de parámetros geodésicos EPSG. Siendo los dos códigos mencionados anteriormente alguno de los sistemas de coordenadas con los que cuenta EPSG.
+
+\subsubsection{Distribución de la plataforma web}
+
+En este trabajo se ha desarrollado una plataforma web completa y funcional. Por tanto, uno de los objetivos es poder distribuir esta aplicación en Internet. Para ello, se podrá contratar un hosting, en el que será posible migrar el sistema de una forma sencilla. 
+
+Un valor añadido de esta plataforma es su instalación y funcionamiento sin necesidad de un
+acceso a Internet permanente. Para ello se cuenta con un servicio virtualizado (como es una máquina
+virtual) en el que se encuentra instalada la aplicación.
+
 
 \section{Objetivos personales}
 
-El presente Trabajo de Fin de Máster ha supuesto un reto personal puesto que en el momento de comenzar el mismo no se contaba con los conocimientos suficientes como para llevarlo a cabo. Durante los meses en los que se ha trabajado sobre este documento, se ha realizado un esfuerzo por aprender las tecnologías necesarias así como todos los conceptos teóricos asociados a las mismas.
+El presente Trabajo de Fin de Máster ha supuesto un reto personal. A la hora de comenzar el proyecto no contaba con conocimientos en extensiones como PostGis para la consulta espacial sobre una Base de Datos ni tenía destreza con tecnología como JSP. Tampoco conocía OpenLayers ni había hecho un gran uso de la funcionalidad de Open Street Maps. 
+
+Durante los meses en los que se ha trabajado sobre este proyecto, se ha realizado un esfuerzo por aprender las tecnologías necesarias así como todos los conceptos teóricos asociados a las mismas.
+
+Es por estos motivos por los que inicialmente decidí escoger este proyecto, entendiendo que proporcionaría la oportunidad de aprender nuevas técnicas y herramientas durante todo el transcurso del desarrollo de este Trabajo de Fin de Máster. 
 

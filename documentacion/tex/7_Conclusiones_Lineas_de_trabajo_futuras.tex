@@ -1,9 +1,33 @@
 \capitulo{7}{Conclusiones y Líneas de trabajo futuras}
 
-Todo proyecto debe incluir las conclusiones que se derivan de su desarrollo. Éstas pueden ser de diferente índole, dependiendo de la tipología del proyecto, pero normalmente van a estar presentes un conjunto de conclusiones relacionadas con los resultados del proyecto y un conjunto de conclusiones técnicas. 
-Además, resulta muy útil realizar un informe crítico indicando cómo se puede mejorar el proyecto, o cómo se puede continuar trabajando en la línea del proyecto realizado. 
-
+En este apartado se pueden ver, en primer lugar, las dificultades encontradas a la hora de realizar
+este proyecto, en segundo lugar, las conclusiones obtenidas y, por último, las líneas de trabajo
+futuras.
 
 \section{Conclusiones}
 
+Se puede afirmar que el presente Trabajo de Fin de Máster ha supuesto un pequeño reto personal en diversos aspectos. Quizá el desconocimiento inicial de cualquier tipo de tecnología relacionada con el análisis de rutas generadas a partir de posiciones GPS ha podido influir en un desarrollo más lento de lo esperado inicialmente. Además, algunos de los desarrollos existentes (como las extensiones para weka) no han sido de gran ayuda debido a que su funcionamiento no ha sido el esperado o que ni tan siquiera funcionaban correctamente.
+
+Además, la escasez de tiempo material por diversos motivos ha sido un gran factor en contra a la hora de desarrollar este trabajo.
+
+Ya en el aspecto centrado en el desarrollo se puede afirmar que la implementación de esta aplicación ha merecido y merece el esfuerzo invertido en el mismo. Como se ha afirmado anteriormente, existen desarrollos anteriores que tratan este problema pero que no llegan a funcionar de la mejor forma posible.
+
+Si se profundiza en el uso de estas aplicaciones, en el mejor de los casos, cuentan con un diseño de interfaz muy pobre y, que, además, obligan al usuario a tener conocimientos previos sobre la aplicación ya que no resultan todo lo intuitivas que deberían ser.
+
+En este último aspecto se ha puesto una especial atención al basar el desarrollo \textit{front-end} en los principios documentados por Hassan-Montero en su \textit{paper}: Diseño Web Centrado en el Usuario.
+
+Por último y no menos importante, cabe señalar que el esfuerzo invertido en la plataforma web desarrollada permite una sencilla ampliación de la misma añadiendo nueva funcionalidad como los aspectos comentados en las líneas de trabajo futuras mostradas en el siguiente apartado.
+
 \section{Lineas de trabajo futuras}
+
+Como se ha comentado en apartados anteriores de esta documentación, no ha sido posible el completo desarrollo planteado durante el comienzo del presente Trabajo de Fin de Máster. Por tanto, las líneas de futuro parecen claras en cuanto a la posibilidad de continuar con el planteamiento inicial. Las ideas principales de dichas líneas se pueden resumir en:
+
+\begin{itemize}
+	\item \textbf{Generación de árboles de predicción:} los árboles de predicción son el aspecto más importante de este proyecto que no ha podido ser llevado a cabo. A partir de la semántica asignada a las rutas y del análisis de un número elevado de las mismas, se haría posible la predicción de un siguiente Punto De Interés dentro de una hipotética ruta todavía no realizada. El desarrollo de este árbol posibilitaría la apertura de nuevos caminos teniendo en mente un futuro uso de este Trabajo como base para un siguiente.
+	Dichos árboles podrían permitir a un hipotético usuario obtener una recomendación de una ruta turística sobre una ciudad no visitada con anterioridad teniendo en cuenta los tipos de lugares visitados en rutas anteriores.
+	
+	 \item \textbf{Exportación o importación de datos:} la implementación de un sistema de exportación permitiría obtener un conjunto de datos a partir de la Base de Datos del sistema. Este aspecto sería realmente útil para la migración de los datos sin tener que implicar conocimientos técnicos sobre el manejo de una Base de Datos como es PostgreSQL. De esta forma, cualquier usuario sería capaz de exportar los datos de las rutas analizadas.
+	Otro aspecto importante es el desarrollo de un sistema de importación de datos para restaurar los datos anteriormente comentados.
+	\item \textbf{Sistema de usuarios:} aunque inicialmente no ha sido uno de los aspectos planteados, el desarrollo de un sistema de usuarios podría permitir el análisis de rutas de forma privada y/o pública. Es decir, cada usuario podría decidir si comparte el análisis de una o varias de sus rutas con el resto de usuarios.
+	Adicionalmente daría soporte a lo comentado en el primer punto de esta lista. Es decir, la predicción de rutas para cada uno de los usuarios del sistema teniendo en cuenta sus gustos y/o prioridades durante la visita de una nueva localidad.
+\end{itemize}

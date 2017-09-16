@@ -2,12 +2,115 @@
 \select@language {spanish}
 \addvspace {10pt}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Diagrama de casos de uso.}}{11}{figure.Alph2.1}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Esquema final de las tablas de la Base de Datos.}}{35}{figure.Alph3.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Esquema general de la arquitectura MVC.}}{42}{figure.Alph3.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Esquema general de la arquitectura MVC.}}{42}{figure.Alph3.3}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Esquema general de la arquitectura MVC.}}{43}{figure.Alph3.4}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Esquema general de la arquitectura MVC.}}{43}{figure.Alph3.5}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Esquema general de la arquitectura MVC.}}{44}{figure.Alph3.6}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Esquema general de la arquitectura MVC.}}{44}{figure.Alph3.7}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Esquema general de la arquitectura MVC.}}{45}{figure.Alph3.8}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Esquema general de la arquitectura MVC.}}{45}{figure.Alph3.9}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Esquema general de la arquitectura MVC.}}{46}{figure.Alph3.10}
+\contentsline {figure}{\numberline {C.11}{\ignorespaces Esquema general de la arquitectura MVC.}}{46}{figure.Alph3.11}
+\contentsline {figure}{\numberline {C.12}{\ignorespaces Esquema general de la arquitectura MVC.}}{47}{figure.Alph3.12}
+\contentsline {figure}{\numberline {C.13}{\ignorespaces Esquema general de la arquitectura MVC.}}{48}{figure.Alph3.13}
+\contentsline {figure}{\numberline {C.14}{\ignorespaces Esquema general de la arquitectura MVC.}}{48}{figure.Alph3.14}
+\contentsline {figure}{\numberline {C.15}{\ignorespaces Esquema general de la arquitectura MVC.}}{49}{figure.Alph3.15}
+\contentsline {figure}{\numberline {C.16}{\ignorespaces Esquema general de la arquitectura MVC.}}{50}{figure.Alph3.16}
+\contentsline {figure}{\numberline {C.17}{\ignorespaces Arquitectura est\IeC {\'a}ndar de JSP.}}{51}{figure.Alph3.17}
+\contentsline {figure}{\numberline {C.18}{\ignorespaces Sub paquete \textit {dao} dentro del paquete \textit {model}.}}{51}{figure.Alph3.18}
+\contentsline {figure}{\numberline {C.19}{\ignorespaces Sub paquete \textit {data} dentro del paquete \textit {model}.}}{52}{figure.Alph3.19}
+\contentsline {figure}{\numberline {C.20}{\ignorespaces Sub paquete \textit {algorithm} del paquete \textit {controller}.}}{53}{figure.Alph3.20}
+\contentsline {figure}{\numberline {C.21}{\ignorespaces Sub paquete \textit {connection} dentro del paquete \textit {controller}.}}{53}{figure.Alph3.21}
+\contentsline {figure}{\numberline {C.22}{\ignorespaces Sub paquete \textit {servlet} en el paquete \textit {controller}.}}{54}{figure.Alph3.22}
+\contentsline {figure}{\numberline {C.23}{\ignorespaces Sub paquete \textit {utils} en el interior del paquete \textit {utils}.}}{54}{figure.Alph3.23}
+\contentsline {figure}{\numberline {C.24}{\ignorespaces P\IeC {\'a}gina principal.}}{55}{figure.Alph3.24}
+\contentsline {figure}{\numberline {C.25}{\ignorespaces Subida de ficheros.}}{56}{figure.Alph3.25}
+\contentsline {figure}{\numberline {C.26}{\ignorespaces Selecci\IeC {\'o}n de ficheros.}}{56}{figure.Alph3.26}
+\contentsline {figure}{\numberline {C.27}{\ignorespaces Algoritmo en curso.}}{57}{figure.Alph3.27}
+\contentsline {figure}{\numberline {C.28}{\ignorespaces Mapa de ruta.}}{57}{figure.Alph3.28}
+\contentsline {figure}{\numberline {C.29}{\ignorespaces Pruebas realizadas.}}{58}{figure.Alph3.29}
+\contentsline {figure}{\numberline {C.30}{\ignorespaces Gesti\IeC {\'o}n principal.}}{58}{figure.Alph3.30}
+\contentsline {figure}{\numberline {C.31}{\ignorespaces Gesti\IeC {\'o}n de \IeC {\'a}reas.}}{59}{figure.Alph3.31}
+\contentsline {figure}{\numberline {C.32}{\ignorespaces Gesti\IeC {\'o}n de PDIs.}}{59}{figure.Alph3.32}
+\contentsline {figure}{\numberline {C.33}{\ignorespaces P\IeC {\'a}gina principal de la aplicaci\IeC {\'o}n web.}}{60}{figure.Alph3.33}
+\contentsline {figure}{\numberline {C.34}{\ignorespaces Aspecto de la p\IeC {\'a}gina de ficheros, en esta caso, sin ficheros.}}{60}{figure.Alph3.34}
+\contentsline {figure}{\numberline {C.35}{\ignorespaces Gesti\IeC {\'o}n de ficheros, algunos ficheros ya cargados.}}{61}{figure.Alph3.35}
+\contentsline {figure}{\numberline {C.36}{\ignorespaces Opciones del algoritmo.}}{61}{figure.Alph3.36}
+\contentsline {figure}{\numberline {C.37}{\ignorespaces Ejecuci\IeC {\'o}n de una prueba en curso.}}{62}{figure.Alph3.37}
+\contentsline {figure}{\numberline {C.38}{\ignorespaces Ejecuci\IeC {\'o}n finalizada.}}{62}{figure.Alph3.38}
+\contentsline {figure}{\numberline {C.39}{\ignorespaces \IeC {\'A}reas y rutas disponibles.}}{63}{figure.Alph3.39}
+\contentsline {figure}{\numberline {C.40}{\ignorespaces Modales de ayuda, se puede encontrar ayuda en todas las p\IeC {\'a}ginas.}}{63}{figure.Alph3.40}
+\contentsline {figure}{\numberline {C.41}{\ignorespaces Las rutas podr\IeC {\'a}n verse sobre un mapa.}}{64}{figure.Alph3.41}
+\contentsline {figure}{\numberline {C.42}{\ignorespaces P\IeC {\'a}gina de pruebas realizadas.}}{64}{figure.Alph3.42}
+\contentsline {figure}{\numberline {C.43}{\ignorespaces P\IeC {\'a}gina de borrado de pruebas.}}{65}{figure.Alph3.43}
+\contentsline {figure}{\numberline {C.44}{\ignorespaces P\IeC {\'a}gina principal de gesti\IeC {\'o}n.}}{65}{figure.Alph3.44}
+\contentsline {figure}{\numberline {C.45}{\ignorespaces P\IeC {\'a}gina que muestra las areas disponibles en el sistema y que permite su mantenimiento.}}{66}{figure.Alph3.45}
+\contentsline {figure}{\numberline {C.46}{\ignorespaces Modal de creaci\IeC {\'o}n de nueva \IeC {\'a}rea.}}{66}{figure.Alph3.46}
+\contentsline {figure}{\numberline {C.47}{\ignorespaces Gesti\IeC {\'o}n de PDIs.}}{67}{figure.Alph3.47}
+\contentsline {figure}{\numberline {C.48}{\ignorespaces P\IeC {\'a}gina de borrado de datos.}}{67}{figure.Alph3.48}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Secci\IeC {\'o}n de continentes}}{6}{figure.Alph4.1}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Pa\IeC {\'\i }ses mapeados de Sudam\IeC {\'e}rica}}{7}{figure.Alph4.2}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Impresi\IeC {\'o}n en consola del resultado del comando.}}{8}{figure.Alph4.3}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Descarga de datos desde QGIS}}{10}{figure.Alph4.4}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Valores introducidos para la b\IeC {\'u}squeda de datos en QGIS}}{11}{figure.Alph4.5}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces \IeC {\'E}xito en la descarga de los datos.}}{12}{figure.Alph4.6}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Conexi\IeC {\'o}n contra el host local.}}{73}{figure.Alph4.1}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Nombre de usuario.}}{74}{figure.Alph4.2}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Contrase\IeC {\~n}a.}}{75}{figure.Alph4.3}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Privilegios.}}{76}{figure.Alph4.4}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Asignacion de usuario rs a rutassemanticas.}}{76}{figure.Alph4.5}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Configuraci\IeC {\'o}n de memoria de Glassfish.}}{77}{figure.Alph4.6}
+\contentsline {figure}{\numberline {D.7}{\ignorespaces Descarga de NetBeans.}}{77}{figure.Alph4.7}
+\contentsline {figure}{\numberline {D.8}{\ignorespaces Selecci\IeC {\'o}n de servidor.}}{78}{figure.Alph4.8}
+\contentsline {figure}{\numberline {D.9}{\ignorespaces Localizaci\IeC {\'o}n del servidor en el sistema.}}{78}{figure.Alph4.9}
+\contentsline {figure}{\numberline {D.10}{\ignorespaces Indicaci\IeC {\'o}n del dominio.}}{79}{figure.Alph4.10}
+\contentsline {figure}{\numberline {D.11}{\ignorespaces Click sobre ``Restore''.}}{80}{figure.Alph4.11}
+\contentsline {figure}{\numberline {D.12}{\ignorespaces Selecci\IeC {\'o}n del fichero de backup.}}{81}{figure.Alph4.12}
+\contentsline {figure}{\numberline {D.13}{\ignorespaces Selecci\IeC {\'o}n de opciones.}}{81}{figure.Alph4.13}
+\contentsline {figure}{\numberline {D.14}{\ignorespaces Opciones adicionales.}}{82}{figure.Alph4.14}
+\contentsline {figure}{\numberline {D.15}{\ignorespaces Tablas a restaurar.}}{82}{figure.Alph4.15}
+\contentsline {figure}{\numberline {D.16}{\ignorespaces Resultado obtenido.}}{83}{figure.Alph4.16}
+\contentsline {figure}{\numberline {D.17}{\ignorespaces Despliegue desde NetBeans.}}{84}{figure.Alph4.17}
+\contentsline {figure}{\numberline {D.18}{\ignorespaces Despliegue en Glassfish.}}{84}{figure.Alph4.18}
+\contentsline {figure}{\numberline {D.19}{\ignorespaces Cancelaci\IeC {\'o}n del despliegue.}}{84}{figure.Alph4.19}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Ventana de aviso de un hilo en ejecuci\IeC {\'o}n.}}{86}{figure.Alph5.1}
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Botones de ayuda e hilo en ejecuci\IeC {\'o}n.}}{86}{figure.Alph5.2}
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Sin ficheros.}}{88}{figure.Alph5.3}
+\contentsline {figure}{\numberline {E.4}{\ignorespaces Carga de ficheros realizada correctamente.}}{88}{figure.Alph5.4}
+\contentsline {figure}{\numberline {E.5}{\ignorespaces Error en la carga de ficheros.}}{88}{figure.Alph5.5}
+\contentsline {figure}{\numberline {E.6}{\ignorespaces Botones de la tabla de ficheros.}}{89}{figure.Alph5.6}
+\contentsline {figure}{\numberline {E.7}{\ignorespaces Bot\IeC {\'o}n desactivado al encontrarse una prueba en ejecuci\IeC {\'o}n.}}{89}{figure.Alph5.7}
+\contentsline {figure}{\numberline {E.8}{\ignorespaces Opci\IeC {\'o}n de creaci\IeC {\'o}n de nueva \IeC {\'a}rea. Se indica en el aviso que pueden no existir Puntos De Inter\IeC {\'e}s para la zona que delimite esta nueva \IeC {\'a}rea.}}{90}{figure.Alph5.8}
+\contentsline {figure}{\numberline {E.9}{\ignorespaces Opci\IeC {\'o}n de selecci\IeC {\'o}n de un \IeC {\'a}rea existente.}}{90}{figure.Alph5.9}
+\contentsline {figure}{\numberline {E.10}{\ignorespaces Opciones relativas al an\IeC {\'a}lisis de la ruta.}}{91}{figure.Alph5.10}
+\contentsline {figure}{\numberline {E.11}{\ignorespaces Opciones de b\IeC {\'u}squeda de paradas.}}{91}{figure.Alph5.11}
+\contentsline {figure}{\numberline {E.12}{\ignorespaces Opciones an\IeC {\'a}lisis de Puntos De Inter\IeC {\'e}s activas.}}{92}{figure.Alph5.12}
+\contentsline {figure}{\numberline {E.13}{\ignorespaces Opciones an\IeC {\'a}lisis de Puntos De Inter\IeC {\'e}s desactivadas debido a que no se buscar\IeC {\'a}n paradas.}}{92}{figure.Alph5.13}
+\contentsline {figure}{\numberline {E.14}{\ignorespaces Opciones guardado, en la figura, la opci\IeC {\'o}n no est\IeC {\'a} seleccionada.}}{92}{figure.Alph5.14}
+\contentsline {figure}{\numberline {E.15}{\ignorespaces Algoritmo de an\IeC {\'a}lisis en ejecuci\IeC {\'o}n.}}{93}{figure.Alph5.15}
+\contentsline {figure}{\numberline {E.16}{\ignorespaces El algoritmo ha finalizado.}}{93}{figure.Alph5.16}
+\contentsline {figure}{\numberline {E.17}{\ignorespaces P\IeC {\'a}gina de resultados.}}{93}{figure.Alph5.17}
+\contentsline {figure}{\numberline {E.18}{\ignorespaces Secci\IeC {\'o}n sobre el mapa.}}{94}{figure.Alph5.18}
+\contentsline {figure}{\numberline {E.19}{\ignorespaces Bot\IeC {\'o}n que permite ver m\IeC {\'a}s detalles.}}{95}{figure.Alph5.19}
+\contentsline {figure}{\numberline {E.20}{\ignorespaces Una de las posibles rutas analizadas mostrada sobre un mapa.}}{95}{figure.Alph5.20}
+\contentsline {figure}{\numberline {E.21}{\ignorespaces Tabla de pruebas ejecutadas.}}{96}{figure.Alph5.21}
+\contentsline {figure}{\numberline {E.22}{\ignorespaces Bot\IeC {\'o}n de borrado total de pruebas.}}{97}{figure.Alph5.22}
+\contentsline {figure}{\numberline {E.23}{\ignorespaces Modal de borrado de pruebas.}}{97}{figure.Alph5.23}
+\contentsline {figure}{\numberline {E.24}{\ignorespaces Gesti\IeC {\'o}n de la plataforma web.}}{97}{figure.Alph5.24}
+\contentsline {figure}{\numberline {E.25}{\ignorespaces Gesti\IeC {\'o}n de \IeC {\'a}reas.}}{98}{figure.Alph5.25}
+\contentsline {figure}{\numberline {E.26}{\ignorespaces Edici\IeC {\'o}n de \IeC {\'a}rea existente.}}{98}{figure.Alph5.26}
+\contentsline {figure}{\numberline {E.27}{\ignorespaces Gesti\IeC {\'o}n de PDIs.}}{99}{figure.Alph5.27}
+\contentsline {figure}{\numberline {E.28}{\ignorespaces Subida de PDIs.}}{99}{figure.Alph5.28}
+\contentsline {figure}{\numberline {E.29}{\ignorespaces Borrado de datos.}}{100}{figure.Alph5.29}
+\contentsline {figure}{\numberline {E.30}{\ignorespaces Continente asi\IeC {\'a}tico.}}{101}{figure.Alph5.30}
+\contentsline {figure}{\numberline {E.31}{\ignorespaces Tabla mostrando todos los continentes.}}{101}{figure.Alph5.31}
+\contentsline {figure}{\numberline {E.32}{\ignorespaces Tabla con los pa\IeC {\'\i }ses asi\IeC {\'a}ticos.}}{102}{figure.Alph5.32}
+\contentsline {figure}{\numberline {E.33}{\ignorespaces Impresi\IeC {\'o}n en consola del resultado del comando.}}{104}{figure.Alph5.33}
+\contentsline {figure}{\numberline {E.34}{\ignorespaces Impresi\IeC {\'o}n en consola del resultado del comando osmfilter.}}{104}{figure.Alph5.34}
+\contentsline {figure}{\numberline {E.35}{\ignorespaces Selecci\IeC {\'o}n del fichero.}}{105}{figure.Alph5.35}
+\contentsline {figure}{\numberline {E.36}{\ignorespaces Regi\IeC {\'o}n a la que pertenece.}}{105}{figure.Alph5.36}
+\contentsline {figure}{\numberline {E.37}{\ignorespaces Ejecuci\IeC {\'o}n del procesado.}}{105}{figure.Alph5.37}
+\contentsline {figure}{\numberline {E.38}{\ignorespaces Conexi\IeC {\'o}n contra PostgreSQL en QGIS.}}{107}{figure.Alph5.38}
+\contentsline {figure}{\numberline {E.39}{\ignorespaces Descarga de datos desde QGIS}}{107}{figure.Alph5.39}
+\contentsline {figure}{\numberline {E.40}{\ignorespaces Valores introducidos para la b\IeC {\'u}squeda de datos en QGIS}}{108}{figure.Alph5.40}
+\contentsline {figure}{\numberline {E.41}{\ignorespaces \IeC {\'E}xito en la descarga de los datos.}}{109}{figure.Alph5.41}

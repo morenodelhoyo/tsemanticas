@@ -1,22 +1,51 @@
 \documentclass[a4paper,11pt,oneside]{memoir}
 
+\newcommand{\quotes}[1]{``#1''}
 % Castellano
 \usepackage[spanish]{babel}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
 \usepackage{placeins}
-
 \usepackage{listings}
+\usepackage{float}
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
 \RequirePackage{xtab}
 \RequirePackage{multirow}
 
+%Float
+\usepackage{float}
+ 
+%Landscape
+\usepackage{lscape}
+ 
+%Euro
+\usepackage{eurosym}
+ 
+%TabItem
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+ 
+%Citas bibliografía
+\usepackage{cite}
+\usepackage[numbers,sort]{natbib}
+ 
+%Tabla
+\usepackage{longtable}
+
 % Links
 \usepackage[colorlinks]{hyperref}
 \hypersetup{
 	allcolors = {red}
+}
+
+\lstset{
+  language=bash,
+  breaklines=true,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  tabsize=3
 }
 
 % Ecuaciones
@@ -48,6 +77,32 @@
 	\end{figure}
 }
 
+\newcommand{\imagenLarga}[2]{
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=1.2\textwidth]{#1}
+        \caption{#2}\label{fig:#1}
+    \end{figure}
+    \FloatBarrier
+}
+ 
+\newcommand{\imagenPeque}[2]{
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.4\textwidth]{#1}
+        \caption{#2}\label{fig:#1}
+    \end{figure}
+    \FloatBarrier
+}
+ 
+\newcommand{\imagenMuyPeque}[2]{
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{#1}
+        \caption{#2}\label{fig:#1}
+    \end{figure}
+    \FloatBarrier
+}
 
 
 % El comando \figura nos permite insertar figuras comodamente, y utilizando
@@ -91,6 +146,9 @@
 % Para las tablas
 \newcommand{\otoprule}{\midrule [\heavyrulewidth]}
 %
+
+%Table width
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 % Nuevo comando para tablas pequeñas (menos de una página).
 \newcommand{\tablaSmall}[5]{%
  \begin{table}
@@ -156,14 +214,14 @@
       \otoprule
     }
     \tablehead{
-      \multicolumn{#3}{l}{\small\sl continúa desde la página anterior}\\
+      \multicolumn{#3}{l}{\small continúa desde la página anterior}\\
       \toprule
       #5
       \otoprule
     }
     \tabletail{
       \hline
-      \multicolumn{#3}{r}{\small\sl continúa en la página siguiente}\\
+      \multicolumn{#3}{r}{\small continúa en la página siguiente}\\
     }
     \tablelasttail{
       \hline
@@ -188,14 +246,14 @@
       \otoprule
     }
     \tablehead{
-      \multicolumn{#3}{l}{\small\sl continúa desde la página anterior}\\
+      \multicolumn{#3}{l}{\small continúa desde la página anterior}\\
       \toprule
       #5
       \otoprule
     }
     \tabletail{
       \hline
-      \multicolumn{#3}{r}{\small\sl continúa en la página siguiente}\\
+      \multicolumn{#3}{r}{\small continúa en la página siguiente}\\
     }
     \tablelasttail{
       \hline
@@ -217,12 +275,12 @@
       \toprule
     }
     \tablehead{
-      \multicolumn{#3}{l}{\small\sl continúa desde la página anterior}\\
+      \multicolumn{#3}{l}{\small continúa desde la página anterior}\\
       \hline
     }
     \tabletail{
       \hline
-      \multicolumn{#3}{r}{\small\sl continúa en la página siguiente}\\
+      \multicolumn{#3}{r}{\small continúa en la página siguiente}\\
     }
     \tablelasttail{
       \hline
@@ -249,12 +307,12 @@
       \toprule
     }
     \tablehead{
-      \multicolumn{#3}{l}{\small\sl continúa desde la página anterior}\\
+      \multicolumn{#3}{l}{\small continúa desde la página anterior}\\
       \hline
     }
     \tabletail{
       \hline
-      \multicolumn{#3}{r}{\small\sl continúa en la página siguiente}\\
+      \multicolumn{#3}{r}{\small continúa en la página siguiente}\\
     }
     \tablelasttail{
       \hline
@@ -339,10 +397,10 @@
 \makeatother
 
 \newcommand{\nombre}{David Moreno del Hoyo} %%% cambio de comando
-\newcommand{\fechaEntrega}{10 de febrero de 2017}
+\newcommand{\fechaEntrega}{18 de septiembre de 2017}
 \newcommand{\titulo}{Sistema para el registro y análisis de trayectorias semánticas}
-\newcommand{\tutorTFM}{Bruno Baruque}
-\newcommand{\coTutorTFM}{Santiago Porras}
+\newcommand{\tutorTFM}{Dr. Bruno Baruque Zanón}
+\newcommand{\coTutorTFM}{Dr. Santiago Porras Alfonso}
 
 
 % Datos de portada
@@ -379,9 +437,9 @@
 
 \clearpage
 
-%\listoftables
+\listoftables
 
-%\clearpage
+\clearpage
 
 \mainmatter
 

@@ -5,6 +5,7 @@
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
 \usepackage{placeins}
+\usepackage{float}
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
@@ -17,14 +18,26 @@
 	allcolors = {red}
 }
 
+
 % Ecuaciones
 \usepackage{amsmath}
 
 % Rutas de fichero / paquete
 \newcommand{\ruta}[1]{{\sffamily #1}}
+\newcommand{\quotes}[1]{``#1''}
 
 % Párrafos
 \nonzeroparskip
+
+\usepackage{listings}
+\lstset{
+  language=bash,
+  breaklines=true,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  tabsize=3
+}
 
 
 % Imagenes
@@ -351,12 +364,12 @@
 \makeatother
 
 \newcommand{\nombre}{David Moreno del Hoyo} %%% cambio de comando
-\newcommand{\fechaEntrega}{10 de febrero de 2017}
+\newcommand{\fechaEntrega}{18 de septiembre de 2017}
 \newcommand{\titulo}{Sistema para el registro y análisis de trayectorias semánticas}
-\newcommand{\tutorTFM}{Bruno Baruque Zanón}
-\newcommand{\coTutorTFM}{Santiago Porras Alfonso}
-\newcommand{\departamento}{}
-\newcommand{\area}{}
+\newcommand{\tutorTFM}{Dr. Bruno Baruque Zanón}
+\newcommand{\coTutorTFM}{Dr. Santiago Porras Alfonso}
+\newcommand{\departamento}{Ingeniería Civil}
+\newcommand{\area}{Área de Lenguajes y Sistemas Informáticos}
 \newcommand{\dni}{71305821-W}
 
 % Datos de portada
@@ -389,7 +402,7 @@
 \noindent Y que dicho trabajo ha sido realizado por el alumno bajo la dirección del que suscribe, en virtud de lo cual se autoriza su presentación y defensa.
 
 \begin{center} %\large
-En Burgos, {\large 10 de febrero de 2017}
+En Burgos, {\large 18 de septiembre de 2017}
 \end{center}
 
 \vfill\vfill\vfill
@@ -429,12 +442,15 @@ Vº. Bº. del co-tutor:\\[2cm]
 % Abstract en castellano
 \renewcommand*\abstractname{Resumen}
 \begin{abstract}
-En este primer apartado se hace una \textbf{breve} presentación del tema que se aborda en el proyecto.
+El presente Trabajo de Fin de Máster aborda el complejo problema de la gestión de rutas basadas en coordenadas GPS. Cada ruta puede estar compuesta de un número realmente elevado de coordenadas lo que puede repercutir en tiempos de procesado elevados.
+
+En este trabajo se desarrolla una plataforma web que permite realizar una limpìeza y etiquetado de las rutas llevadas a cabo por un usuario concreto, reconociendo las paradas que dicho usuario realiza durante el transcurso de la ruta y asignando semántica a dichas paradas. La citada semántica viene dada por la búsqueda de Puntos De Interés (PDI) cercanos a cada parada detectada.
+
 \end{abstract}
 
 \renewcommand*\abstractname{Descriptores}
 \begin{abstract}
-Palabras separadas por comas que identifiquen el contenido del proyecto Ej: servidor web, buscador de vuelos, android \ldots
+Plataforma web, ruta, coordenada, PDI, ruta semántica.
 \end{abstract}
 
 \clearpage
@@ -447,7 +463,7 @@ A \textbf{brief} presentation of the topic addressed in the project.
 
 \renewcommand*\abstractname{Keywords}
 \begin{abstract}
-keywords separated by commas.
+Web, track, coordinate, POI, semantics.
 \end{abstract}
 
 \clearpage

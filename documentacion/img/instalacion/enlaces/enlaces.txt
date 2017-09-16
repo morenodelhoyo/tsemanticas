@@ -1,0 +1,34 @@
+ubuntu
+https://www.ubuntu.com/download/desktop
+
+postgresql
+https://www.postgresql.org/download/linux/ubuntu/
+
+postgis
+http://postgis.net/
+
+http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS23UbuntuPGSQL96Apt
+
+además pgAdmin3: sudo apt-get install pgadmin3
+
+java y glasfish 4
+
+http://idroot.net/linux/install-glassfish-ubuntu-16-04/
+
+netbeans
+https://netbeans.org/downloads/
+
+config de java_home en /etc/netbeans.conf
+
+qgis
+sudo apt-get install qgis
+
+osmosis
+http://wiki.openstreetmap.org/wiki/Osmosis
+
+atom
+https://atom.io/
+
+chrome
+
+https://askubuntu.com/questions/510056/how-to-install-google-chrome
