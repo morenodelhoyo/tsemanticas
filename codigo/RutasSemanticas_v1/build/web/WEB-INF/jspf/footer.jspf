@@ -1,0 +1,18 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img class="logo" src="images/logos/ubu.png">
+            </div>
+            <div class="col-md-4 text-center">
+                <p><strong>Trabajo de Fin de Máster</strong></p>
+                    David Moreno del Hoyo
+            </div>
+            <div class="col-md-4 text-center">
+                <p><strong>Tutores</strong></p>
+                Dr. Bruno Baruque Zanón<br>
+                Dr. Santiago Porras Alfonso
+            </div>
+        </div>
+    </div>
+</footer>

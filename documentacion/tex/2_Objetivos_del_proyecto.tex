@@ -26,7 +26,7 @@ En esta sección se van a tratar los objetivos de carácter técnico que se han 
 Para llevar a cabo estos objetivos se han analizado ciertos parámetros como el mejor Sistema Operativo disponible, el SGBD que más se adapta a los requerimientos técnicos o las librerías de datos. En los siguientes apartados se aporta este análisis.
 
 \subsubsection{Sistema Operativo}
-Ubuntu es un sistema operativo basado en GNU/Linux y distribuido como software libre y de código abierto. Aunque la última versión estable es la 17.04, el sistema está basado en la 16.04 LTS que cuenta con un soporte extendido. Podría haberse usado una distribución de servidor pero para facilitar el desarrollo de la plataforma web se optó por una de escritorio que contase con interfaz gráfica.
+Ubuntu \cite{ubuntu:info} es un sistema operativo basado en GNU/Linux y distribuido como software libre y de código abierto. Aunque la última versión estable es la 17.04, el sistema está basado en la 16.04 LTS que cuenta con un soporte extendido. Podría haberse usado una distribución de servidor pero para facilitar el desarrollo de la plataforma web se optó por una de escritorio que contase con interfaz gráfica.
 
 Al ser una distribución de soporte extendido suele recibir mayor soporte y perduran un mayor tiempo. Por tanto, los administradores de sistemas suelen ser reticentes a sustituir un sistema que funciona y sobre el que han invertido muchas horas de trabajo, además de que los cambios requieren una inversión elevada de tiempo y recursos y eso, en una empresa, se traduce en dejar de ganar dinero.
 
@@ -35,9 +35,9 @@ Este soporte extendido implica actualizaciones del sistema por un mínimo de 5 a
 \subsubsection{Ubuntu frente a otros Sistemas Operativos}
 Aunque Ubuntu fue el sistema elegido, no fue el único analizado para dar soporte a esta plataforma web. Otro de los sistemas analizados fue CentOS, usado de forma amplia en muchos entornos de servidor.
 
-CentOS (Community ENTerprise Operating System) es una distribución que trata de ofrecer una plataforma gestionada por la comunidad, de tipo empresarial y de código abierto. Es compatible con Red Hat Enterprise Linux, distribución en la que se basó su desarrollo. Es una versión orientada a servidores y cuenta con un amplio soporte. Las versiones que se lanzan tienen un tiempo de vida de diez años, significativamente mayor que el habitual para la distribución de escritorio, que suele variar entre los 6 meses (muchas versiones beta para realizar correcciones de la comunidad de cara a Release Candidates) y los 60 (como se ha especificado sobre las versiones Long Time Support de Ubuntu). Desde enero de 2014, CentOS pasó a ser adoptado por Red Hat, por lo que el equipo principal de desarrollo tiene mayor interacción con los equipos de Fedora y RHEL.
+CentOS (Community ENTerprise Operating System) \cite{centos:info} es una distribución que trata de ofrecer una plataforma gestionada por la comunidad, de tipo empresarial y de código abierto. Es compatible con Red Hat Enterprise Linux, distribución en la que se basó su desarrollo. Es una versión orientada a servidores y cuenta con un amplio soporte. Las versiones que se lanzan tienen un tiempo de vida de diez años, significativamente mayor que el habitual para la distribución de escritorio, que suele variar entre los 6 meses (muchas versiones beta para realizar correcciones de la comunidad de cara a Release Candidates) y los 60 (como se ha especificado sobre las versiones Long Time Support de Ubuntu). Desde enero de 2014, CentOS pasó a ser adoptado por Red Hat, por lo que el equipo principal de desarrollo tiene mayor interacción con los equipos de Fedora y RHEL.
 
-Actualmente, CentOS, ocupa el tercer lugar en porcentaje de uso en servidores en producción.
+Actualmente, CentOS, ocupa el tercer lugar en porcentaje de uso en servidores en producción. \cite{uso:info}
 
 Aunque en principio es un sistema igualmente válido que Ubuntu, se optó por la versión 16.04 LTS debido a que otros desarrollos previos en el que se basa este TFM contaban con versiones previas de este Sistema Operativo como base.
 
@@ -49,7 +49,7 @@ Además se necesitaba hacer uso de una extensión llamada PostGIS que añade sop
 
 \subsubsection{Mapas basados en OpenLayers}
 
-Para mostrar las rutas se deseaba hacer uso de un mapas, inicialmente se trató con la API de OpenStreetMaps y, posteriormente, se ha terminado usando OpenLayers.
+Para mostrar las rutas se deseaba hacer uso de un mapas, inicialmente se trató con la API de OpenStreetMaps y, posteriormente, se ha terminado usando OpenLayers \cite{openlayers:info}.
 
 OpenLayers  es una biblioteca de JavaScript de código abierto con la que el usuario puede disfrutar de sencilla interacción con el usuario permitiendo señalar zonas en un mapa determinado mediante una figura como puede ser un cuadrado, un triángulo, etc. También permite dibujar rutas mediante coordenadas geográficas (latitud, longitud) y añadir marcadores en lugares determinados.
 
@@ -77,7 +77,7 @@ virtual) en el que se encuentra instalada la aplicación.
 
 \section{Objetivos personales}
 
-El presente Trabajo de Fin de Máster ha supuesto un reto personal. A la hora de comenzar el proyecto no contaba con conocimientos en extensiones como PostGis para la consulta espacial sobre una Base de Datos ni tenía destreza con tecnología como JSP. Tampoco conocía OpenLayers ni había hecho un gran uso de la funcionalidad de Open Street Maps. 
+El presente Trabajo de Fin de Máster ha supuesto un reto personal. A la hora de comenzar el proyecto no contaba con conocimientos en extensiones como PostGis para la consulta espacial sobre una Base de Datos ni tenía destreza con tecnología como JSP. Tampoco conocía OpenLayers ni había hecho un gran uso de la funcionalidad de Open Street Map. 
 
 Durante los meses en los que se ha trabajado sobre este proyecto, se ha realizado un esfuerzo por aprender las tecnologías necesarias así como todos los conceptos teóricos asociados a las mismas.
 

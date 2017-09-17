@@ -13,7 +13,42 @@ De esta forma se contará con la información que permita controlar los costes y
 
 \section{Planificación temporal}
 
+El desarrollo del proyecto ha sido basado en la metodología Scrum, por tanto, se trata de un desarrollo ágil. Aunque Scrum define una serie de buenas prácticas a aplicar durante todo el desarrollo, en el proyecto actual no se han aplicado todas y cada una de las mismas. Las aplicadas en este trabajo son:
 
+\begin{itemize}
+	\item Desarrollo incremental e iterativo.
+	\item Reuniones término de cada \textit{sprint}.
+\end{itemize}
+
+El presente trabajo ha sido desarrollado desde el mes de marzo de 2017 hasta el mes de septiembre del mismo año. Los primeros sprints (primero, segundo y tercero) contaron con una duración aproximada de un mes mientras que los finales (cuarto a noveno) se han realizado de forma quincenal. 
+Los \textit{sprints} llevados a cabo se muestran a continuación.
+
+\subsection{Sprint 1}
+Estudio inicial del estado del arte y documentación sobre la que el proyecto se basa.
+
+\subsection{Sprint 2}
+Estudio de los requisitos del sistema, analizando las necesidades de almacenamiento y recuperación de datos. Selección de PostgreSQL y PostGIS como SGBD y extensión del mismo.
+
+\subsection{Sprint 3}
+Desarrollo inicial del algoritmo de análisis de rutas, implementando la lectura de ficheros y almacenado en crudo de los datos sobre el sistema.
+
+\subsection{Sprint 4}
+Segunda iteración sobre el algoritmo de análisis de rutas para poder separar dichas rutas y descubrir paradas sobre las mismas.
+
+\subsection{Sprint 5}
+Tercera iteración sobre el algoritmo, posibilitando la búsqueda de PDIs sobre las paradas detectadas.
+
+\subsection{Sprint 6}
+Primer diseño de la interfaz web, diseño de las páginas de carga de ficheros, selección de opciones del algoritmo y resultados finales.
+
+\subsection{Sprint 7}
+Implementación de la interfaz según los prototipados iniciales y aplicación de estilos finales.
+
+\subsection{Sprint 8}
+Versión inicial de la documentación del proyecto. Adición de página de visualizado de resultados.
+
+\subsection{Sprint 9}
+Versión final de la documentación del trabajo, anexos y memoria completados.
 
 \section{Estudio de viabilidad}
 El estudio de viabilidad de un proyecto debe estimar la posibilidad de obtener una rentabilidad a partir de los costes y beneficios que produzca el desarrollo de la aplicación.
@@ -42,7 +77,7 @@ Dentro del ámbito de los costes incluimos los siguientes apartados:
 
 Para el desarrollo del proyecto se contratará a un único programador por un tiempo de cinco meses a jornada completa.
 
-El salario bruto prorrateando las pagas extra será de 1.400 euros mensuales. La empresa deberá de tener en cuenta el pago que le corresponde realizar a la Seguridad Social y será el 32,1\% que se aplica sobre la base de cotización, que en este caso será de 1.400 euros. Se desglosa de la siguiente manera:
+El salario bruto prorrateando las pagas extra será de 1.400 euros mensuales. La empresa deberá de tener en cuenta el pago que le corresponde realizar a la Seguridad Social \cite{bases:info} \cite{tarifas:info} y será el 32,1\% que se aplica sobre la base de cotización, que en este caso será de 1.400 euros. Se desglosa de la siguiente manera:
 
 \begin{itemize}
 	\item \textbf{Contingencias comunes:} 23,6%.
@@ -65,7 +100,7 @@ Siendo el coste total el calculado a continuación:
 	\item 1.849,4*5=\textbf{9.247 euros.}
 \end{itemize}
 
-En el momento de la contratación se verá si el programador elegido se puede acoger a algún tipo de bonificación en las cuotas que paga la empresa a la Seguridad Social, para ello nos informaremos en la siguiente página.
+En el momento de la contratación se verá si el programador elegido se puede acoger a algún tipo de bonificación \cite{bonif:info} en las cuotas que paga la empresa a la Seguridad Social, para ello nos informaremos en la siguiente página.
 
 
 \subsubsection{Coste de capital}
@@ -176,10 +211,10 @@ En el desarrollo de un producto software es bastante común el uso de librerías
 En este apartado se mencionan las librerías y software de terceros de las que se hace uso en el proyecto así como su licencia.
 
 \begin{itemize}
-	\item \textbf{PostgreSQL y PostgreSQL SQL JDB Driver:} cuentan con licencia de tipo \textbf{PostgreSQL License} basada en BSD y MIT.
-	\item \textbf{json:} su desarrollador indica que este software puede ser usado y distribuido de forma libre.
-	\item \textbf{gson, commons-exec y commons-io:} estos tres paquetes cuentan con licencia \textbf{Apache 2.0}.
-	\item \textbf{Open Layers 3:} la licencia de Open Layers es \textbf{FreeBSD}.
+	\item \textbf{PostgreSQL y PostgreSQL SQL JDB Driver:} cuentan con licencia de tipo \textbf{PostgreSQL License} \cite{licpost:info} basada en BSD y MIT.
+	\item \textbf{json:} su desarrollador indica que este software puede ser usado y distribuido de forma libre \cite{licjson:info}.
+	\item \textbf{gson, commons-exec y commons-io:} estos tres paquetes cuentan con licencia \textbf{Apache 2.0} \cite{licapa:info}.
+	\item \textbf{Open Layers 3:} la licencia de Open Layers es \textbf{FreeBSD} \cite{licbsd:info}.
 \end{itemize}
 
 \subsubsection{Características de las licencias}

@@ -1,0 +1,472 @@
+*{
+    font-family: 'Exo', sans-serif !Important;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background:#e5e6e6;
+}
+
+footer {
+    color:white;
+    background-color: #505050;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow:auto;
+    padding-bottom:110px; /* this needs to be bigger than footer height*/
+}
+
+.active>a{
+    background-color: white !Important;
+    border-bottom: 1px solid black;
+}
+
+.area{
+    padding: 10px 40px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.area-click{
+    color:black;
+}
+
+.area-click:hover{
+    color:black;
+}
+
+.area-header{
+    padding: 10px 0px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+
+.botonesresultados{
+    margin-bottom: 30px;
+}
+
+.box__button {
+    font-weight: 700;
+    color: #e5edf1;
+    background-color: #39bfd3;
+    display: none;
+    padding: 8px 16px;
+    margin: 40px auto 0;
+}
+
+.box__button:hover, .box__button:focus {
+    background-color: #0f3c4b;
+}
+
+.box__restart {
+    font-weight: 700;
+}
+.box__restart:focus,
+.box__restart:hover {
+    color: #39bfd3;
+}
+
+
+.box {
+    font-size: 1.25rem; /* 20 */
+    background-color: #c8dadf;
+    position: relative;
+    padding: 100px 20px;
+}
+
+.box.has-advanced-upload {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+}
+
+.box.is-dragover {
+    outline-offset: -20px;
+    outline-color: #c8dadf;
+    background-color: #fff;
+}
+
+.box__dragndrop,
+.box__icon {
+    display: none;
+}
+
+.box.has-advanced-upload .box__dragndrop {
+    display: inline;
+}
+
+.box.has-advanced-upload .box__icon {
+    width: 100%;
+    height: 80px;
+    fill: #92b0b3;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.box.is-uploading .box__input,
+.box.is-success .box__input,
+.box.is-error .box__input {
+    visibility: hidden;
+}
+
+.box__uploading,
+.box__success,
+.box__error {
+    display: none;
+}
+
+.box.is-uploading .box__uploading,
+.box.is-success .box__success,
+.box.is-error .box__error {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+
+    -webkit-transform: translateY( -50% );
+    transform: translateY( -50% );
+}
+
+.box__uploading {
+    font-style: italic;
+}
+
+.box__success
+{
+    -webkit-animation: appear-from-inside .25s ease-in-out;
+    animation: appear-from-inside .25s ease-in-out;
+}
+
+
+.btnborrarpruebas{
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+.btnborrarregiones{
+    margin-bottom: 30px;
+}
+
+.btntablaficheros{
+    margin-bottom: 30px;
+}
+
+.btntablas .btn {
+    width:100%;
+    margin-bottom:15px;
+}
+
+.btn-block{
+  margin-bottom: 50px;
+  background: white;
+}
+
+.btn-block:hover{
+  margin-bottom: 50px;
+  color:white;
+  background: #646868;
+}
+
+.cabecera-descripcion{
+    font-size:30px;
+    text-transform: lowercase;
+    color:white;
+    text-shadow: 2px 2px #333;
+}
+
+.cabecera-portada{
+    font-weight: bold !Important;
+    font-size:80px;
+    text-transform: uppercase;
+    color:white;
+    text-shadow: 3px 3px #333;
+}
+
+.cabeceraexperimentos{
+    padding: 10px 40px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.datostree{
+    border: 1px;
+}
+
+
+.eachfile{
+    padding: 10px 0px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.filesheader{
+    padding: 10px 0px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.footer {
+    position: relative;
+    margin-top: -110px; /* negative value of footer height */
+    min-height: 110px;
+    clear:both;
+    padding-top:20px;
+} 
+
+.glyphicon {
+    font-family: inherit;
+}
+.glyphicon:before{
+    font-family:'Glyphicons Halflings';
+}
+
+.img-ubu{
+    width:100%;
+}
+
+.indexhr, .uploadhr, .resultshr, .experimenthr, .managehr, hr {
+    margin-top: -24px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 26px solid #808080;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.js .box__file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.js .box__file + label {
+    max-width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.js .box__file + label:hover strong,
+.box__file:focus + label strong,
+.box__file.has-focus + label strong {
+    color: #39bfd3;
+}
+
+.js .box__file:focus + label,
+.js .box__file.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.js .box__file + label * {
+    /* pointer-events: none; */ /* in case of FastClick lib use */
+}
+
+
+.lista li{
+    margin-bottom: 30px !Important;
+}
+
+.logo{
+    height: 70px;
+}
+
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 300%;
+    background: url('../../images/loading_icon.gif') no-repeat center center;
+}
+
+@media (max-width:990px) {
+    .cabecera-portada{
+        font-size:50px;
+    }
+}
+
+.map{
+    margin-bottom: 40px;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 990px)  {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .footer .col-md-4 {
+        margin-bottom: 10px;
+    }
+    .uploadFile .uno {
+        float:left; 
+    }
+    .uploadFile .dos {
+        float:left;
+    }
+}
+
+.navbar{
+    margin-top: 1%;
+}
+
+.navbar-right{
+    margin-right: 300px !Important;
+}
+
+.navbar-default{
+    background-color: white !Important;
+    border-color: white !Important;
+}
+
+@-webkit-keyframes appear-from-inside
+{
+    from	{ -webkit-transform: translateY( -50% ) scale( 0 ); }
+    75%		{ -webkit-transform: translateY( -50% ) scale( 1.1 ); }
+    to		{ -webkit-transform: translateY( -50% ) scale( 1 ); }
+}
+@keyframes appear-from-inside
+{
+    from	{ transform: translateY( -50% ) scale( 0 ); }
+    75%		{ transform: translateY( -50% ) scale( 1.1 ); }
+    to		{ transform: translateY( -50% ) scale( 1 ); }
+}
+
+.no-js .box__file + label {
+    display: none;
+}
+
+.no-js .box__button {
+    display: block;
+}
+
+
+.nombre, .descripcion, .zona, .num-rutas {
+  font-weight: bold;
+}
+
+.margin-chkbox,
+.margin-name,
+.margin-isprocessed,
+.margin-length,
+.margin-processed,
+.margin-upload{
+    margin-top: 0.5%;
+}
+
+.nombre-span, .descripcion-span, .zona-span, .num-rutas-span{
+  font-weight: normal;
+}
+
+.table{
+    margin-bottom: 0px !Important;
+}
+
+.table>thead>tr>th{
+    border-bottom: 0px !Important;
+}
+
+.tablaamenitiesbottom{
+    margin-bottom: 30px;
+}
+
+.tabla{
+    overflow-x:auto; 
+}
+
+.tablapruebas {
+    overflow-x:auto;
+}
+
+.tablapruebas thead { display: block; }
+
+.tablapruebas tbody{
+    display:block;
+    overflow-y:auto;
+    height: 725px;
+}
+
+.track{
+    padding: 10px 40px;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.treerow{ 
+    margin-top: 40px;
+}
+
+.portada{
+    background-image: url('../../images/pekin-rosa.jpg');
+    background-position: 0px 80px;
+    background-repeat: no-repeat;
+}
+
+
+.uploadfiletext{
+    margin-left: 5%;
+    margin-right: 5%;
+}

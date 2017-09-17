@@ -1,16 +1,26 @@
 \documentclass[a4paper,11pt,oneside]{memoir}
 
 % Castellano
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
 \usepackage{placeins}
-\usepackage{float}
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
 \RequirePackage{xtab}
 \RequirePackage{multirow}
+
+%Float
+\usepackage{float}
+ 
+%Simbolos
+\usepackage{textcomp}
+ 
+ 
+%Citas bibliografía
+\usepackage{cite}
+\usepackage[numbers,sort]{natbib}
 
 % Links
 \usepackage[colorlinks]{hyperref}
@@ -366,8 +376,8 @@
 \newcommand{\nombre}{David Moreno del Hoyo} %%% cambio de comando
 \newcommand{\fechaEntrega}{18 de septiembre de 2017}
 \newcommand{\titulo}{Sistema para el registro y análisis de trayectorias semánticas}
-\newcommand{\tutorTFM}{Dr. Bruno Baruque Zanón}
-\newcommand{\coTutorTFM}{Dr. Santiago Porras Alfonso}
+\newcommand{\tutorTFM}{Dr. D. Bruno Baruque Zanón}
+\newcommand{\coTutorTFM}{Dr. D. Santiago Porras Alfonso}
 \newcommand{\departamento}{Ingeniería Civil}
 \newcommand{\area}{Área de Lenguajes y Sistemas Informáticos}
 \newcommand{\dni}{71305821-W}
@@ -384,11 +394,11 @@
 
 
 
-\null\cleardoublepage
+\newpage\null\thispagestyle{empty}\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{empty}
+\thispagestyle{empty}
 
 
 \noindent\includegraphics[width=\textwidth]{cabecera}\vspace{1cm}
@@ -431,8 +441,7 @@ Vº. Bº. del co-tutor:\\[2cm]
 %D. nombre tutor
 
 
-\null\cleardoublepage
-\null\cleardoublepage
+\newpage\null\thispagestyle{empty}\newpage
 
 
 
@@ -444,7 +453,7 @@ Vº. Bº. del co-tutor:\\[2cm]
 \begin{abstract}
 El presente Trabajo de Fin de Máster aborda el complejo problema de la gestión de rutas basadas en coordenadas GPS. Cada ruta puede estar compuesta de un número realmente elevado de coordenadas lo que puede repercutir en tiempos de procesado elevados.
 
-En este trabajo se desarrolla una plataforma web que permite realizar una limpìeza y etiquetado de las rutas llevadas a cabo por un usuario concreto, reconociendo las paradas que dicho usuario realiza durante el transcurso de la ruta y asignando semántica a dichas paradas. La citada semántica viene dada por la búsqueda de Puntos De Interés (PDI) cercanos a cada parada detectada.
+En este trabajo se desarrolla una plataforma web que permite realizar una limpieza y etiquetado de las rutas llevadas a cabo por un usuario concreto, reconociendo las paradas que dicho usuario realiza durante el transcurso de la ruta y asignando semántica a dichas paradas. La citada semántica viene dada por la búsqueda de Puntos De Interés (PDI) cercanos a cada parada detectada.
 
 \end{abstract}
 
@@ -458,12 +467,14 @@ Plataforma web, ruta, coordenada, PDI, ruta semántica.
 % Abstract en inglés
 \renewcommand*\abstractname{Abstract}
 \begin{abstract}
-A \textbf{brief} presentation of the topic addressed in the project.
+This work deals with the complex problem of GPS-coordinates-based routes management. Each route may consist of a really high amount of coordinates, and that can result in long processing times.
+
+To aim that goal, a web platform has been developed. It allows cleaning and tagging the routes carried out by a specific user, as well as recognizing every stop made, and assigning semantics to those stops. Those semantics are given by seeking out Points of Interest (POI) close to each detected stop.
 \end{abstract}
 
 \renewcommand*\abstractname{Keywords}
 \begin{abstract}
-Web, track, coordinate, POI, semantics.
+Web, track, coordinate, POI, semantic track.
 \end{abstract}
 
 \clearpage
@@ -479,7 +490,7 @@ Web, track, coordinate, POI, semantics.
 
 %\listoftables
 
-%\clearpage
+\clearpage
 
 \mainmatter
 \include{./tex/1_Introduccion}
@@ -491,7 +502,7 @@ Web, track, coordinate, POI, semantics.
 \include{./tex/7_Conclusiones_Lineas_de_trabajo_futuras}
 
 
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{bibliografia}
 
 \end{document}

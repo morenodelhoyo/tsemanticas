@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: anexos.aux
+A level-1 auxiliary file: ./tex/A_Plan_proyecto.aux
+A level-1 auxiliary file: ./tex/B_Requisitos.aux
+A level-1 auxiliary file: ./tex/C_Diseno.aux
+A level-1 auxiliary file: ./tex/D_Manual_programador.aux
+A level-1 auxiliary file: ./tex/E_Manual_usuario.aux
+The style file: plainnat.bst
+Database file #1: bibliografiaAnexos.bib
+Warning--to sort, need author or key in bases:info
+Warning--to sort, need author or key in tarifas:info
+Warning--to sort, need author or key in bonif:info
+Warning--to sort, need author or key in licpost:info
+Warning--to sort, need author or key in licjson:info
+Warning--to sort, need author or key in licapa:info
+Warning--to sort, need author or key in licbsd:info
+Warning--to sort, need author or key in req:info
+Warning--to sort, need author or key in ieee:info
+Warning--to sort, need author or key in seq:info
+Warning--to sort, need author or key in mvc:wiki
+Warning--to sort, need author or key in installpost:info
+Warning--to sort, need author or key in pgcron:info
+Warning--to sort, need author or key in installjava:info
+Warning--to sort, need author or key in servnet:info
+Warning--to sort, need author or key in auto:info
+Warning--empty author in auto:info
+Warning--empty journal in auto:info
+Warning--empty year in auto:info
+Warning--empty year in auto:info
+Warning--empty year in bases:info
+Warning--empty year in bonif:info
+Warning--empty year in ieee:info
+Warning--empty author in installjava:info
+Warning--empty journal in installjava:info
+Warning--empty year in installjava:info
+Warning--empty author in installpost:info
+Warning--empty journal in installpost:info
+Warning--empty year in installpost:info
+Warning--empty year in licapa:info
+Warning--empty year in licbsd:info
+Warning--empty year in licjson:info
+Warning--empty year in licpost:info
+Warning--empty year in mvc:wiki
+Warning--empty author in pgcron:info
+Warning--empty journal in pgcron:info
+Warning--empty year in pgcron:info
+Warning--empty year in pgcron:info
+Warning--empty year in req:info
+Warning--empty year in seq:info
+Warning--empty author in servnet:info
+Warning--empty journal in servnet:info
+Warning--empty year in servnet:info
+Warning--empty year in servnet:info
+Warning--empty year in tarifas:info
+Warning--empty journal in montero:info
+Warning--empty year in montero:info
+Warning--empty year in montero:info
+(There were 48 warnings)

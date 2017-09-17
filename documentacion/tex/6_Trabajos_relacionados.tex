@@ -3,13 +3,13 @@
 En este apartado se va a aportar una visión más amplia del \quotes{estado del arte} mediante el estudio de otras herramientas similares.
 
 \section{Weka-STPM}
-WEKA for Moving Object Data Analysis and Mining o Weka-STPM es una extensión para Weka que permite soportar de forma automática el procesado de trayectorias o rutas para añadir semántica a las mismas. Está desarrollada por la Doctora Vania Bogorny, profesora del Departamento de Informática y Estadística en la Universidad Federal de Santa Catarina (Brasil).
+WEKA for Moving Object Data Analysis and Mining o Weka-STPM \cite{weka:info} es una extensión para Weka que permite soportar de forma automática el procesado de trayectorias o rutas para añadir semántica a las mismas. Está desarrollada por la Doctora Vania Bogorny, profesora del Departamento de Informática y Estadística en la Universidad Federal de Santa Catarina (Brasil).
 
 Inicialmente parece una herramienta clave que podía haber facilitado el análisis de las rutas puesto que permitía la lectura y escritura en Bases de Datos PostgreSQL y soportaba la extensión PostGIS, pero tras algunas pruebas se vio que no se obtenían los resultados esperados.
 
 Además, se puede ver por su código, que no está completamente terminada, encontrándose algunos errores en su ejecución y opciones no disponibles. Por ejemplo, aunque se lograba una conexión contra la Base de Datos, no se lograba que la aplicación insertase ningún tipo de resultado en la misma.
 
-Su interfaz (Figura \ref{weka}) basada en Swing tampoco ayuda a comprender su funcionamiento puesto que hay botonoes que quedan ocultos, opciones que no se visualizan y desplegables que desaparecen detrás del resto de menús. Ante los problemas encontrados no se puede afirmar que esta herramienta pueda ser de gran utilidad en la actualidad pero sí es posible garantizar que si su desarrollo finaliza supondrá un gran paso adelante en el análisis de cualquier tipo de trayectoria.
+Su interfaz (Figura \ref{weka}) basada en Swing tampoco ayuda a comprender su funcionamiento puesto que hay botones que quedan ocultos, opciones que no se visualizan y desplegables que desaparecen detrás del resto de menús. Ante los problemas encontrados no se puede afirmar que esta herramienta pueda ser de gran utilidad en la actualidad pero sí es posible garantizar que si su desarrollo finaliza supondrá un gran paso adelante en el análisis de cualquier tipo de trayectoria.
 
 \begin{figure}[h]
   \centering
@@ -20,7 +20,7 @@ Su interfaz (Figura \ref{weka}) basada en Swing tampoco ayuda a comprender su fu
 
 
 \section{CARTO}
-Carto es una plataforma de cómputo en la nube SaaS (Software as a Service) que provee de un sistema de información geográfica o GIS y herramientas de mapeo de información para navegadores web.
+Carto \cite{carto:info} es una plataforma de cómputo en la nube SaaS (Software as a Service) que provee de un sistema de información geográfica o GIS y herramientas de mapeo de información para navegadores web.
 
 Está basada en la extensión PostGIS de ProstreSQL y es de código abierto. Su \textit{front-end} está basado en JavaScript mientas que su \textit{back-end} está basado en Node.js.
 
@@ -35,7 +35,7 @@ El aspecto que muestran los mapas creados mediante CARTO puede ser visto en la F
 
 
 \subsection{CARTO Builder}
-CARTO Builder es una aplicación web en la que los usuarios pueden procesar sus datos, realizar anaálisis y diseñar mapas propios. CARTO Builder está pensado y diseñado para todas las personas noveles que desean hacer uso de estas herramientas sin contar con conocimientos previos ni avanzados en sistemas de información geográficos. No obstante se provee de acceso a consultas SQL que pueden ser personalizadas si se cuenta con mayores conocimientos.
+CARTO Builder es una aplicación web en la que los usuarios pueden procesar sus datos, realizar análisis y diseñar mapas propios. CARTO Builder está pensado y diseñado para todas las personas noveles que desean hacer uso de estas herramientas sin contar con conocimientos previos ni avanzados en sistemas de información geográficos. No obstante se provee de acceso a consultas SQL que pueden ser personalizadas si se cuenta con mayores conocimientos.
 
 \subsection{CARTO Engine}
 CARTO Engine provee al usuario de distintas APIs y librerías que permiten la construcción de mapas completamente personalizados.
@@ -50,7 +50,7 @@ Aunque como se puede apreciar, su gran variedad de características permite una 
 
 \section{Google Trips}
 
-Quizá la primera aproximación a esta aplicación pueda parecer que es la que más se adapta al espíritu de este proyecto. Google Trips (Figura \ref{trips}) permite organizar viajes o rutas en pocos minutos.
+Quizá la primera aproximación a esta aplicación pueda parecer que es la que más se adapta al espíritu de este proyecto. Google Trips \cite{trips:info} (Figura \ref{trips}) permite organizar viajes o rutas en pocos minutos.
 
 También facilita obtener sugerencias de sitios no visitados que guardan relación con los visitados anteriormente y que hayan gustado a su usuario, preparar rutas diarias, organizar reservas según un calendario en Gmail, etc.
 

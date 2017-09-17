@@ -6,5 +6,65 @@ A level-1 auxiliary file: ./tex/4_Tecnicas_y_herramientas.aux
 A level-1 auxiliary file: ./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux
 A level-1 auxiliary file: ./tex/6_Trabajos_relacionados.aux
 A level-1 auxiliary file: ./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux
-The style file: plain.bst
+The style file: plainnat.bst
 Database file #1: bibliografia.bib
+Warning--to sort, need author or key in ubuntu:info
+Warning--to sort, need author or key in centos:info
+Warning--to sort, need author or key in uso:info
+Warning--to sort, need author or key in openlayers:info
+Warning--to sort, need author or key in coord:wiki
+Warning--to sort, need author or key in netbeans:info
+Warning--to sort, need author or key in glass:info
+Warning--to sort, need author or key in osm:wiki
+Warning--to sort, need author or key in post:info
+Warning--to sort, need author or key in postgis:wiki
+Warning--to sort, need author or key in qgis:info
+Warning--to sort, need author or key in osmosis:info
+Warning--to sort, need author or key in osmconvert:wiki
+Warning--to sort, need author or key in osmfilter:wiki
+Warning--to sort, need author or key in servlet:wiki
+Warning--to sort, need author or key in jsp:wiki
+Warning--to sort, need author or key in boot:info
+Warning--to sort, need author or key in epsg:wiki
+Warning--to sort, need author or key in pais:info
+Warning--to sort, need author or key in weka:info
+Warning--to sort, need author or key in carto:info
+Warning--to sort, need author or key in trips:info
+Warning--empty year in boot:info
+Warning--empty year in carto:info
+Warning--empty year in centos:info
+Warning--empty year in coord:wiki
+Warning--empty year in epsg:wiki
+Warning--empty year in glass:info
+Warning--empty year in jsp:wiki
+Warning--empty year in netbeans:info
+Warning--empty year in openlayers:info
+Warning--empty year in osm:wiki
+Warning--empty year in osmconvert:wiki
+Warning--empty year in osmfilter:wiki
+Warning--empty year in osmosis:info
+Warning--empty year in pais:info
+Warning--empty year in post:info
+Warning--empty year in postgis:wiki
+Warning--empty year in qgis:info
+Warning--empty year in servlet:wiki
+Warning--empty year in trips:info
+Warning--empty year in ubuntu:info
+Warning--empty year in uso:info
+Warning--empty year in weka:info
+Warning--empty journal in survey:info
+Warning--empty year in survey:info
+Warning--empty year in survey:info
+Warning--empty journal in modeling:info
+Warning--empty year in modeling:info
+Warning--empty year in modeling:info
+Warning--empty journal in semantic:info
+Warning--empty year in semantic:info
+Warning--empty year in semantic:info
+Warning--empty journal in tree:info
+Warning--empty year in tree:info
+Warning--empty year in tree:info
+Warning--empty journal in montero:info
+Warning--empty year in montero:info
+Warning--empty year in montero:info
+(There were 59 warnings)

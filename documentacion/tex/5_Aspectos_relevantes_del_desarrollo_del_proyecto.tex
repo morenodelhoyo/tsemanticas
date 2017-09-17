@@ -3,7 +3,7 @@
 A la hora de realizar un proyecto de este tipo siempre surgen problemas o cuestiones que se han de ir resolviendo en ese momento, esta sección trata los puntos más relevantes.
 
 \section{Concepto inicial del proyecto}
-El proyecto planteado, en su forma incial, trataba de la implementación de una aplicación de escritorio en lenguaje Python o Java permitiendo asignar semántica a las rutas analizadas.
+El proyecto planteado, en su forma inicial, trataba de la implementación de una aplicación de escritorio en lenguaje Python o Java permitiendo asignar semántica a las rutas analizadas.
 
 Para ello, la aplicación debería poder leer y procesar ficheros de texto plano o csv. Todos los datos obtenidos serían almacenados en una Base de Datos PostgreSQL puesto que cuenta con una extensión llamada PostGIS que permite el análisis y tratamiento de posiciones geográficas añadiendo funcionalidad adicional al SGBD mencionado.
 
@@ -20,9 +20,9 @@ Adicionalmente, no se contaban con conocimientos sobre el funcionamiento de los 
 
 
 \subsection{Coordenadas geográficas}
-Debido a los distintos tipos de toma y representación de coordenadas geográficas es posible que una misma coordenada representada sobre distintos sistemas de mapas de lugar a errores de representación de varios centenares de metros. Este comportamiento puede observarse al comparar coordenadas geográficas presentadas por distintos motores de mapas. Por ejemplo, una coordenada localizada en China mostrada un mapa basado en OpenStreetMaps no coincidirá con la misma coordenada mostrada por los mapas de Google.
+Debido a los distintos tipos de toma y representación de coordenadas geográficas es posible que una misma coordenada representada sobre distintos sistemas de mapas de lugar a errores de representación de varios centenares de metros. Este comportamiento puede observarse al comparar coordenadas geográficas presentadas por distintos motores de mapas. Por ejemplo, una coordenada localizada en China mostraba un mapa basado en Open Street Map no coincidirá con la misma coordenada mostrada por los mapas de Google.
 
-Esto es así por el uso de distintos sistemas de coordenadas usados por ambos motores (EPSG:3857 en Google Maps frente a EPSG:4326 en OpenStreetMaps).
+Esto es así por el uso de distintos sistemas de coordenadas usados por ambos motores (EPSG:3857 en Google Maps frente a EPSG:4326 en OpenStreetMaps) \cite{epsg:wiki}.
 
 Al comienzo del desarrollo del trabajo, no se conocían los diferentes sistemas de coordenadas dando lugar a confusión y errores en los cálculos sobre las rutas.
 
@@ -43,7 +43,7 @@ Estas limitaciones favorecen la aparición de errores en las coordenadas medidas
 
 Este echo puede ser fácilmente verificado atendiendo a las restricciones inherentes del hardware y a la forma en la que el software es implementado. Dejando un dispositivo GPS activo en un punto fijo, se verá al cabo de un cierto espacio de tiempo que el dispositivo parece moverse de forma autónoma. Este movimiento viene dado por los errores y/o fallos mencionados anteriormente.
 
-Por tanto, es posible afirmar, que los datos con los que cada usuario cuenta tendrán un cierto error. Esto hace que los algoritmos de análisis y muestra de resultados deban tolerar estas inexactitudes. La Figura \ref{errores} muestra el movimiento virtual efectuado por dispositivo GPS completamente parado.
+Por tanto, es posible afirmar, que los datos con los que cada usuario cuenta tendrán un cierto error. Esto hace que los algoritmos de análisis y muestra de resultados deban tolerar estas inexactitudes. La Figura \ref{errores} muestra el movimiento virtual efectuado por dispositivo GPS completamente parado. \cite{pais:info}
 
 \begin{figure}[h]
   \centering
@@ -94,5 +94,5 @@ Este comportamiento no es el ideal puesto que el usuario puede tener la oportuni
 
 Por tanto se decidió separar el algoritmo en diferentes clases que permitiesen una ejecución del algoritmo más personalizada.
 
-Este echo hizo que el desarrollo se viese ralentizado puesto que el cambio de la implementación del algoritmo implicó más tiempo del planeado inicialmente. Además, en este momento, se llevó a cabo la migración hacia la plataforma web, lo que implicó cambios adicionales sobre el código.
+Este hecho hizo que el desarrollo se viese ralentizado puesto que el cambio de la implementación del algoritmo implicó más tiempo del planeado inicialmente. Además, en este momento, se llevó a cabo la migración hacia la plataforma web, lo que implicó cambios adicionales sobre el código.
 

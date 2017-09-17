@@ -2,127 +2,137 @@
 \select@language {spanish}
 \contentsline {chapter}{\'{I}ndice general}{\es@scroman {i}}{section*.1}
 \contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {iii}}{section*.2}
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {vi}}{section*.3}
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {vi}}{section*.3}
 \contentsline {appendix}{\chapternumberline {A}Plan de Proyecto Software}{1}{appendix.Alph1}
 \contentsline {section}{\numberline {A.1}Introducci\IeC {\'o}n}{1}{section.Alph1.1}
 \contentsline {section}{\numberline {A.2}Planificaci\IeC {\'o}n temporal}{1}{section.Alph1.2}
-\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{1}{section.Alph1.3}
-\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{2}{section*.4}
-\contentsline {subsubsection}{Coste laboral}{2}{section*.5}
-\contentsline {subsubsection}{Coste de capital}{3}{section*.6}
-\contentsline {subsubsection}{Ingresos estimados}{4}{section*.7}
-\contentsline {subsection}{Viabilidad legal}{5}{section*.8}
-\contentsline {subsubsection}{Librer\IeC {\'\i }as de terceros}{5}{section*.9}
-\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de las licencias}{6}{section*.10}
-\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{7}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{7}{section.Alph2.1}
-\contentsline {section}{\numberline {B.2}Objetivos generales}{8}{section.Alph2.2}
-\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{8}{section.Alph2.3}
-\contentsline {subsection}{Requisitos funcionales}{9}{section*.11}
-\contentsline {subsection}{Requisitos no funcionales}{10}{section*.12}
-\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{10}{section.Alph2.4}
-\contentsline {subsection}{Diagrama de casos de uso}{10}{section*.13}
-\contentsline {subsubsection}{Actores}{11}{section*.14}
-\contentsline {subsubsection}{Casos de uso}{11}{section*.15}
-\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{34}{appendix.Alph3}
-\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{34}{section.Alph3.1}
-\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{34}{section.Alph3.2}
-\contentsline {subsection}{Base de Datos}{34}{section*.16}
-\contentsline {subsubsection}{tfm\_area}{34}{section*.17}
-\contentsline {subsubsection}{tfm\_nodos}{35}{section*.18}
-\contentsline {subsubsection}{tfm\_caminos}{36}{section*.19}
-\contentsline {subsubsection}{tfm\_experimento}{36}{section*.20}
-\contentsline {subsubsection}{tfm\_experimento\_fichero}{37}{section*.21}
-\contentsline {subsubsection}{tfm\_experimento\_ruta}{37}{section*.22}
-\contentsline {subsubsection}{tfm\_fichero}{38}{section*.23}
-\contentsline {subsubsection}{tfm\_fichero\_poi}{38}{section*.24}
-\contentsline {subsubsection}{tfm\_nombre\_nodo}{38}{section*.25}
-\contentsline {subsubsection}{tfm\_posicion}{38}{section*.26}
-\contentsline {subsubsection}{tfm\_posicion\_poi}{39}{section*.27}
-\contentsline {subsubsection}{tfm\_proceso\_poi}{39}{section*.28}
-\contentsline {subsubsection}{tfm\_proceso\_ruta}{39}{section*.29}
-\contentsline {subsubsection}{tfm\_region\_pois}{40}{section*.30}
-\contentsline {subsubsection}{tfm\_ruta}{40}{section*.31}
-\contentsline {subsubsection}{tfm\_ruta\_area}{40}{section*.32}
-\contentsline {subsubsection}{tfm\_usuario}{41}{section*.33}
-\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{41}{section.Alph3.3}
-\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{41}{section.Alph3.4}
-\contentsline {subsection}{Diagramas de secuencias}{41}{section*.34}
-\contentsline {subsubsection}{Subida de ficheros}{41}{section*.35}
-\contentsline {subsubsection}{Borrado de datos}{41}{section*.36}
-\contentsline {subsubsection}{Borrado de ficheros}{41}{section*.37}
-\contentsline {subsubsection}{Subir ficheros de PDIs}{43}{section*.38}
-\contentsline {subsubsection}{Borrar regi\IeC {\'o}n}{43}{section*.39}
-\contentsline {subsubsection}{Crear \IeC {\'a}rea}{43}{section*.40}
-\contentsline {subsubsection}{Pruebas}{45}{section*.41}
-\contentsline {subsubsection}{Repetir prueba}{45}{section*.42}
-\contentsline {subsubsection}{Borrar prueba}{46}{section*.43}
-\contentsline {subsubsection}{Resultados}{46}{section*.44}
-\contentsline {subsubsection}{Leer ficheros}{47}{section*.45}
-\contentsline {subsubsection}{Procesar Rutas}{47}{section*.46}
-\contentsline {subsubsection}{Procesar Paradas}{47}{section*.47}
-\contentsline {subsubsection}{Procesar PDIs}{47}{section*.48}
-\contentsline {subsection}{Arquitectura MVC}{47}{section*.49}
-\contentsline {subsection}{Arquitectura web}{50}{section*.50}
-\contentsline {subsection}{Estructura de paquetes del sistema}{50}{section*.51}
-\contentsline {subsubsection}{Modelo}{51}{section*.52}
-\contentsline {subsubsection}{Controlador}{52}{section*.53}
-\contentsline {subsubsection}{Vista}{52}{section*.54}
-\contentsline {section}{\numberline {C.5}Prototipado de la aplicaci\IeC {\'o}n web}{52}{section.Alph3.5}
-\contentsline {subsection}{Prototipado horizontal de baja fidelidad}{54}{section*.55}
-\contentsline {subsection}{Prototipado horizontal de alta fidelidad}{55}{section*.56}
-\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{68}{appendix.Alph4}
-\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{68}{section.Alph4.1}
-\contentsline {section}{\numberline {D.2}Estructura de directorios}{68}{section.Alph4.2}
-\contentsline {section}{\numberline {D.3}Manual del programador}{69}{section.Alph4.3}
-\contentsline {subsection}{Virtual Box}{69}{section*.57}
-\contentsline {subsection}{Ubuntu 16.04 LTS}{69}{section*.58}
-\contentsline {subsubsection}{Recursos del sistema}{70}{section*.59}
-\contentsline {subsection}{PostgreSQL 9.6, PgAdmin 3 y PostGIS}{70}{section*.60}
-\contentsline {subsubsection}{PostgreSQL}{70}{section*.61}
-\contentsline {subsubsection}{PostGIS}{71}{section*.62}
-\contentsline {subsubsection}{pg\_cron}{71}{section*.63}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n b\IeC {\'a}sica de PostgreSQL}{72}{section*.64}
-\contentsline {subsubsection}{Tareas programadas con pg\_cron}{74}{section*.65}
-\contentsline {subsection}{Java y Glassfish 4}{74}{section*.66}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n de Glassfish}{76}{section*.67}
-\contentsline {subsection}{NetBeans}{77}{section*.68}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{77}{section*.69}
-\contentsline {subsection}{QGIS}{78}{section*.70}
-\contentsline {subsection}{Herramientas de OpenStreetMap}{79}{section*.71}
-\contentsline {subsubsection}{Osmosis}{79}{section*.72}
-\contentsline {subsubsection}{Osmfilter y Osmconvert}{79}{section*.73}
-\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{79}{section.Alph4.4}
-\contentsline {section}{\numberline {D.5}Recuperaci\IeC {\'o}n de la Base de Datos}{79}{section.Alph4.5}
-\contentsline {subsection}{\IeC {\'A}rea por defecto}{80}{section*.74}
-\contentsline {subsection}{NetBeans}{80}{section*.75}
-\contentsline {subsection}{Despliegue de la plataforma web}{81}{section*.76}
-\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{85}{appendix.Alph5}
-\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{85}{section.Alph5.1}
-\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{85}{section.Alph5.2}
-\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{86}{section.Alph5.3}
-\contentsline {section}{\numberline {E.4}Manual de usuario}{86}{section.Alph5.4}
-\contentsline {subsection}{Secciones de la plataforma web}{86}{section*.77}
-\contentsline {subsubsection}{Portada}{87}{section*.78}
-\contentsline {subsubsection}{Gesti\IeC {\'o}n de ficheros}{87}{section*.79}
-\contentsline {subsubsection}{Opciones del algoritmo}{90}{section*.80}
-\contentsline {subsubsection}{Visualizaci\IeC {\'o}n de resultados}{93}{section*.81}
-\contentsline {subsubsection}{Pruebas}{95}{section*.82}
-\contentsline {subsubsection}{Gesti\IeC {\'o}n}{97}{section*.83}
-\contentsline {paragraph}{Gesti\IeC {\'o}n de \IeC {\'a}reas:}{97}{section*.84}
-\contentsline {paragraph}{Gesti\IeC {\'o}n de Puntos de Inter\IeC {\'e}s:}{99}{section*.85}
-\contentsline {paragraph}{Borrado de datos:}{99}{section*.86}
-\contentsline {section}{\numberline {E.5}Obtenci\IeC {\'o}n y manipulaci\IeC {\'o}n de datos}{100}{section.Alph5.5}
-\contentsline {subsection}{Descarga de mapas}{100}{section*.87}
-\contentsline {subsubsection}{Osmconvert}{102}{section*.88}
-\contentsline {subsection}{Osmosis}{102}{section*.89}
-\contentsline {subsubsection}{Extracci\IeC {\'o}n de una ciudad}{102}{section*.90}
-\contentsline {subsection}{Osmconvert}{104}{section*.91}
-\contentsline {section}{\numberline {E.6}QGIS}{105}{section.Alph5.6}
-\contentsline {subsection}{QGIS}{106}{section*.92}
-\contentsline {subsubsection}{Descarga de contenido OSM con QGIS}{106}{section*.93}
-\contentsline {section}{\numberline {E.7}Datos de prueba}{108}{section.Alph5.7}
-\contentsline {subsection}{Origen de datos}{108}{section*.94}
-\contentsline {subsubsection}{Taxi Service Trajectory}{109}{section*.95}
-\contentsline {subsubsection}{GPS Trajectories Data Set}{110}{section*.96}
-\contentsline {subsubsection}{Geolife}{110}{section*.97}
+\contentsline {subsection}{Sprint 1}{2}{section*.4}
+\contentsline {subsection}{Sprint 2}{2}{section*.5}
+\contentsline {subsection}{Sprint 3}{2}{section*.6}
+\contentsline {subsection}{Sprint 4}{2}{section*.7}
+\contentsline {subsection}{Sprint 5}{2}{section*.8}
+\contentsline {subsection}{Sprint 6}{2}{section*.9}
+\contentsline {subsection}{Sprint 7}{2}{section*.10}
+\contentsline {subsection}{Sprint 8}{2}{section*.11}
+\contentsline {subsection}{Sprint 9}{3}{section*.12}
+\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{3}{section.Alph1.3}
+\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{3}{section*.13}
+\contentsline {subsubsection}{Coste laboral}{3}{section*.14}
+\contentsline {subsubsection}{Coste de capital}{4}{section*.15}
+\contentsline {subsubsection}{Ingresos estimados}{5}{section*.16}
+\contentsline {subsection}{Viabilidad legal}{7}{section*.17}
+\contentsline {subsubsection}{Librer\IeC {\'\i }as de terceros}{7}{section*.18}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de las licencias}{7}{section*.19}
+\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{8}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{8}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}Objetivos generales}{9}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{9}{section.Alph2.3}
+\contentsline {subsection}{Requisitos funcionales}{10}{section*.20}
+\contentsline {subsection}{Requisitos no funcionales}{11}{section*.21}
+\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{11}{section.Alph2.4}
+\contentsline {subsection}{Diagrama de casos de uso}{11}{section*.22}
+\contentsline {subsubsection}{Actores}{12}{section*.23}
+\contentsline {subsubsection}{Casos de uso}{12}{section*.24}
+\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{35}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{35}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{35}{section.Alph3.2}
+\contentsline {subsection}{Base de Datos}{35}{section*.25}
+\contentsline {subsubsection}{tfm\_area}{35}{section*.26}
+\contentsline {subsubsection}{tfm\_nodos}{36}{section*.27}
+\contentsline {subsubsection}{tfm\_caminos}{37}{section*.28}
+\contentsline {subsubsection}{tfm\_experimento}{37}{section*.29}
+\contentsline {subsubsection}{tfm\_experimento\_fichero}{38}{section*.30}
+\contentsline {subsubsection}{tfm\_experimento\_ruta}{38}{section*.31}
+\contentsline {subsubsection}{tfm\_fichero}{39}{section*.32}
+\contentsline {subsubsection}{tfm\_fichero\_poi}{39}{section*.33}
+\contentsline {subsubsection}{tfm\_nombre\_nodo}{39}{section*.34}
+\contentsline {subsubsection}{tfm\_posicion}{39}{section*.35}
+\contentsline {subsubsection}{tfm\_posicion\_poi}{40}{section*.36}
+\contentsline {subsubsection}{tfm\_proceso\_poi}{40}{section*.37}
+\contentsline {subsubsection}{tfm\_proceso\_ruta}{40}{section*.38}
+\contentsline {subsubsection}{tfm\_region\_pois}{41}{section*.39}
+\contentsline {subsubsection}{tfm\_ruta}{41}{section*.40}
+\contentsline {subsubsection}{tfm\_ruta\_area}{41}{section*.41}
+\contentsline {subsubsection}{tfm\_usuario}{42}{section*.42}
+\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{42}{section.Alph3.3}
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{42}{section.Alph3.4}
+\contentsline {subsection}{Diagramas de secuencias}{42}{section*.43}
+\contentsline {subsubsection}{Subida de ficheros}{42}{section*.44}
+\contentsline {subsubsection}{Borrado de datos}{42}{section*.45}
+\contentsline {subsubsection}{Borrado de ficheros}{42}{section*.46}
+\contentsline {subsubsection}{Subir ficheros de PDIs}{44}{section*.47}
+\contentsline {subsubsection}{Borrar regi\IeC {\'o}n}{44}{section*.48}
+\contentsline {subsubsection}{Crear \IeC {\'a}rea}{44}{section*.49}
+\contentsline {subsubsection}{Pruebas}{46}{section*.50}
+\contentsline {subsubsection}{Repetir prueba}{46}{section*.51}
+\contentsline {subsubsection}{Borrar prueba}{47}{section*.52}
+\contentsline {subsubsection}{Resultados}{47}{section*.53}
+\contentsline {subsubsection}{Lectura de ficheros}{48}{section*.54}
+\contentsline {subsubsection}{Procesado de Rutas}{48}{section*.55}
+\contentsline {subsubsection}{Procesado de Paradas}{48}{section*.56}
+\contentsline {subsubsection}{Procesado de PDIs}{48}{section*.57}
+\contentsline {subsection}{Arquitectura MVC}{48}{section*.58}
+\contentsline {subsection}{Arquitectura web}{51}{section*.59}
+\contentsline {subsection}{Estructura de paquetes del sistema}{51}{section*.60}
+\contentsline {subsubsection}{Modelo}{52}{section*.61}
+\contentsline {subsubsection}{Controlador}{53}{section*.62}
+\contentsline {subsubsection}{Vista}{53}{section*.63}
+\contentsline {section}{\numberline {C.5}Prototipado de la aplicaci\IeC {\'o}n web}{53}{section.Alph3.5}
+\contentsline {subsection}{Prototipado horizontal de baja fidelidad}{55}{section*.64}
+\contentsline {subsection}{Prototipado horizontal de alta fidelidad}{56}{section*.65}
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{70}{appendix.Alph4}
+\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{70}{section.Alph4.1}
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{70}{section.Alph4.2}
+\contentsline {section}{\numberline {D.3}Manual del programador}{71}{section.Alph4.3}
+\contentsline {subsection}{Virtual Box}{71}{section*.66}
+\contentsline {subsection}{Ubuntu 16.04 LTS}{71}{section*.67}
+\contentsline {subsubsection}{Recursos del sistema}{72}{section*.68}
+\contentsline {subsection}{PostgreSQL 9.6, PgAdmin 3 y PostGIS}{72}{section*.69}
+\contentsline {subsubsection}{PostgreSQL}{72}{section*.70}
+\contentsline {subsubsection}{PostGIS}{73}{section*.71}
+\contentsline {subsubsection}{pg\_cron}{73}{section*.72}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n b\IeC {\'a}sica de PostgreSQL}{74}{section*.73}
+\contentsline {subsubsection}{Tareas programadas con pg\_cron}{76}{section*.74}
+\contentsline {subsection}{Java y Glassfish 4}{76}{section*.75}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n de Glassfish}{78}{section*.76}
+\contentsline {subsection}{NetBeans}{79}{section*.77}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{79}{section*.78}
+\contentsline {subsection}{QGIS}{80}{section*.79}
+\contentsline {subsection}{Herramientas de OpenStreetMap}{81}{section*.80}
+\contentsline {subsubsection}{Osmosis}{81}{section*.81}
+\contentsline {subsubsection}{Osmfilter y Osmconvert}{81}{section*.82}
+\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{81}{section.Alph4.4}
+\contentsline {section}{\numberline {D.5}Recuperaci\IeC {\'o}n de la Base de Datos}{81}{section.Alph4.5}
+\contentsline {subsection}{\IeC {\'A}rea por defecto}{82}{section*.83}
+\contentsline {subsection}{NetBeans}{82}{section*.84}
+\contentsline {subsection}{Despliegue de la plataforma web}{83}{section*.85}
+\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{87}{appendix.Alph5}
+\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{87}{section.Alph5.1}
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{87}{section.Alph5.2}
+\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{88}{section.Alph5.3}
+\contentsline {section}{\numberline {E.4}Manual de usuario}{88}{section.Alph5.4}
+\contentsline {subsection}{Secciones de la plataforma web}{88}{section*.86}
+\contentsline {subsubsection}{Portada}{89}{section*.87}
+\contentsline {subsubsection}{Gesti\IeC {\'o}n de ficheros}{89}{section*.88}
+\contentsline {subsubsection}{Opciones del algoritmo}{91}{section*.89}
+\contentsline {subsubsection}{Visualizaci\IeC {\'o}n de resultados}{95}{section*.90}
+\contentsline {subsubsection}{Pruebas}{98}{section*.91}
+\contentsline {subsubsection}{Gesti\IeC {\'o}n}{99}{section*.92}
+\contentsline {paragraph}{Gesti\IeC {\'o}n de \IeC {\'a}reas:}{100}{section*.93}
+\contentsline {paragraph}{Gesti\IeC {\'o}n de Puntos de Inter\IeC {\'e}s:}{101}{section*.94}
+\contentsline {paragraph}{Borrado de datos:}{102}{section*.95}
+\contentsline {section}{\numberline {E.5}Obtenci\IeC {\'o}n y manipulaci\IeC {\'o}n de datos}{102}{section.Alph5.5}
+\contentsline {subsection}{Descarga de mapas}{103}{section*.96}
+\contentsline {subsubsection}{Osmconvert}{104}{section*.97}
+\contentsline {subsection}{Osmosis}{104}{section*.98}
+\contentsline {subsubsection}{Extracci\IeC {\'o}n de una ciudad}{104}{section*.99}
+\contentsline {subsection}{Osmconvert}{106}{section*.100}
+\contentsline {section}{\numberline {E.6}QGIS}{107}{section.Alph5.6}
+\contentsline {subsection}{QGIS}{108}{section*.101}
+\contentsline {subsubsection}{Descarga de contenido OSM con QGIS}{108}{section*.102}
+\contentsline {section}{\numberline {E.7}Datos de prueba}{110}{section.Alph5.7}
+\contentsline {subsection}{Origen de datos}{110}{section*.103}
+\contentsline {subsubsection}{Taxi Service Trajectory}{111}{section*.104}
+\contentsline {subsubsection}{GPS Trajectories Data Set}{112}{section*.105}
+\contentsline {subsubsection}{Geolife}{112}{section*.106}
+\contentsline {chapter}{Bibliograf\'{\i }a}{114}{section*.108}

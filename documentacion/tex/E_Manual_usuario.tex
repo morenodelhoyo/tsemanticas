@@ -1,10 +1,16 @@
 \apendice{Documentación de usuario}
 
 \section{Introducción}
-En los siguientes apartados de este anexo se mostrará cuáles son los requisitos  y conocimientos mínimos necesarios para poder hacer uso de la plataforma web.
+En los siguientes apartados de este anexo se mostrará cuáles son los requisitos y conocimientos mínimos necesarios para poder hacer uso de la plataforma web.
 
 \section{Requisitos de usuarios}
-Los requisitos mínimos son los siguientes:
+Para acceder al sistema en caso de hacer uso de la máquina virtual que acompaña a esta documentación se necesita conocer el nombre de usuario y contraseña, estos son:
+
+\begin{itemize}
+	\item \textbf{Usuario:} rs.
+	\item \textbf{Contraseña:} rs.
+\end{itemize}
+La contraseña mostrada será válida para cualquier solicitud de la misma por parte del sistema. En caso de no usar una máquina virtual, los requisitos mínimos son los siguientes:
 
 \begin{itemize}
 	\item Hardware: el recurso que puede limitar la experiencia de usuario es la cantidad de memoria RAM disponible, por ello, se recomienda contar con, al menos, 3 GiB de memoria RAM.
@@ -47,8 +53,8 @@ En este apartado se detallan las secciones con las que cuenta la plataforma web 
 
 \begin{itemize}
 	\item Portada: la portada de la plataforma web muestra algunas de las características de la misma.
-	\item Gestión de ficheros: la página de gestión de ficheros permite la subida, gestión y procesado de ficheros de rutas. Se permite la subida de ficheros de tipo csv. Estos ficheros serán mostrados en una tabla permitiendo su selección, procesado o eliminación de forma unitaria o conjunta.
-	\item Visualización de resultados: la ventana de resultados cuenta con dos partes diferenciadas. A la izquierda se muestran tres formas diferentes de seleccionar las áreas disponibles en la Base de Datos. La primera forma consiste en seleccionar las áreas existentes, la segunda permite seleccionar un área dentro de un mapa, y la tercera consiste en introducir los valores de latitud y longitud manualmente. Una vez seleccionada una o varias áreas de la forma deseada por el usuario, el listado de rutas mostrado a la izquierda (segunda de las partes mencionadas) será actualizado con las rutas pertenecientes al área o a las áreas seleccionadas.
+	\item Ficheros: la página de gestión de ficheros permite la subida, gestión y procesado de ficheros de rutas. Se permite la subida de ficheros de tipo csv. Estos ficheros serán mostrados en una tabla permitiendo su selección, procesado o eliminación de forma unitaria o conjunta.
+	\item Resultados: la ventana de resultados cuenta con dos partes diferenciadas. A la izquierda se muestran tres formas diferentes de seleccionar las áreas disponibles en la Base de Datos. La primera forma consiste en seleccionar las áreas existentes, la segunda permite seleccionar un área dentro de un mapa, y la tercera consiste en introducir los valores de latitud y longitud manualmente. Una vez seleccionada una o varias áreas de la forma deseada por el usuario, el listado de rutas mostrado a la izquierda (segunda de las partes mencionadas) será actualizado con las rutas pertenecientes al área o a las áreas seleccionadas.
 	\item Pruebas: esta página permite ver al usuario las pruebas que se han llevado a cabo del algoritmo de análisis de rutas. Se mostrará una tabla con los valores seleccionados en cada una de las ejecuciones del algoritmo y se permitirá su re ejecución, dejando al usuario la oportunidad de modificarlos o realizar la ejecución con los mismos valores.
 	\item Gestión: en esta sección se encuentran las páginas de gestión de la plataforma web. Un primer apartado permite mantener las áreas que se encuentran en la Base de Datos, además de crear nuevas áreas.
 \end{itemize}
@@ -265,7 +271,7 @@ La página de pruebas permite visualizar todas las ejecuciones del algoritmo rea
 	\item \textbf{Ficheros:} muestra el o los ficheros analizados. Para poder visualizar más de un fichero se ha de clicar sobre el botón \quotes{Ver todos}. Este botón indicará el número de ficheros analizados. Al clicar sobre el botón se lanzará un modal con el nombre de dichos ficheros.
 	\item \textbf{Área:} muestra el nombre del área asignada a las rutas.
 	\item \textbf{Distancia (rutas):} es la distancia máxima para dividir una ruta en dos partes.
-	\item \textbf{¿Búsqueda de paradas?:} indica si el usuario ha realizado la búsquda de paradas.
+	\item \textbf{¿Búsqueda de paradas?:} indica si el usuario ha realizado la búsqueda de paradas.
 	\item \textbf{Distancia:} es el valor que indica al algoritmo una distancia para considerar que dos puntos forman parte de una parada en ruta.
 	\item \textbf{Variación de mediana:} valor que multiplica la mediana calculada
 	\item \textbf{¿Búsqueda de POIs?:} indica si el usuario ha realizado la búsqueda de POIs.
@@ -372,12 +378,12 @@ Se mostrará un modal advirtiendo del borrado que se va a realizar evitando el b
 \section{Obtención y manipulación de datos}
 La plataforma web anteriormente descrita necesita diferentes datos para resultar útil. El primer conjunto de datos necesarios para poder llevar a cabo un análisis de rutas es el correspondiente a los Puntos De Interés que se deseen localizar en las paradas de las rutas. Este conjunto de datos puede obtenerse a partir de ficheros de tipo \textbf{osm}. En las siguientes secciones se explica cómo obtener estos datos.
 
-El segundo conjunto de datos necesario es el de las rutas propiamente dichas. Para realizar las pruebas se han buscado en distintos lugares de internet el mejor conjunto de datos posibles. En la parte final de este aenxo se mencionan los conjuntos de datos analizados y por qué se ha escogido uno en concreto.
+El segundo conjunto de datos necesario es el de las rutas propiamente dichas. Para realizar las pruebas se han buscado en distintos lugares de Internet el mejor conjunto de datos posibles. En la parte final de este anexo se mencionan los conjuntos de datos analizados y por qué se ha escogido uno en concreto.
 
 A continuación se muestra cómo obtener un mapa completo de China en formato comprimido (\textbf{pbf}), después se indicará cómo convertir este formato a osm y, por último, cómo obtener su conjunto de Puntos De Interés.
 
 \subsection{Descarga de mapas}
-Accediendo a la web de descargas de Geofabrik (enlace: \url{http://download.geofabrik.de/}) será posible elegir el país o continente cuyo mapa se desea descargar. La página principal de descargas permite obtener un continente completo (se aprecia en la Figura \ref{asaia1}). En esta ocasión se desea obtener solamente el mapa correspondiente a China. Por tanto, se clica sobre la fila correspondiente a Asia y en la segunda página se clica sobre China. El proceso es el descrito en las figuras \ref{asia2} y \ref{asia3}.
+Accediendo a la web de descargas de Geofabrik (enlace: \url{http://download.geofabrik.de/}) será posible elegir el país o continente cuyo mapa se desea descargar. La página principal de descargas permite obtener un continente completo (se aprecia en la Figura \ref{asia1}). En esta ocasión se desea obtener solamente el mapa correspondiente a China. Por tanto, se clica sobre la fila correspondiente a Asia y en la segunda página se clica sobre China. El proceso es el descrito en las figuras \ref{asia2} y \ref{asia3}.
 
 \begin{figure}[h]
   \centering
@@ -511,7 +517,7 @@ Como se ha comentado a lo largo de esta documentación, QGIS es un excelente pro
 \subsection{QGIS}
 QGIS es una herramienta de información geográfica libre y de código abierto que permite conexiones con PostgreSQL y visualización de los datos obtenidos sobre un mapa físico. 
 
-También permite la obtención de información geográfica desde Open Street Maps. De esta forma se pueden superponer rutas/trazas obtenidas desde las tablas de la Base de Datos con los mapas de Open Street Maps.
+También permite la obtención de información geográfica desde Open Street Map. De esta forma se pueden superponer rutas/trazas obtenidas desde las tablas de la Base de Datos con los mapas de Open Street Map.
 
 Para configurar una conexión contra la Base de Datos instalada y configurada anteriormente se ha de clicar en el icono de PostgreSQL ubicado en la columna central izquierda. Pedirá al usuario una serie de valores como:
 
@@ -536,7 +542,7 @@ Una vez se consigue una conexión, aparecerán las tablas que en la Base de Dato
 Otro de los aspectos importantes a tener en cuenta es la facilidad que brinda al usuario para descargar contenido en formato osm indicando una zona determinada mediante coordenadas geográficas. Esta característica ofrece el mismo resultado que el recorte del mapa de China realizado con Osmosis. A continuación, se muestra un ejemplo con los mismos datos.
 
 \subsubsection{Descarga de contenido OSM con QGIS}
-Para comenzar, se ha de acceder a la sección ``Vectorial'', después, situar el cursor sobre ``OpenStreetMaps'' y clicar sobre ``Descargar datos'' (Figura \ref{vectorial}).
+Para comenzar, se ha de acceder a la sección ``Vectorial'', después, situar el cursor sobre ``OpenStreetMap'' y clicar sobre ``Descargar datos'' (Figura \ref{vectorial}).
 
 \begin{figure}[h]
   \centering

@@ -9,7 +9,7 @@ Por último se verán aspectos relativos al desarrollo de una plataforma web cen
 
 
 \section{Conceptos previos}
-En este apartado se verán los conceptos previos para entender los pasos posteriores aquí detallados.
+En este apartado se verán los conceptos previos para entender los pasos posteriores aquí detallados. Todos los puntos aquí mostrados están basados en la documentación obtenida de \cite{survey:info}, \cite{semantic:info} y \cite{modeling:info}. 
 
 \subsection{Área}
 Toda ruta realizada puede englobarse en un área determinada. Esta área estará marcada por las coordenadas máximas y mínimas de las posiciones que componen la ruta.
@@ -17,7 +17,7 @@ Toda ruta realizada puede englobarse en un área determinada. Esta área estará
 Al analizar un conjunto de datos se puede obtener el área formada por todas las posiciones de las rutas que forman el conjunto.
 
 \subsection{Coordenada geográfica}
-Una coordenada geográfica está formada por un valor de longitud y un valor de latitud. Estos valores son obtenidos mediante los sistemas GPS o GLONASS (basados en un sistema de satélites y receptores terrestres). El valor de la longitud estará comprendido entre -180.0º y +180.0º, situando la coordenada en el espacio horizontal del globo terrestre. El valor de la latitud sitúa al receptor en el eje vertical y puede tomar valores de entre -90.0º y +90.0º. Siendo el origen de coordenadas el valor formado por la coordenada (0,0).
+Una coordenada geográfica \cite{coord:wiki} está formada por un valor de longitud y un valor de latitud. Estos valores son obtenidos mediante los sistemas GPS o GLONASS (basados en un sistema de satélites y receptores terrestres). El valor de la longitud estará comprendido entre -180.0º y +180.0º, situando la coordenada en el espacio horizontal del globo terrestre. El valor de la latitud sitúa al receptor en el eje vertical y puede tomar valores de entre -90.0º y +90.0º. Siendo el origen de coordenadas el valor formado por la coordenada (0,0).
 
 Además, una coordenada puede contar con otros valores como la marca de tiempo en la que fue tomada o la altura de la misma sobre la superficie terrestre.
 
@@ -80,7 +80,7 @@ Dependiendo de la opción, se seguirá uno de estos dos caminos:
 
 El siguiente paso consiste en dividir la trayectoria seguida en \quotes{movimiento} y \quotes{paradas}. Un periodo de movimiento es el tiempo en el que la persona se encuentra moviéndose entre dos ubicaciones mientras que un periodo de parada es el tiempo en el que, por ejemplo, la persona se encuentra viendo un lugar de interés.
 
-Estas paradas son detectadas una vez calculada la mediana como se ha comentado en los puntos anteriores. En el caso de que existan posiciones cercanas espacialmente pero separadas en el tiempo. Estas posiciones formarán una parada. Entendiendo como parada la entrada en un lugar de interés, la llegada y salida del puesto de trabajo de la persona que porta el dispositivo, etc.
+Estas paradas son detectadas una vez calculada la mediana como se ha comentado en los puntos anteriores. En el caso de que existan posiciones cercanas espacialmente pero separadas en el tiempo, estas posiciones formarán una parada. Entendiendo como parada la entrada en un lugar de interés, la llegada y salida del puesto de trabajo de la persona que porta el dispositivo, etc.
 
 De esta forma se obtienen paradas dentro de la ruta, contemplando el resto de posiciones como movimiento dentro de la misma.
 
@@ -90,6 +90,6 @@ El último proceso realizable es el correspondiente a la asignación de semánti
 
 Este proceso toma las paradas detectadas en la ruta y las contrasta con las posiciones de los Puntos De Interés almacenados en el sistema. Para ello se toma como límite el radio que marca la distancia máxima al que buscar un PDI.
 
-Un PDI obtenido de Open Street Maps puede contener diversa información, dicha información es aportada por la persona que registra dicho dato dentro de los sistemas OSM. Esta información incluye de forma obligatoria la posición espacial del Punto De Interés pero deja al usuario la posibilidad de añadir más información. Generalmente también se cuenta con un nombre en el idioma nativo de la persona que registra el PDI pero en otras ocasiones también existe un nombre genérico en inglés. Adicionalmente, un nodo suele incluir el tipo al que pertenece, este tipo recibe el nombre de \textit{amenity}. Una \textit{amenity} es una generalización de lugar al que representa el PDI. Por ejemplo, pueden existir museos, lugares de culto, gasolineras, centros comerciales, etc. De esta forma se puede conocer el nombre propio del lugar pero también qué tipo de lugar representa.
+Un PDI obtenido de Open Street Map puede contener diversa información, dicha información es aportada por la persona que registra dicho dato dentro de los sistemas OSM. Esta información incluye de forma obligatoria la posición espacial del Punto De Interés pero deja al usuario la posibilidad de añadir más información. Generalmente también se cuenta con un nombre en el idioma nativo de la persona que registra el PDI pero en otras ocasiones también existe un nombre genérico en inglés. Adicionalmente, un nodo suele incluir el tipo al que pertenece, este tipo recibe el nombre de \textit{amenity}. Una \textit{amenity} es una generalización de lugar al que representa el PDI. Por ejemplo, pueden existir museos, lugares de culto, gasolineras, centros comerciales, etc. De esta forma se puede conocer el nombre propio del lugar pero también qué tipo de lugar representa.
 
 Una vez se han obtenido los PDIs cercanos a las paradas, todos los datos serán actualizados en la Base de Datos, permitiendo al usuario recuperarlos en el momento  que desee, mostrando los resultados en la página de resultados de la plataforma.

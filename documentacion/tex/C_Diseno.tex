@@ -6,7 +6,7 @@ Este anexo especifica la estructura de los datos, los procedimientos y la arquit
 
 \section{Diseño de datos}
 
-El diseño de datos es mostrado en esta sección detallando cada una de las tablas creadas y usadas por la plataforma web para almacenar y recuperar al información que el sistema mantiene.
+El diseño de datos es mostrado en esta sección detallando cada una de las tablas creadas y usadas por la plataforma web para almacenar y recuperar la información que el sistema mantiene.
 
 \subsection{Base de Datos}
 
@@ -45,7 +45,7 @@ Tabla \quotes{tfm\_nodos}, almacena los nodos correspondientes a los Puntos De I
 	\item \textbf{nombre:} nombre que recibe el nodo.
 	\item \textbf{the\_geom:} valor de geometría calculado y asignado por PostGIS.
 	\item \textbf{id\_region:} referencia ajena a la tabla \quotes{tfm\_region\_pois}.
-	\item \textbf{amenity:} tipo de nodo (generalización).
+	\item \textbf{\textit{amenity:}} tipo de nodo (generalización).
 \end{itemize}
 
 \subsubsection{tfm\_caminos}
@@ -68,7 +68,7 @@ La tabla \quotes{tfm\_caminos} permite almacenar los valores de un camino presen
 	\item \textbf{buscar\_paradas:} este valor booleano indica si el usuario ha seleccionado la búsqueda de paradas durante el proceso de selección de opciones.
 	\item \textbf{distancia\_parada:} es la distancia máxima a la que dos posiciones secuenciales se considerarán paradas.
 	\item \textbf{variacion\_mediana:} multiplicador que permite realizar una variación sobre la mediana obtenida por el algoritmo.
-	\item \textbf{buscar\_pois:} indica si el usuario ha deseado buscar PDIs en las rutas analzadas.
+	\item \textbf{buscar\_pois:} indica si el usuario ha deseado buscar PDIs en las rutas analizadas.
 	\item \textbf{radio\_maximo:} es el valor que indica el radio máximo al que buscar PDIs sobre una parada.
 	\item \textbf{mult\_radio:} el multiplicador del radio permite ampliar el rango espacial de la búsqueda de Puntos De Interés.
 	\item \textbf{almacenado\_db:} es un valor booleano que indica si se ha almacenado la prueba en la Base de Datos.
@@ -170,7 +170,7 @@ La tabla \quotes{tfm\_ruta} almacena todos los datos relativos a las rutas. Sus 
 	\item \textbf{fecha\_creacion:} es la fecha de creación de la ruta en la Base de Datos.
 	\item \textbf{nuevo:} indica si la ruta es nueva, podrá ser consultado para eliminar todas las rutas en caso de que la ejecución sea detenida.
 	\item \textbf{es\_temporal:} indica si el usuario no ha querido guardar la ruta de forma permanente  y será eliminada
-	\item \textbf{fecha\_comienzo:} es la fecha de comienzo de la ruta analizada. Esta fecha permite conocer el dato  de comienzo sin tener que obtener las posiciones de la rutta.
+	\item \textbf{fecha\_comienzo:} es la fecha de comienzo de la ruta analizada. Esta fecha permite conocer el dato  de comienzo sin tener que obtener las posiciones de la ruta.
 	\item \textbf{fecha\_fin:} valor de fecha en la que la ruta finaliza.
 \end{itemize}
 
@@ -203,60 +203,61 @@ Este apartado del Anexo de Diseño refleja el diseño arquitectónico de la apli
 
 
 \subsection{Diagramas de secuencias}
-Este apartado muestra los diagramas de secuencias.
+Este apartado muestra los diagramas de secuencias \cite{seq:info}.
 
 \subsubsection{Subida de ficheros}
-Diagrama de secuencias para la subida de un fichero de datos a la plataforma.
+Diagrama de secuencias para la subida de un fichero de datos a la plataforma. Figura \ref{subida}.
+
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/4.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de subida de ficheros a la plataforma.}
+  \label{subida}
 \end{figure}
 
 \subsubsection{Borrado de datos}
-Diagrama de secuencias para el borrado de datos.
+Diagrama de secuencias para el borrado de datos. Figura \ref{borradodatos}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/2.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Borrado de datos en el sistema.}
+  \label{borradodatos}
 \end{figure}
 
 \subsubsection{Borrado de ficheros}
-Diagrama de secuencias para el borrado de ficheros.
+Diagrama de secuencias para el borrado de ficheros. Figura \ref{borradoficheros}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/1.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de borrado de fichreos.}
+  \label{borradoficheros}
 \end{figure}
 
 \subsubsection{Subir ficheros de PDIs}
-Diagrama de secuencias para la subida de ficheros de PDIs.
+Diagrama de secuencias para la subida de ficheros de PDIs. Figura \ref{subidapdis}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/3.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de subida de ficheros de PDIs.}
+  \label{subidapdis}
 \end{figure}
 
 \subsubsection{Borrar región}
-Diagrama de secuencias para borrar regiones.
+Diagrama de secuencias para borrar regiones. Figura \ref{borradoregion}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/5.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Borrado de región.}
+  \label{borradoregion}
 \end{figure}
 
 \subsubsection{Crear área}
-Diagrama de secuencias para crear áreas.
+Diagrama de secuencias para crear áreas. Figrua \ref{creacionarea}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/6.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de la creación de áreas.}
+  \label{creacionarea}
 \end{figure}
 
 \subsubsection{Pruebas}
@@ -264,79 +265,79 @@ Diagrama de secuencias para recuperar las pruebas realizadas.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/11.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Recuperación de pruebas.}
+  \label{recprueba}
 \end{figure}
 
 \subsubsection{Repetir prueba}
-Diagrama de secuencias para repetir una prueba. Se continua Procesar ficheros.
+Diagrama de secuencias para repetir una prueba. Figura \ref{repprueba}, se continua en \quotes{Procesado de ficheros}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/13.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Repetición de prueba.}
+  \label{repprueba}
 \end{figure}
 
 \subsubsection{Borrar prueba}
-Diagrama de secuencias para borrar una prueba realizada.
+Diagrama de secuencias para borrar una prueba realizada. Figura \ref{borradoprueba}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/12.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Borrado de pruebas.}
+  \label{borradoprueba}
 \end{figure}
 
 \subsubsection{Resultados}
-Diagrama de secuencias para recuperar los resultados obtenidos del análisis de datos.
+Diagrama de secuencias para recuperar los resultados obtenidos del análisis de datos. Figura \ref{resultados}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/14.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de obtención de resultados.}
+  \label{resultados}
 \end{figure}
 
-\subsubsection{Leer ficheros}
-Diagrama de secuencias para leer ficheros, generación de una ruta inicial y su posterior procesado.
+\subsubsection{Lectura de ficheros}
+Diagrama de secuencias para leer ficheros, generación de una ruta inicial y su posterior procesado. Figura \ref{lectura}, continua en \quotes{Procesado de Rutas}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/7.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Lectura de ficheros.}
+  \label{lectura}
 \end{figure}
 
-\subsubsection{Procesar Rutas}
-Diagrama de secuencias para procesar las rutas leídas en el procesado de ficheros.
+\subsubsection{Procesado de Rutas}
+Diagrama de secuencias para procesar las rutas leídas en el procesado de ficheros. Figura \ref{procesado}, se continua con el \quotes{Procesado de paradas}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/8.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Procesado de rutas.}
+  \label{procesado}
 \end{figure}
 
-\subsubsection{Procesar Paradas}
-Diagrama de secuencias para procesar las paradas de las rutas detectadas en el paso anterior.
+\subsubsection{Procesado de Paradas}
+Diagrama de secuencias para procesar las paradas de las rutas detectadas en el paso anterior. La Figura \ref{paradas} lo muestra, continua en \quotes{Procesado de PDIs}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/9.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Procesado de paradas en las rutas.}
+  \label{paradas}
 \end{figure}
 
-\subsubsection{Procesar PDIs}
-Diagrama de secuencias para obtener los PDIs cercanos a las paradas que han sido detectadas. También se muestra el almacenado en la Base de Datos.
+\subsubsection{Procesado de PDIs}
+Diagrama de secuencias para obtener los PDIs cercanos a las paradas que han sido detectadas. También se muestra el almacenado en la Base de Datos. Figura \ref{pdis}.
 \begin{figure}[!htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{../img/diagramas/secuencias/10.jpg}
-  \caption{Esquema general de la arquitectura MVC.}
-  \label{mvc}
+  \caption{Diagrama de secuencias de procesado de PDIs.}
+  \label{pdis}
 \end{figure}
 
 
 \subsection{Arquitectura MVC}
 
-El proyecto de esta plataforma web sigue el patrón arquitectónico Modelo-Vista-Controlador. Este patrón, generalmente, es usado para el diseño de aplicaciones que requieren de una interfaz de usuario permitiendo separar la lógica de negocio de la interfaz o vista y, por último, de los datos. La gran mayoría de frameworks de desarrollo web usan esta arquitectura.
+El proyecto de esta plataforma web sigue el patrón arquitectónico Modelo-Vista-Controlador \cite{mvc:wiki}. Este patrón, generalmente, es usado para el diseño de aplicaciones que requieren de una interfaz de usuario permitiendo separar la lógica de negocio de la interfaz o vista y, por último, de los datos. La gran mayoría de \textit{frameworks} de desarrollo web usan esta arquitectura.
 
-El diagrama de esta arquitectura es el mostrado en la Figura \ref{mvc}. Como se aprecia en la iamgen, la arquitectura está separada en tres componentes:
+El diagrama de esta arquitectura es el mostrado en la Figura \ref{mvc}. Como se aprecia en la imagen, la arquitectura está separada en tres componentes:
 
 \begin{itemize}
 	\item \textbf{Controlador:} el controlador responde a los eventos que le requiera el usuario. De esta forma es el encargado de llamar al modelo cuando se solicita algún tipo de tratamiento de información. También puede interactuar con la vista para cambiar la forma en que la interfaz se muestra al usuario. Se puede decir que el controlador es un intermediario entre la vista y el modelo.
@@ -449,7 +450,7 @@ Las vistas están formadas por páginas de tipo jsp. Por tanto, no se puede most
 
 \section{Prototipado de la aplicación web}
 
-La aplicación web sigue los conceptos descritos por Hassan-Montero en relación al diseño web centrado en el usuario. Este apartado incluye los prototipados realizados.
+La aplicación web sigue los conceptos descritos por Hassan-Montero \cite{montero:info} en relación al diseño web centrado en el usuario. Este apartado incluye los prototipados realizados.
 
 \subsection{Prototipado horizontal de baja fidelidad}
 Este prototipado muestra un primer diseño de la aplicación donde pueden verse algunas de las páginas planteadas en una primera aproximación. La lista de figuras mostradas corresponden con:

@@ -5,7 +5,7 @@
 Esta sección pretende aclarar todos los conceptos relativos a las cuestiones técnicas y de programación llevadas a cabo en el presente Trabajo de Fin de Máster.
 
 \section{Estructura de directorios}
-Este apartado presenta la estructura de los directorios y carpetas usados en el proyeto. Esta estructura es la siguiente:
+Este apartado presenta la estructura de los directorios y carpetas usados en el proyecto. Esta estructura es la siguiente:
 
 \begin{itemize}
 	\item \textbf{web:} esta carpeta almacena todos los recursos web, desde las páginas jsp hasta los ficheros css pasando por los ficheros javascript o las imágenes usadas.
@@ -33,7 +33,7 @@ Este apartado presenta la estructura de los directorios y carpetas usados en el 
 
 La presente sección indica cómo instalar las herramientas necesarias para el correcto desempeño de todo el sistema.
 
-Si se opta por una máquina virutal, primero se deberá contar con el software Virtual Box instalado en el ssitema anfitrión.
+Si se opta por una máquina virtual, primero se deberá contar con el software Virtual Box instalado en el sistema anfitrión.
 
 \subsection{Virtual Box}
 El software de virtualización seleccionado ha sido Oracle VM Virtual Box en su versión 5.1. Este programa ha sido instalado sobre Windows 10, sistema que actúa como anfitrión.
@@ -71,6 +71,8 @@ El sistema ha contado con los siguientes recursos hardware durante la fase de de
 PostgreSQL puede ser instalado en Ubuntu desde la consola de comandos. Para ello se han de seguir unos sencillos pasos.
 
 \subsubsection{PostgreSQL}
+
+La configuración aquí mostrada puede verse en el tutorial mostrado en la página wiki de PostGIS \cite{installpost:info}.
 
 El primer paso es añadir el repositorio al fichero sources.list:
 
@@ -112,7 +114,7 @@ Se puede obtener más información en la página web oficial de PostGIS: \url{ht
 
 \subsubsection{pg\_cron}
 
-\quotes{pg\_cron} es un programador de tareas para PostgreSQL basado en cron. Este programador permitirá realizar tareas de mantenimiento sobre la Base de Datos en los tiempos marcados al programar las tareas.
+\quotes{pg\_cron} \cite{pgcron:info} es un programador de tareas para PostgreSQL basado en cron. Este programador permitirá realizar tareas de mantenimiento sobre la Base de Datos en los tiempos marcados al programar las tareas.
 
 Para usar este complemento de chrome primero se ha de instalar y configurar, a continuación, se mencionan los pasos necesarios.
 
@@ -261,7 +263,7 @@ Estas tareas permiten realizar operaciones de mantenimiento (como VACCUM) y borr
 En este punto se cuenta con un SGBD instalado en el sistema, un usuario con una Base de Datos asignada y las extensiones necesarias. En los siguientes apartados se muestra cómo instalar el resto de componentes.
 
 \subsection{Java y Glassfish 4}
-A continuación, se mostrará cómo instalar Java y el servidor Glassfish sobre Ubuntu. Para ello, se han de seguir los siguientes pasos:
+A continuación, se mostrará cómo instalar Java y el servidor Glassfish sobre Ubuntu \cite{installjava:info}. Para ello, se han de seguir los siguientes pasos:
 
 La lista de comandos es la siguiente:
 \begin{lstlisting}[language=bash]
@@ -304,7 +306,7 @@ Para comprobar que Glassfish funciona, se levantará el servidor situándose en 
 	glassfish4/bin/asadmin start-domain
 \end{lstlisting}
 
-Si todo sucede de forma correcta, el \quotes{domain1} quedará levantado y corriendo. Antes de finalizar se ha de configurar la memoria asignada a la JVM en la consola de adminsitración del servidor.
+Si todo sucede de forma correcta, el \quotes{domain1} quedará levantado y corriendo. Antes de finalizar se ha de configurar la memoria asignada a la JVM en la consola de administración del servidor.
 
 \subsubsection{Configuración de Glassfish}
 Para acceder a la consola mencionada anteriormente, se ha de abrir un navegador y teclear \quotes{localhost:4848} que es el puerto de escucha de configuración de Glassfish. En unos segundos, la consola quedará a disposición del usuario.
@@ -317,8 +319,6 @@ Se ha de acceder a la sección \quotes{Configurations} -> \quotes{Server config}
   \caption{Configuración de memoria de Glassfish.}
   \label{glassconfig}
 \end{figure}
-
-
 
 \subsection{NetBeans}
 Como IDE se ha usado NetBeans, para instalar este entorno se ha de acceder al sección de descargas de su desarrollador y elegir la versión que cuente con Java EE por defecto (Figura \ref{descnet}.
@@ -333,13 +333,13 @@ Como IDE se ha usado NetBeans, para instalar este entorno se ha de acceder al se
 El IDE cuenta con un sencillo instalador que guía al usuario en todos los pasos necesarios. Como ya se cuenta con Glassfish en el sistema, se desmarcará la opción que permite una nueva instalación de este servidor. Al finalizar, el IDE se lanzará y se podrá comenzar a trabajar. Si por alguna razón no encuentra la ruta adecuada al JDK instalado, en el apartado siguiente se comenta cómo solucionar este pequeño inconveniente. Además, se muestra cómo ligar a NetBeans con Glasssfish.
 
 \subsubsection{Configuración}
-En el caso de que NetBeans no localice el JDK, se ha de abrir el fichero \quotes{netbeans.conf} de la carpeta \textbackslash etc situada dentro de la carpeta del IDE. La línea que ha de modificarse es la siguiente:
+En el caso de que NetBeans no localice el JDK, se ha de abrir el fichero \quotes{netbeans.conf} de la carpeta \textbackslash etc, situada dentro de la carpeta del IDE. La línea que ha de modificarse es la siguiente:
 
 \begin{lstlisting}[language=bash]
 	netbeans_jdkhome="/usr/lib/jvm/java-8-oracle"
 \end{lstlisting}
 
-Para indicar el servidor a NetBeans se ha de acceder a la ventana de configuración de servidores del IDE, localizada en: \quotes{Tools} -> \quotes{Servers}. En este momento se mostrará una ventana que permitirá seleccionar el servidor que se desea instalar además de otros parámetros. Todo el proceso de configuración queda descrito en las siguientes Figuras:  \ref{sv1}, \ref{sv2} y \ref{sv3}.
+Para indicar el servidor a NetBeans se ha de acceder a la ventana de configuración de servidores del IDE, localizada en: \quotes{Tools} -> \quotes{Servers}. En este momento se mostrará una ventana que permitirá seleccionar el servidor que se desea instalar además de otros parámetros. Todo el proceso de configuración queda descrito en las siguientes figuras:  \ref{sv1}, \ref{sv2} y \ref{sv3}, información obtenida de \cite{servnet:info}.
 
 \begin{figure}[h]
   \centering
@@ -364,7 +364,7 @@ Para indicar el servidor a NetBeans se ha de acceder a la ventana de configuraci
 
 \subsection{QGIS}
 
-Durante el desarrollo de este trabajo se ha hecho uso de las capacidades de QGIS para visualizar resultados y rutas sobre mapas Open Street Maps. QGIS se encuentra incluido en el repositorio de Ubuntu y solo es necesario teclear el siguiente comando en la consola:
+Durante el desarrollo de este trabajo se ha hecho uso de las capacidades de QGIS para visualizar resultados y rutas sobre mapas OpenStreetMap. QGIS se encuentra incluido en el repositorio de Ubuntu y solo es necesario teclear el siguiente comando en la consola:
 
 \begin{lstlisting}[language=bash]
 	sudo apt-get install qgis
@@ -463,7 +463,7 @@ Para obtener este fichero simplemente se ha de construir el proyecto y acceder a
 
 Para no perder este fichero en una posible desinstalación de NetNBeans se creará una carpeta llamada \textit{Proyectos} en la que se copiará este fichero.
 
-Una vez copiado se han de seguir estos pasos:
+Una vez copiado se han de seguir estos pasos \cite{auto:info}:
 
 \begin{enumerate}
 	\item Acceder a la carpeta \textit{glassfish4} dentro de /opt.
@@ -501,7 +501,7 @@ El resultado es mostrado en la Figura \ref{undeploy}.
   \label{undeploy}
 \end{figure}
 
-Si se desea detener el dominio se deberán seguir los mismos pasos que para inciarlo. El comando ha de ser el siguiente:
+Si se desea detener el dominio se deberán seguir los mismos pasos que para iniciarlo. El comando ha de ser el siguiente:
 
 \begin{lstlisting}[language=bash]
 	bin/asadmin
